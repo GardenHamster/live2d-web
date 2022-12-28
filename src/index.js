@@ -7,12 +7,7 @@ function loadWidget(config) {
     const model = new Model(config);
     localStorage.removeItem("waifu-display");
     sessionStorage.removeItem("waifu-text");
-    document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
-            <div id="waifu-tips"></div>
-            <canvas id="live2d" width="800" height="800"></canvas>
-            <div id="waifu-tool"></div>
-        </div>`);
-    // https://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element
+    document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d"></canvas><div id="waifu-tool"></div></div>`);
     setTimeout(() => {
         document.getElementById("waifu").style.bottom = 0;
     }, 0);
@@ -64,9 +59,9 @@ function loadWidget(config) {
 
     function registerEventListener(result) {
         // 检测用户活动状态，并在空闲时显示消息
-        let userAction = false,
-            userActionTimer,
-            messageArray = result.message.default;
+        let userAction = false;
+        let userActionTimer;
+        let messageArray = result.message.default;
         window.addEventListener("mousemove", () => userAction = true);
         window.addEventListener("keydown", () => userAction = true);
         setInterval(() => {
@@ -124,30 +119,21 @@ function loadWidget(config) {
     }
 
     (function initModel() {
-        let modelId = localStorage.getItem("modelId"),
-            modelTexturesId = localStorage.getItem("modelTexturesId");
+        let modelId = localStorage.getItem("modelId");
+        let modelTexturesId = localStorage.getItem("modelTexturesId");
         if (modelId === null) {
-            // 首次访问加载 指定模型 的 指定材质
             modelId = 0; // 模型 ID
             modelTexturesId = 0; // 材质 ID
         }
         model.loadModel(modelId, modelTexturesId);
-        fetch(config.waifuPath)
+        fetch(config.live2dPath)
             .then(response => response.json())
             .then(registerEventListener);
     })();
 }
 
-function initWidget(config, apiPath) {
-    if (typeof config === "string") {
-        config = {
-            waifuPath: config,
-            apiPath
-        };
-    }
-    document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle">
-            <span>看板娘</span>
-        </div>`);
+function initWidget(config) {
+    document.body.insertAdjacentHTML("beforeend", '<div id="waifu-toggle"><span>看板娘</span></div>');
     const toggle = document.getElementById("waifu-toggle");
     toggle.addEventListener("click", () => {
         toggle.classList.remove("waifu-toggle-active");

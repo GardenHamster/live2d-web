@@ -30,73 +30,100 @@
 
     class Model {
         constructor(config) {
-            let { apiPath, cdnPath } = config;
-            let useCDN = false;
-            if (typeof cdnPath === "string") {
-                useCDN = true;
-                if (!cdnPath.endsWith("/")) cdnPath += "/";
-            } else if (typeof apiPath === "string") {
-                if (!apiPath.endsWith("/")) apiPath += "/";
-            } else {
-                throw "Invalid initWidget argument!";
-            }
-            this.useCDN = useCDN;
-            this.apiPath = apiPath;
-            this.cdnPath = cdnPath;
+            let { modelPath,live2dPath  } = config;
+            if (!modelPath.endsWith("/")) modelPath += "/";
+            if (!live2dPath.endsWith("/")) live2dPath += "/";
+            this.live2dPath = live2dPath;
+            this.modelPath = modelPath;
         }
 
         async loadModelList() {
-            const response = await fetch(`${this.cdnPath}model_list.json`);
+            const response = await fetch(`${this.live2dPath}model_list.json`);
             this.modelList = await response.json();
         }
 
-        async loadModel(modelId, modelTexturesId, message) {
+        async loadModel(modelId, modelTexturesId) {
             localStorage.setItem("modelId", modelId);
             localStorage.setItem("modelTexturesId", modelTexturesId);
-            showMessage(message, 4000, 10);
-            if (this.useCDN) {
-                if (!this.modelList) await this.loadModelList();
-                const target = randomSelection(this.modelList.models[modelId]);
-                loadlive2d("live2d", `${this.cdnPath}model/${target}/index.json`);
-            } else {
-                loadlive2d("live2d", `${this.apiPath}get/?id=${modelId}-${modelTexturesId}`);
-                console.log(`Live2D 模型 ${modelId}-${modelTexturesId} 加载完成`);
-            }
+            if (!this.modelList) await this.loadModelList();
+            const target = randomSelection(this.modelList.models[modelId]);
+            showMessage(target.born, 4000, 10);
+            this.loadlive2d(target);
         }
 
         async loadRandModel() {
-            const modelId = localStorage.getItem("modelId"),
-                modelTexturesId = localStorage.getItem("modelTexturesId");
-            if (this.useCDN) {
-                if (!this.modelList) await this.loadModelList();
-                const target = randomSelection(this.modelList.models[modelId]);
-                loadlive2d("live2d", `${this.cdnPath}model/${target}/index.json`);
-                showMessage("我的新衣服好看嘛？", 4000, 10);
-            } else {
-                // 可选 "rand"(随机), "switch"(顺序)
-                fetch(`${this.apiPath}rand_textures/?id=${modelId}-${modelTexturesId}`)
-                    .then(response => response.json())
-                    .then(result => {
-                        if (result.textures.id === 1 && (modelTexturesId === 1 || modelTexturesId === 0)) showMessage("我还没有其他衣服呢！", 4000, 10);
-                        else this.loadModel(modelId, result.textures.id, "我的新衣服好看嘛？");
-                    });
-            }
+            const modelId = localStorage.getItem("modelId");
+            localStorage.getItem("modelTexturesId");
+            if (!this.modelList) await this.loadModelList();
+            const target = randomSelection(this.modelList.models[modelId]);
+            this.loadlive2d(target);
+            showMessage(target.born, 4000, 10);
         }
 
         async loadOtherModel() {
             let modelId = localStorage.getItem("modelId");
-            if (this.useCDN) {
-                if (!this.modelList) await this.loadModelList();
-                const index = (++modelId >= this.modelList.models.length) ? 0 : modelId;
-                this.loadModel(index, 0, this.modelList.messages[index]);
-            } else {
-                fetch(`${this.apiPath}switch/?id=${modelId}`)
-                    .then(response => response.json())
-                    .then(result => {
-                        this.loadModel(result.model.id, 0, result.model.message);
-                    });
-            }
+            if (!this.modelList) await this.loadModelList();
+            const index = (++modelId >= this.modelList.models.length) ? 0 : modelId;
+            this.loadModel(index, 0);
         }
+
+        async loadlive2d(target) {
+            const app = new PIXI.Application({
+                view: document.getElementById('live2d'),
+                autoStart: true,
+                transparent: true
+            });
+        
+            const model = PIXI.live2d.Live2DModel.fromSync(this.modelPath+target.path);
+            PIXI.live2d.config.cubism4.setOpacityFromMotion = true;
+            PIXI.live2d.SoundManager.volume = 0.5;
+        
+            model.once('load', () => {
+                model.rotation = Math.PI;
+                model.skew.x = Math.PI;
+                model.skew.y = Math.PI;
+        
+                const scale = 0.3;
+                model.scale.set(scale,scale);
+                model.anchor.set(0.5, 0.5);
+        
+                const liv2dDom=document.getElementById('live2d');
+                model.x = liv2dDom.width /2;
+                model.y = liv2dDom.height * 0.65;
+            });
+            
+            model.once('settingsJSONLoaded', (json) => {
+                console.log('live2d mode settingsJSONLoaded');
+            });
+        
+            model.once('ready', () => {
+                console.log('live2d mode ready');
+                app.stage.addChild(model);
+                setTimeout((() => {
+                    model.motion('born');
+                }), 1000);
+            });
+        
+            model.on('hit', (hitAreas) => {
+                console.log('live2d mode hit');
+                if (hitAreas.includes('head')) {
+                    model.motion('flick_head');
+                }
+                if (hitAreas.includes("face")) {
+                    model.motion('tap_face');
+                }
+                if (hitAreas.includes("breast")) {
+                    model.motion('tap_breast');
+                }
+                if (hitAreas.includes("belly")) {
+                    model.motion('tap_belly');
+                }
+                if (hitAreas.includes("leg")) {
+                    model.motion('tap_belly');
+                }
+            });
+        }
+
     }
 
     var fa_comment = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d=\"M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z\"/></svg>";
@@ -184,12 +211,7 @@
         const model = new Model(config);
         localStorage.removeItem("waifu-display");
         sessionStorage.removeItem("waifu-text");
-        document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
-            <div id="waifu-tips"></div>
-            <canvas id="live2d" width="800" height="800"></canvas>
-            <div id="waifu-tool"></div>
-        </div>`);
-        // https://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element
+        document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d"></canvas><div id="waifu-tool"></div></div>`);
         setTimeout(() => {
             document.getElementById("waifu").style.bottom = 0;
         }, 0);
@@ -241,9 +263,9 @@
 
         function registerEventListener(result) {
             // 检测用户活动状态，并在空闲时显示消息
-            let userAction = false,
-                userActionTimer,
-                messageArray = result.message.default;
+            let userAction = false;
+            let userActionTimer;
+            let messageArray = result.message.default;
             window.addEventListener("mousemove", () => userAction = true);
             window.addEventListener("keydown", () => userAction = true);
             setInterval(() => {
@@ -301,30 +323,21 @@
         }
 
         (function initModel() {
-            let modelId = localStorage.getItem("modelId"),
-                modelTexturesId = localStorage.getItem("modelTexturesId");
+            let modelId = localStorage.getItem("modelId");
+            let modelTexturesId = localStorage.getItem("modelTexturesId");
             if (modelId === null) {
-                // 首次访问加载 指定模型 的 指定材质
                 modelId = 0; // 模型 ID
                 modelTexturesId = 0; // 材质 ID
             }
             model.loadModel(modelId, modelTexturesId);
-            fetch(config.waifuPath)
+            fetch(config.live2dPath)
                 .then(response => response.json())
                 .then(registerEventListener);
         })();
     }
 
-    function initWidget(config, apiPath) {
-        if (typeof config === "string") {
-            config = {
-                waifuPath: config,
-                apiPath
-            };
-        }
-        document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle">
-            <span>看板娘</span>
-        </div>`);
+    function initWidget(config) {
+        document.body.insertAdjacentHTML("beforeend", '<div id="waifu-toggle"><span>看板娘</span></div>');
         const toggle = document.getElementById("waifu-toggle");
         toggle.addEventListener("click", () => {
             toggle.classList.remove("waifu-toggle-active");
