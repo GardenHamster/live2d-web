@@ -1,109 +1,121 @@
 {
     "models": [
-        {
-            "path":"Houkai-Gakuen2/theresa/model.json",
-            "born":"德丽莎参上!"
-        },
-        {
-            "path":"Houkai-Gakuen2/sirin/model.json",
-            "born":"西琳西琳"
-        },
-        {
-            "path":"Potion-Maker/Pio/index.json",
-            "born":"来自 Potion Maker 的 Pio 酱 ~"
-        },
-        {
-            "path":"Potion-Maker/Tia/index.json",
-            "born":"来自 Potion Maker 的 Tia 酱 ~"
-        },
-        {
-            "path":"bilibili-live/22/index.json",
-            "born":"来自 Bilibili Live 的 22 哦 ~"
-        },
-        {
-            "path":"bilibili-live/33/index.json",
-            "born":"来自 Bilibili Live 的 33 的说"
-        },
         [
             {
-                "path":"HyperdimensionNeptunia/neptune_classic/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "Houkai-Gakuen2/theresa/model.json",
+                "born": "德丽莎参上!"
+            }
+        ],
+        [
+            {
+                "path": "Houkai-Gakuen2/sirin/model.json",
+                "born": "西琳西琳"
+            }
+        ],
+        [
+            {
+                "path": "Potion-Maker/Pio/index.json",
+                "born": "来自 Potion Maker 的 Pio 酱 ~"
+            }
+        ],
+        [
+            {
+                "path": "Potion-Maker/Tia/index.json",
+                "born": "来自 Potion Maker 的 Tia 酱 ~"
+            }
+        ],
+        [
+            {
+                "path": "bilibili-live/22/index.json",
+                "born": "来自 Bilibili Live 的 22 哦 ~"
+            }
+        ],
+        [
+            {
+                "path": "bilibili-live/33/index.json",
+                "born": "来自 Bilibili Live 的 33 的说"
+            }
+        ],
+        [
+            {
+                "path": "HyperdimensionNeptunia/neptune_classic/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/nepnep/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/nepnep/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/neptune_santa/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/neptune_santa/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/nepmaid/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/nepmaid/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/nepswim/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/nepswim/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/noir_classic/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/noir_classic/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/noir/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/noir/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/noir_santa/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/noir_santa/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/noireswim/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/noireswim/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/blanc_classic/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/blanc_classic/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/blanc_normal/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/blanc_normal/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/blanc_swimwear/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/blanc_swimwear/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/vert_classic/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/vert_classic/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/vert_normal/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/vert_normal/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/vert_swimwear/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/vert_swimwear/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/nepgear/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/nepgear/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/nepgear_extra/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/nepgear_extra/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/nepgearswim/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/nepgearswim/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/histoire/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/histoire/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "path":"HyperdimensionNeptunia/histoirenohover/index.json",
-                "born":"Nep! Nep! 超次元游戏：海王星 系列"
+                "path": "HyperdimensionNeptunia/histoirenohover/index.json",
+                "born": "Nep! Nep! 超次元游戏：海王星 系列"
             }
         ]
     ]

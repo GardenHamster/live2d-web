@@ -46,16 +46,16 @@
             localStorage.setItem("modelId", modelId);
             localStorage.setItem("modelTexturesId", modelTexturesId);
             if (!this.modelList) await this.loadModelList();
-            const target = randomSelection(this.modelList.models[modelId]);
+            const target = randomSelection(this.modelList.models[modelId][modelTexturesId]);
             showMessage(target.born, 4000, 10);
             this.loadlive2d(target);
         }
 
         async loadRandModel() {
             const modelId = localStorage.getItem("modelId");
-            localStorage.getItem("modelTexturesId");
+            const modelTexturesId = localStorage.getItem("modelTexturesId");
             if (!this.modelList) await this.loadModelList();
-            const target = randomSelection(this.modelList.models[modelId]);
+            const target = randomSelection(this.modelList.models[modelId][modelTexturesId]);
             this.loadlive2d(target);
             showMessage(target.born, 4000, 10);
         }
