@@ -12,6 +12,7 @@
     }
 
     function randomIndex(length, current) {
+        current=Number(current);
         if (length == 1) return 0;
         if (length == 2) return nextIndex(length, current);
         let index = Math.floor(Math.random() * length);
@@ -19,6 +20,7 @@
     }
 
     function nextIndex(length, current) {
+        current=Number(current);
         return current + 1 < length ? current + 1 : 0;
     }
 
@@ -66,7 +68,7 @@
             localStorage.setItem("modelTexturesId", modelTexturesId);
             if (!this.modelList) await this.loadModelList();
             const target = this.modelList.models[modelId][modelTexturesId];
-            showMessage(target.born_tip, 4000, 10);
+            if(target.born_tip!=null) showMessage(target.born_tip, 4000, 10);
             this.loadlive2d(target, modelId, modelTexturesId);
         }
 
@@ -78,8 +80,8 @@
         }
 
         async loadNextTexture() {
-            const modelId = localStorage.getItem("modelId");
-            const modelTexturesId = localStorage.getItem("modelTexturesId");
+            const modelId = Number(localStorage.getItem("modelId"));
+            const modelTexturesId = Number(localStorage.getItem("modelTexturesId"));
             if (!this.modelList) await this.loadModelList();
             const index = nextIndex(this.modelList.models[modelId].length, modelTexturesId);
             if (index == modelTexturesId) return;
@@ -87,8 +89,8 @@
         }
 
         async loadRandTexture() {
-            const modelId = localStorage.getItem("modelId");
-            const modelTexturesId = localStorage.getItem("modelTexturesId");
+            const modelId = Number(localStorage.getItem("modelId"));
+            const modelTexturesId = Number(localStorage.getItem("modelTexturesId"));
             if (!this.modelList) await this.loadModelList();
             const index = randomIndex(this.modelList.models[modelId].length, modelTexturesId);
             if (index == modelTexturesId) return;

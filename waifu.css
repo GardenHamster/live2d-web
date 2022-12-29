@@ -80,7 +80,7 @@
 	color: #aaa;
 	opacity: 0;
 	position: absolute;
-	top: 70px;
+	top: 40px;
 	right: 0;
 	transition: opacity 1s;
 }
@@ -91,7 +91,7 @@
 
 #waifu-tool span {
 	display: block;
-	height: 32px;
+	height: 35px;
 	text-align: center;
 }
 

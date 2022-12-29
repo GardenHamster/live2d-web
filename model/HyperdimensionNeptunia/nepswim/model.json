@@ -1,0 +1,120 @@
+{
+    "version": "Sample 1.0.0",
+    "model": "model.moc",
+    "textures": [
+        "textures.1024/00.png",
+        "textures.1024/01.png",
+        "textures.1024/02.png"
+    ],
+    "pose": "pose.json",
+    "physics": "physics.json",
+    "layout": {
+        "center_x": 0,
+        "center_y": -0.4,
+        "width": 3
+    },
+    "hit_areas_custom": {
+        "head_x": [
+            -0.35,
+            0.6
+        ],
+        "head_y": [
+            0.19,
+            -0.2
+        ],
+        "body_x": [
+            -0.3,
+            -0.25
+        ],
+        "body_y": [
+            0.3,
+            -0.9
+        ]
+    },
+    "expressions": [
+        {
+            "name": "normal",
+            "file": "exp/normal.json"
+        },
+        {
+            "name": "happy",
+            "file": "exp/happy.json"
+        },
+        {
+            "name": "unhappy",
+            "file": "exp/unhappy.json"
+        },
+        {
+            "name": "kira",
+            "file": "exp/kira.json"
+        },
+        {
+            "name": "deformed",
+            "file": "exp/deformed.json"
+        },
+        {
+            "name": "enjoy",
+            "file": "exp/enjoy.json"
+        }
+    ],
+    "motions": {
+        "idle": [
+            {
+                "file": "mtn/idle_00.mtn",
+                "fade_in": 2000,
+                "fade_out": 2000
+            },
+            {
+                "file": "mtn/idle_01.mtn",
+                "fade_in": 2000,
+                "fade_out": 2000
+            },
+            {
+                "file": "mtn/idle_02.mtn",
+                "fade_in": 2000,
+                "fade_out": 2000
+            }
+        ],
+        "flick_head": [
+            {
+                "file": "mtn/smile.mtn"
+            },
+            {
+                "file": "mtn/shake.mtn"
+            },
+            {
+                "file": "mtn/refuse.mtn"
+            },
+            {
+                "file": "mtn/tilt_head.mtn"
+            }
+        ],
+        "tap_body": [
+            {
+                "dialogue": 11,
+                "sound": "snd/001.ogg",
+                "file": "mtn/nep_touch_head_1.mtn"
+            },
+            {
+                "dialogue": 13,
+                "sound": "snd/013.ogg",
+                "file": "mtn/nep_touch_belly_1.mtn"
+            },
+            {
+                "dialogue": 90,
+                "sound": "snd/101.ogg",
+                "file": "mtn/nep_slide_head_2.mtn"
+            },
+            {
+                "dialogue": 93,
+                "sound": "snd/007.ogg",
+                "file": "mtn/nep_touch_boobs_1.mtn"
+            },
+            {
+                "dialogue": 94,
+                "sound": "snd/014.ogg",
+                "file": "mtn/nep_touch_belly_2.mtn"
+            }
+        ]
+    }
+}

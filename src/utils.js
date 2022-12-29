@@ -3,6 +3,7 @@ function randomSelection(obj) {
 }
 
 function randomIndex(length, current) {
+    current=Number(current);
     if (length == 1) return 0;
     if (length == 2) return nextIndex(length, current);
     let index = Math.floor(Math.random() * length);
@@ -10,6 +11,7 @@ function randomIndex(length, current) {
 }
 
 function nextIndex(length, current) {
+    current=Number(current);
     return current + 1 < length ? current + 1 : 0;
 }
 

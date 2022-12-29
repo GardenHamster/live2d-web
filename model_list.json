@@ -20,14 +20,14 @@
         [
             {
                 "model_json": "Potion-Maker/Pio/index.json",
-                "center_y": 0.45,
+                "model_scale": 0.85,
+                "center_y": 0.5,
                 "born_tip": "来自 Potion Maker 的 Pio 酱 ~"
             },
             {
                 "model_json": "Potion-Maker/Tia/index.json",
                 "model_scale": 0.75,
-                "anchor_x": 0.5,
-                "anchor_y": 0.55,
+                "center_y": 0.5,
                 "born_tip": "来自 Potion Maker 的 Tia 酱 ~"
             }
         ],
@@ -40,45 +40,58 @@
             },
             {
                 "model_json": "bilibili-live/33/index.json",
-                "model_scale": 0.5,
+                "model_scale": 0.55,
+                "center_y": 0.55,
                 "born_tip": "来自 Bilibili Live 的 33 的说"
             }
         ],
         [
             {
-                "model_json": "HyperdimensionNeptunia/histoire/index.json",
+                "model_json": "HyperdimensionNeptunia/histoire/model.json",
                 "model_scale": 0.6,
-                "anchor_y": 1.2,
+                "center_y": -0.20,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "model_json": "HyperdimensionNeptunia/nepgear/index.json",
+                "model_json": "HyperdimensionNeptunia/nepgear/model.json",
+                "model_scale": 0.28,
+                "center_y": -0.4,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "model_json": "HyperdimensionNeptunia/nepgear_extra/index.json",
+                "model_json": "HyperdimensionNeptunia/nepgear_extra/model.json",
+                "model_scale": 0.28,
+                "center_y": -0.4,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "model_json": "HyperdimensionNeptunia/nepgearswim/index.json",
+                "model_json": "HyperdimensionNeptunia/nepgearswim/model.json",
+                "model_scale": 0.28,
+                "center_y": -0.4,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "model_json": "HyperdimensionNeptunia/nepmaid/index.json",
+                "model_json": "HyperdimensionNeptunia/nepmaid/model.json",
                 "model_scale": 0.3,
-                "anchor_y": 0.95,
+                "center_y": -0.2,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "model_json": "HyperdimensionNeptunia/nepswim/index.json",
+                "model_json": "HyperdimensionNeptunia/nepswim/model.json",
+                "model_scale": 0.3,
+                "center_y": 0,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "model_json": "HyperdimensionNeptunia/neptune_santa/index.json",
+                "model_json": "HyperdimensionNeptunia/neptune_santa/model.json",
+                "model_scale": 0.3,
+                "center_y": -0.3,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "model_json": "HyperdimensionNeptunia/noir_classic/index.json",
+                "model_json": "HyperdimensionNeptunia/noir_classic/model.json",
+                "model_scale": 0.3,
+                "center_y": -0.5,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
             }
         ]
