@@ -1,4 +1,4 @@
-import randomSelection from "./utils.js";
+import { randomSelection } from "./utils.js";
 
 let messageTimer;
 

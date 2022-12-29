@@ -5,7 +5,7 @@
   "main": "autoload.js",
   "type": "module",
   "scripts": {
-    "build": "rollup -c rollup.config.js -f iife | terser -c -m > waifu-tips.js",
+    "build": "rollup -c rollup.config.js -f iife -o waifu-tips.js -w",
     "build-dev": "rollup -c rollup.config.js -f iife -o waifu-tips.js -w"
   },
   "repository": {
@@ -23,9 +23,12 @@
   "homepage": "https://github.com/GardenHamster/live2d-web#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.2.0",
+    "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.0",
     "@rollup/pluginutils": "^5.0.1",
     "rollup": "^3.2.3",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^2.0.2",
     "terser": "^5.15.1",
     "webpack": "^5.75.0"
   }

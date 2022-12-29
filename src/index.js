@@ -1,20 +1,17 @@
 import Model from "./model.js";
 import showMessage from "./message.js";
-import randomSelection from "./utils.js";
+import { randomSelection } from "./utils.js";
 import tools from "./tools.js";
 
 function loadWidget(config) {
+    document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d"></canvas><div id="waifu-tool"></div></div>`);
     const model = new Model(config);
     localStorage.removeItem("waifu-display");
     sessionStorage.removeItem("waifu-text");
-    document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d"></canvas><div id="waifu-tool"></div></div>`);
-    setTimeout(() => {
-        document.getElementById("waifu").style.bottom = 0;
-    }, 0);
 
     (function registerTools() {
-        tools["switch-model"].callback = () => model.loadOtherModel();
-        tools["switch-texture"].callback = () => model.loadRandModel();
+        tools["switch-model"].callback = () => model.loadNextModel();
+        tools["switch-texture"].callback = () => model.loadNextTexture();
         if (!Array.isArray(config.tools)) {
             config.tools = Object.keys(tools);
         }

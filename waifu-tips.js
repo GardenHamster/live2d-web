@@ -2,11 +2,24 @@
  * Live2D Widget
  * https://github.com/stevenjoezhang/live2d-widget
  */
+
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 (function () {
     'use strict';
 
     function randomSelection(obj) {
         return Array.isArray(obj) ? obj[Math.floor(Math.random() * obj.length)] : obj;
+    }
+
+    function randomIndex(length, current) {
+        if (length == 1) return 0;
+        if (length == 2) return nextIndex(length, current);
+        let index = Math.floor(Math.random() * length);
+        return index == current ? randomIndex(length, current) : index;
+    }
+
+    function nextIndex(length, current) {
+        return current + 1 < length ? current + 1 : 0;
     }
 
     let messageTimer;
@@ -30,80 +43,107 @@
 
     class Model {
         constructor(config) {
-            let { modelPath,live2dPath  } = config;
+            let { modelPath, live2dPath } = config;
             if (!modelPath.endsWith("/")) modelPath += "/";
             if (!live2dPath.endsWith("/")) live2dPath += "/";
             this.live2dPath = live2dPath;
             this.modelPath = modelPath;
+            this.app = new PIXI.Application({
+                view: document.getElementById('live2d'),
+                autoStart: true,
+                transparent: true
+            });
         }
 
         async loadModelList() {
             const response = await fetch(`${this.live2dPath}model_list.json`);
             this.modelList = await response.json();
+            this.loadedList = new Array();
         }
 
         async loadModel(modelId, modelTexturesId) {
             localStorage.setItem("modelId", modelId);
             localStorage.setItem("modelTexturesId", modelTexturesId);
             if (!this.modelList) await this.loadModelList();
-            const target = randomSelection(this.modelList.models[modelId][modelTexturesId]);
-            showMessage(target.born, 4000, 10);
-            this.loadlive2d(target);
+            const target = this.modelList.models[modelId][modelTexturesId];
+            showMessage(target.born_tip, 4000, 10);
+            this.loadlive2d(target, modelId, modelTexturesId);
         }
 
-        async loadRandModel() {
-            const modelId = localStorage.getItem("modelId");
-            const modelTexturesId = localStorage.getItem("modelTexturesId");
-            if (!this.modelList) await this.loadModelList();
-            const target = randomSelection(this.modelList.models[modelId][modelTexturesId]);
-            this.loadlive2d(target);
-            showMessage(target.born, 4000, 10);
-        }
-
-        async loadOtherModel() {
+        async loadNextModel() {
             let modelId = localStorage.getItem("modelId");
             if (!this.modelList) await this.loadModelList();
             const index = (++modelId >= this.modelList.models.length) ? 0 : modelId;
             this.loadModel(index, 0);
         }
 
-        async loadlive2d(target) {
-            const app = new PIXI.Application({
-                view: document.getElementById('live2d'),
-                autoStart: true,
-                transparent: true
-            });
-        
-            const model = PIXI.live2d.Live2DModel.fromSync(this.modelPath+target.path);
+        async loadNextTexture() {
+            const modelId = localStorage.getItem("modelId");
+            const modelTexturesId = localStorage.getItem("modelTexturesId");
+            if (!this.modelList) await this.loadModelList();
+            const index = nextIndex(this.modelList.models[modelId].length, modelTexturesId);
+            if (index == modelTexturesId) return;
+            this.loadModel(modelId, index);
+        }
+
+        async loadRandTexture() {
+            const modelId = localStorage.getItem("modelId");
+            const modelTexturesId = localStorage.getItem("modelTexturesId");
+            if (!this.modelList) await this.loadModelList();
+            const index = randomIndex(this.modelList.models[modelId].length, modelTexturesId);
+            if (index == modelTexturesId) return;
+            this.loadModel(modelId, index);
+        }
+
+        async loadlive2d(target, modelId, modelTexturesId) {
+            if (target.model_scale == null) target.model_scale = 1;
+            if (target.center_x == null) target.center_x = 0.5;
+            if (target.center_y == null) target.center_y = 0.5;
+            if (target.anchor_x == null) target.anchor_x = 0.5;
+            if (target.anchor_y == null) target.anchor_y = 0.5;
+
             PIXI.live2d.config.cubism4.setOpacityFromMotion = true;
-            PIXI.live2d.SoundManager.volume = 0.5;
-        
+            PIXI.live2d.SoundManager.volume = 0.9;
+
+            if (this.loadedList[modelId] != null && this.loadedList[modelId][modelTexturesId] != null) {
+                let model = this.loadedList[modelId][modelTexturesId];
+                if (this.currentModel != null) this.currentModel.visible = false;
+                model.visible = true;
+                this.currentModel = model;
+                model.motion('born');
+            }
+            else {
+                let model = PIXI.live2d.Live2DModel.fromSync(this.modelPath + target.model_json);
+                await this.addModelEvent(model, target);
+                if (this.loadedList[modelId] == null) this.loadedList[modelId] = new Array();
+                this.loadedList[modelId][modelTexturesId] = model;
+            }
+        }
+
+        async addModelEvent(model, target) {
             model.once('load', () => {
+                const liv2dDom = document.getElementById('live2d');
                 model.rotation = Math.PI;
                 model.skew.x = Math.PI;
                 model.skew.y = Math.PI;
-        
-                const scale = 0.3;
-                model.scale.set(scale,scale);
-                model.anchor.set(0.5, 0.5);
-        
-                const liv2dDom=document.getElementById('live2d');
-                model.x = liv2dDom.width /2;
-                model.y = liv2dDom.height * 0.65;
+                model.scale.set(target.model_scale);
+                model.anchor.set(target.anchor_x, target.anchor_y);
+                model.x = liv2dDom.width * target.center_x;
+                model.y = liv2dDom.height * target.center_y;
             });
-            
+
             model.once('settingsJSONLoaded', (json) => {
                 console.log('live2d mode settingsJSONLoaded');
             });
-        
+
             model.once('ready', () => {
                 console.log('live2d mode ready');
-                app.stage.addChild(model);
-                setTimeout((() => {
-                    model.motion('born');
-                }), 1000);
+                if (this.currentModel != null) this.currentModel.visible = false;
+                this.currentModel = model;
+                this.app.stage.addChild(model);
+                model.motion('born');
             });
-        
+
             model.on('hit', (hitAreas) => {
                 console.log('live2d mode hit');
                 if (hitAreas.includes('head')) {
@@ -123,6 +163,8 @@
                 }
             });
         }
+
+
 
     }
 
@@ -208,17 +250,14 @@
     };
 
     function loadWidget(config) {
+        document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d"></canvas><div id="waifu-tool"></div></div>`);
         const model = new Model(config);
         localStorage.removeItem("waifu-display");
         sessionStorage.removeItem("waifu-text");
-        document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d"></canvas><div id="waifu-tool"></div></div>`);
-        setTimeout(() => {
-            document.getElementById("waifu").style.bottom = 0;
-        }, 0);
 
         (function registerTools() {
-            tools["switch-model"].callback = () => model.loadOtherModel();
-            tools["switch-texture"].callback = () => model.loadRandModel();
+            tools["switch-model"].callback = () => model.loadNextModel();
+            tools["switch-texture"].callback = () => model.loadNextTexture();
             if (!Array.isArray(config.tools)) {
                 config.tools = Object.keys(tools);
             }

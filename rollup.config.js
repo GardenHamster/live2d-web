@@ -1,5 +1,8 @@
-import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { createFilter } from "@rollup/pluginutils";
+import commonjs from "@rollup/plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
+import serve from 'rollup-plugin-serve';
+import livereload from 'rollup-plugin-livereload';
 
 function string(opts = {}) {
     if (!opts.include) {
@@ -36,7 +39,11 @@ export default {
         file: 'waifu-tips.js',
         format: 'iife'
     },
-    plugins: [nodeResolve(), string({
-        include: "**/*.svg",
-    })]
+    plugins: [
+        resolve(),
+        string({ include: "**/*.svg" }),
+        serve(),
+        livereload(),
+        commonjs()
+    ]
 };
