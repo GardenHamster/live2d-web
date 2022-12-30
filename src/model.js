@@ -27,7 +27,6 @@ class Model {
         localStorage.setItem("modelTexturesId", modelTexturesId);
         if (!this.modelList) await this.loadModelList();
         const target = this.modelList.models[modelId][modelTexturesId];
-        if (target.born_tip != null) showMessage(target.born_tip, 4000, 10);
         this.loadlive2d(target, modelId, modelTexturesId);
     }
 
@@ -71,9 +70,11 @@ class Model {
             if (this.currentModel != null) this.currentModel.visible = false;
             model.visible = true;
             this.currentModel = model;
+            if (target.born_tip != null) showMessage(target.born_tip, 4000, 10);
             model.motion('born');
         }
         else {
+            if (this.currentModel != null) this.currentModel.visible = false;
             let model = PIXI.live2d.Live2DModel.fromSync(this.modelPath + target.model_json);
             await this.addModelEvent(model, target);
             if (this.loadedList[modelId] == null) this.loadedList[modelId] = new Array();
@@ -99,9 +100,9 @@ class Model {
 
         model.once('ready', () => {
             console.log('live2d mode ready');
-            if (this.currentModel != null) this.currentModel.visible = false;
             this.currentModel = model;
             this.app.stage.addChild(model);
+            if (target.born_tip != null) showMessage(target.born_tip, 4000, 10);
             model.motion('born');
         });
 
