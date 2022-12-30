@@ -10,7 +10,7 @@
 				"file": "motions/1.mtn",
 				"sound": "sound/shake.mp3",
 				"text": 155060,
-				"sound_delay": 2
+				"sound_delay": -2
 			}
 		],
 		"flick_head": [
@@ -18,7 +18,7 @@
 				"file": "motions/4.mtn",
 				"sound": "sound/reward.mp3",
 				"text": 155064,
-				"sound_delay": 2
+				"sound_delay": -2
 			}
 		],
 		"tap_face": [
@@ -26,7 +26,7 @@
 				"file": "motions/4.mtn",
 				"sound": "sound/reward.mp3",
 				"text": 155064,
-				"sound_delay": 2
+				"sound_delay": -2
 			}
 		],
 		"tap_shake": [
@@ -34,7 +34,7 @@
 				"file": "motions/2.mtn",
 				"sound": "sound/battle.mp3",
 				"text": 155062,
-				"sound_delay": 2
+				"sound_delay": -2
 			}
 		],
 		"tap_belly": [
@@ -42,7 +42,7 @@
 				"file": "motions/2.mtn",
 				"sound": "sound/shake.mp3",
 				"text": 155062,
-				"sound_delay": 2
+				"sound_delay": -2
 			}
 		],
 		"tap_breast": [
@@ -50,7 +50,7 @@
 				"file": "motions/2.mtn",
 				"sound": "sound/shake.mp3",
 				"text": 155062,
-				"sound_delay": 2
+				"sound_delay": -2
 			}
 		],
 		"tap_leg": [
@@ -58,7 +58,7 @@
 				"file": "motions/9.mtn",
 				"sound": "sound/welcome.mp3",
 				"text": 155069,
-				"sound_delay": 2
+				"sound_delay": -2
 			}
 		],
 		"mail": [
@@ -76,7 +76,7 @@
 				"file": "motions/9.mtn",
 				"sound": "sound/welcome.mp3",
 				"text": 155068,
-				"sound_delay": 2
+				"sound_delay": -2
 			}
 		],
 		"born": [
@@ -84,7 +84,7 @@
 				"file": "motions/15.mtn",
 				"sound": "sound/welcome.mp3",
 				"text": 155074,
-				"sound_delay": 2
+				"sound_delay": -2
 			}
 		],
 		"friend": [

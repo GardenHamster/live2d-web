@@ -11,6 +11,7 @@ class Model {
         this.app = new PIXI.Application({
             view: document.getElementById('live2d'),
             autoStart: true,
+            antialias: true,
             transparent: true
         });
     }
@@ -26,7 +27,7 @@ class Model {
         localStorage.setItem("modelTexturesId", modelTexturesId);
         if (!this.modelList) await this.loadModelList();
         const target = this.modelList.models[modelId][modelTexturesId];
-        if(target.born_tip!=null) showMessage(target.born_tip, 4000, 10);
+        if (target.born_tip != null) showMessage(target.born_tip, 4000, 10);
         this.loadlive2d(target, modelId, modelTexturesId);
     }
 
@@ -119,9 +120,18 @@ class Model {
                 model.motion('tap_belly');
             }
             if (hitAreas.includes("leg")) {
-                model.motion('tap_belly');
+                model.motion('tap_leg');
+            }
+            if (hitAreas.includes("hand")) {
+                model.motion('tap_hand');
+            }
+            if (hitAreas.includes("hm")) {
+                model.motion('tap_hm');
             }
         });
+
+
+
     }
 
 

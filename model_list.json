@@ -7,14 +7,50 @@
                 "center_x": 0.5,
                 "center_y": 0.65,
                 "born_tip": "德丽莎参上!"
-            }
-        ],
-        [
+            },
+            {
+                "model_json": "Houkai-Gakuen2/bronya/model.json",
+                "model_scale": 0.8,
+                "center_y": 0.6,
+                "born_tip": "花嫁板鸭"
+            },
             {
                 "model_json": "Houkai-Gakuen2/sirin/model.json",
                 "model_scale": 0.45,
                 "center_y": 0.75,
                 "born_tip": "西琳西琳"
+            }
+        ],
+        [
+            {
+                "model_json": "Houkai-Gakuen2/kaguya/model.json",
+                "model_scale": 0.5,
+                "center_y": 0.7,
+                "born_tip": "耀夜姬"
+            },
+            {
+                "model_json": "Houkai-Gakuen2/keluoyi/model.json",
+                "model_scale": 0.5,
+                "center_y": 0.7,
+                "born_tip": "柯罗伊"
+            },
+            {
+                "model_json": "Houkai-Gakuen2/kiro/model.json",
+                "model_scale": 0.6,
+                "center_y": 0.8,
+                "born_tip": "时雨绮罗"
+            },
+            {
+                "model_json": "Houkai-Gakuen2/yazakura/model.json",
+                "model_scale": 0.25,
+                "center_y": 0.85,
+                "born_tip": "八重樱"
+            },
+            {
+                "model_json": "Houkai-Gakuen2/bachongying/model.json",
+                "model_scale": 0.3,
+                "center_y": 0.3,
+                "born_tip": "八重樱"
             }
         ],
         [
@@ -93,6 +129,12 @@
                 "model_scale": 0.3,
                 "center_y": -0.5,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
+            }
+        ],
+        [
+            {
+                "model_json": "Other/Senko_Normals/senko.model3.json",
+                "model_scale": 0.3
             }
         ]
     ]
