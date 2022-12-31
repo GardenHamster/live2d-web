@@ -112,7 +112,6 @@
                 if (this.currentModel != null) this.currentModel.visible = false;
                 model.visible = true;
                 this.currentModel = model;
-                if (target.born_tip != null) showMessage(target.born_tip, 4000, 10);
                 model.motion('born');
             }
             else {
@@ -138,13 +137,30 @@
 
             model.once('settingsJSONLoaded', (json) => {
                 console.log('live2d mode settingsJSONLoaded');
+                model.settings = json;
             });
 
             model.once('ready', () => {
                 console.log('live2d mode ready');
+                model.internalModel.motionManager.on('motionStart', (group, index, audio) => {
+                    let motionGroups = model.settings.motions;
+                    if (motionGroups == null) motionGroups = model.settings.Motions;
+                    if (motionGroups == null) motionGroups = model.settings.FileReferences?.Motions;
+                    if (motionGroups == null) motionGroups = model.settings.FileReferences?.motions;
+                    if (motionGroups == null) return;
+                    let motions = motionGroups[group];
+                    if (motions == null) return;
+                    if (motions.length < index + 1) return;
+                    let motion = motions[index];
+                    if (motion == null) return;
+                    let text = motion.text;
+                    if (text == null) text = motion.Text;
+                    if (text == null) text = target.born_tip;
+                    if (text == null) return;
+                    showMessage(text, 5000, 50);
+                });
                 this.currentModel = model;
                 this.app.stage.addChild(model);
-                if (target.born_tip != null) showMessage(target.born_tip, 4000, 10);
                 model.motion('born');
             });
 
