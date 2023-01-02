@@ -3,7 +3,7 @@
  * https://github.com/stevenjoezhang/live2d-widget
  */
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function (l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 (function () {
     'use strict';
 
@@ -12,7 +12,7 @@
     }
 
     function randomIndex(length, current) {
-        current=Number(current);
+        current = Number(current);
         if (length == 1) return 0;
         if (length == 2) return nextIndex(length, current);
         let index = Math.floor(Math.random() * length);
@@ -20,7 +20,7 @@
     }
 
     function nextIndex(length, current) {
-        current=Number(current);
+        current = Number(current);
         return current + 1 < length ? current + 1 : 0;
     }
 
@@ -123,8 +123,19 @@
             }
         }
 
+        async showModel() {
+            if (this.currentModel == null) return;
+            this.currentModel.visible = true;
+        }
+
+        async hideModel() {
+            if (this.currentModel == null) return;
+            this.currentModel.visible = false;
+        }
+
         async addModelEvent(model, target) {
             model.once('load', () => {
+                console.log('live2d mode load');
                 const liv2dDom = document.getElementById('live2d');
                 model.rotation = Math.PI;
                 model.skew.x = Math.PI;
@@ -136,7 +147,7 @@
             });
 
             model.once('settingsJSONLoaded', (json) => {
-                console.log('live2d mode settingsJSONLoaded');
+                console.log('live2d mode settings loaded');
                 model.settings = json;
             });
 
@@ -165,7 +176,7 @@
             });
 
             model.on('hit', (hitAreas) => {
-                console.log('live2d mode hit');
+                console.log('live2d mode hit,hitAreas=' + hitAreas.join(','));
                 if (hitAreas.includes('head')) {
                     model.motion('flick_head');
                 }
@@ -244,11 +255,11 @@
         },
         "switch-model": {
             icon: fa_user_circle,
-            callback: () => {}
+            callback: () => { }
         },
         "switch-texture": {
             icon: fa_street_view,
-            callback: () => {}
+            callback: () => { }
         },
         "photo": {
             icon: fa_camera_retro,
@@ -261,7 +272,7 @@
         "info": {
             icon: fa_info_circle,
             callback: () => {
-                open("https://github.com/stevenjoezhang/live2d-widget");
+                open("https://github.com/GardenHamster/live2d-web");
             }
         },
         "quit": {
@@ -269,9 +280,11 @@
             callback: () => {
                 localStorage.setItem("waifu-display", Date.now());
                 showMessage("愿你有一天能与重要的人重逢。", 2000, 11);
-                document.getElementById("waifu").style.bottom = "-500px";
+                document.getElementById("waifu").style.bottom = "-1000px";
                 setTimeout(() => {
-                    document.getElementById("waifu").style.display = "none";
+                    Live2dModel.hideModel();
+                    document.getElementById("waifu-tips").style.display = "none";
+                    document.getElementById("waifu-tool").style.display = "none";
                     document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
                 }, 3000);
             }
@@ -279,8 +292,8 @@
     };
 
     function loadWidget(config) {
-        document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d"></canvas><div id="waifu-tool"></div></div>`);
         const model = new Model(config);
+        window.Live2dModel = model;
         localStorage.removeItem("waifu-display");
         sessionStorage.removeItem("waifu-text");
 
@@ -343,17 +356,17 @@
                     userActionTimer = null;
                 } else if (!userActionTimer) {
                     userActionTimer = setInterval(() => {
-                        showMessage(messageArray, 6000, 9);
+                        showMessage(messageArray, 5000, 9);
                     }, 20000);
                 }
             }, 1000);
-            showMessage(welcomeMessage(result.time), 7000, 11);
+            showMessage(welcomeMessage(result.time), 5000, 11);
             window.addEventListener("mouseover", event => {
                 for (let { selector, text } of result.mouseover) {
                     if (!event.target.matches(selector)) continue;
                     text = randomSelection(text);
                     text = text.replace("{text}", event.target.innerText);
-                    showMessage(text, 4000, 8);
+                    showMessage(text, 1000, 8);
                     return;
                 }
             });
@@ -362,7 +375,7 @@
                     if (!event.target.matches(selector)) continue;
                     text = randomSelection(text);
                     text = text.replace("{text}", event.target.innerText);
-                    showMessage(text, 4000, 8);
+                    showMessage(text, 1000, 8);
                     return;
                 }
             });
@@ -398,13 +411,14 @@
                 modelTexturesId = 0; // 材质 ID
             }
             model.loadModel(modelId, modelTexturesId);
-            fetch(config.live2dPath)
+            fetch(config.live2dPath + "waifu-tips.json")
                 .then(response => response.json())
                 .then(registerEventListener);
         })();
     }
 
     function initWidget(config) {
+        document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d"></canvas><div id="waifu-tool"></div></div>`);
         document.body.insertAdjacentHTML("beforeend", '<div id="waifu-toggle"><span>看板娘</span></div>');
         const toggle = document.getElementById("waifu-toggle");
         toggle.addEventListener("click", () => {
@@ -414,8 +428,10 @@
                 toggle.removeAttribute("first-time");
             } else {
                 localStorage.removeItem("waifu-display");
-                document.getElementById("waifu").style.display = "";
+                document.getElementById("waifu-tips").style.display = "";
+                document.getElementById("waifu-tool").style.display = "";
                 setTimeout(() => {
+                    Live2dModel.showModel();
                     document.getElementById("waifu").style.bottom = 0;
                 }, 0);
             }

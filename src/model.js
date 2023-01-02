@@ -81,6 +81,16 @@ class Model {
         }
     }
 
+    async showModel() {
+        if (this.currentModel == null) return;
+        this.currentModel.visible = true;
+    }
+
+    async hideModel() {
+        if (this.currentModel == null) return;
+        this.currentModel.visible = false;
+    }
+
     async addModelEvent(model, target) {
         model.once('load', () => {
             const liv2dDom = document.getElementById('live2d');

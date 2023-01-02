@@ -4,8 +4,8 @@ import { randomSelection } from "./utils.js";
 import tools from "./tools.js";
 
 function loadWidget(config) {
-    document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d"></canvas><div id="waifu-tool"></div></div>`);
     const model = new Model(config);
+    window.Live2dModel = model;
     localStorage.removeItem("waifu-display");
     sessionStorage.removeItem("waifu-text");
 
@@ -68,17 +68,17 @@ function loadWidget(config) {
                 userActionTimer = null;
             } else if (!userActionTimer) {
                 userActionTimer = setInterval(() => {
-                    showMessage(messageArray, 6000, 9);
+                    showMessage(messageArray, 5000, 9);
                 }, 20000);
             }
         }, 1000);
-        showMessage(welcomeMessage(result.time), 7000, 11);
+        showMessage(welcomeMessage(result.time), 5000, 11);
         window.addEventListener("mouseover", event => {
             for (let { selector, text } of result.mouseover) {
                 if (!event.target.matches(selector)) continue;
                 text = randomSelection(text);
                 text = text.replace("{text}", event.target.innerText);
-                showMessage(text, 4000, 8);
+                showMessage(text, 1000, 8);
                 return;
             }
         });
@@ -87,7 +87,7 @@ function loadWidget(config) {
                 if (!event.target.matches(selector)) continue;
                 text = randomSelection(text);
                 text = text.replace("{text}", event.target.innerText);
-                showMessage(text, 4000, 8);
+                showMessage(text, 1000, 8);
                 return;
             }
         });
@@ -123,13 +123,14 @@ function loadWidget(config) {
             modelTexturesId = 0; // 材质 ID
         }
         model.loadModel(modelId, modelTexturesId);
-        fetch(config.live2dPath)
+        fetch(config.live2dPath + "waifu-tips.json")
             .then(response => response.json())
             .then(registerEventListener);
     })();
 }
 
 function initWidget(config) {
+    document.body.insertAdjacentHTML("beforeend", `<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d"></canvas><div id="waifu-tool"></div></div>`);
     document.body.insertAdjacentHTML("beforeend", '<div id="waifu-toggle"><span>看板娘</span></div>');
     const toggle = document.getElementById("waifu-toggle");
     toggle.addEventListener("click", () => {
@@ -139,8 +140,10 @@ function initWidget(config) {
             toggle.removeAttribute("first-time");
         } else {
             localStorage.removeItem("waifu-display");
-            document.getElementById("waifu").style.display = "";
+            document.getElementById("waifu-tips").style.display = "";
+            document.getElementById("waifu-tool").style.display = "";
             setTimeout(() => {
+                Live2dModel.showModel();
                 document.getElementById("waifu").style.bottom = 0;
             }, 0);
         }

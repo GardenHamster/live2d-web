@@ -1,7 +1,3 @@
-// live2d_path 参数建议使用绝对路径
-const live2d_path = "./";
-const model_path = "./model/";
-
 // 封装异步加载资源的方法
 function loadExternalResource(url, type) {
   return new Promise((resolve, reject) => {
@@ -23,9 +19,9 @@ function loadExternalResource(url, type) {
   });
 }
 
-(async function () {
-  if (screen.width < 768) return;
-  //await document.body.insertAdjacentHTML("beforeend", '<div id="waifu"><div id="waifu-tips"></div><canvas id="live2d"></canvas><div id="waifu-tool"></div></div>');
+async function loadLive2d(live2d_path, model_path) {
+  if (live2d_path == null) live2d_path = "./";
+  if (model_path == null) model_path = "./model/";
   await loadExternalResource(live2d_path + "waifu.css", "css");
   await loadExternalResource(live2d_path + "pixi.min.js", "js");
   await loadExternalResource(live2d_path + "live2d.min.js", "js");
@@ -41,9 +37,7 @@ function loadExternalResource(url, type) {
     tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
   });
 
-})();
-
-console.log(`
+  console.log(`
   く__,.ヘヽ.        /  ,ー､ 〉
            ＼ ', !-─‐-i  /  /´
            ／｀ｰ'       L/／｀ヽ､
@@ -62,4 +56,8 @@ console.log(`
                   ﾄ-,/  |___./
                   'ｰ'    !_,.:
 `);
+
+};
+
+
 

@@ -41,11 +41,11 @@ const tools = {
     },
     "switch-model": {
         icon: fa_user_circle,
-        callback: () => {}
+        callback: () => { }
     },
     "switch-texture": {
         icon: fa_street_view,
-        callback: () => {}
+        callback: () => { }
     },
     "photo": {
         icon: fa_camera_retro,
@@ -58,7 +58,7 @@ const tools = {
     "info": {
         icon: fa_info_circle,
         callback: () => {
-            open("https://github.com/stevenjoezhang/live2d-widget");
+            open("https://github.com/GardenHamster/live2d-web");
         }
     },
     "quit": {
@@ -66,9 +66,11 @@ const tools = {
         callback: () => {
             localStorage.setItem("waifu-display", Date.now());
             showMessage("愿你有一天能与重要的人重逢。", 2000, 11);
-            document.getElementById("waifu").style.bottom = "-500px";
+            document.getElementById("waifu").style.bottom = "-1000px";
             setTimeout(() => {
-                document.getElementById("waifu").style.display = "none";
+                Live2dModel.hideModel();
+                document.getElementById("waifu-tips").style.display = "none";
+                document.getElementById("waifu-tool").style.display = "none";
                 document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
             }, 3000);
         }

@@ -7,6 +7,13 @@
     <title>liv2d-web demo</title>
 </head>
 <body>
-    <script src="./autoload.js"></script>
+    <script src="./live2d-web.js"></script>
+    <script>
+        if (screen.width >= 768) {
+            const live2d_path = "./";
+            const model_path = "./model/";
+            loadLive2d(live2d_path,model_path);
+        }
+    </script>
 </body>
 </html>
