@@ -10,9 +10,15 @@
     <script src="./live2d-web.js"></script>
     <script>
         if (screen.width >= 768) {
-            const live2d_path = "./";
-            const model_path = "./model/";
-            loadLive2d(live2d_path,model_path);
+            let localConfig = {
+                live2d_path: './',
+                model_path: './model/'
+            };
+            let cndConfig = {
+                live2d_path: 'https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/',
+                model_path: 'https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/model/'
+            };
+            initLive2d(localConfig);
         }
     </script>
 </body>

@@ -19,21 +19,21 @@ function loadExternalResource(url, type) {
   });
 }
 
-async function loadLive2d(live2d_path, model_path) {
-  if (live2d_path == null) live2d_path = "./";
-  if (model_path == null) model_path = "./model/";
-  await loadExternalResource(live2d_path + "waifu.css", "css");
-  await loadExternalResource(live2d_path + "pixi.min.js", "js");
-  await loadExternalResource(live2d_path + "live2d.min.js", "js");
-  await loadExternalResource(live2d_path + "live2dcubismcore.min.js", "js");
-  await loadExternalResource(live2d_path + "pixi-live2d-display.min.js", "js");
+async function initLive2d(config) {
+  if (!config.live2d_path.endsWith("/")) config.live2d_path += "/";
+  if (!config.model_path.endsWith("/")) config.model_path += "/";
+  await loadExternalResource(config.live2d_path + "waifu.css", "css");
+  await loadExternalResource(config.live2d_path + "pixi.min.js", "js");
+  await loadExternalResource(config.live2d_path + "live2d.min.js", "js");
+  await loadExternalResource(config.live2d_path + "live2dcubismcore.min.js", "js");
+  await loadExternalResource(config.live2d_path + "pixi-live2d-display.min.js", "js");
 
   window.PIXI = PIXI; // 将 PIXI 暴露到 window 上，这样插件就可以通过 window.PIXI.Ticker 来自动更新模型
-  await loadExternalResource(live2d_path + "waifu-tips.js", "js");
+  await loadExternalResource(config.live2d_path + "waifu-tips.js", "js");
 
   initWidget({
-    modelPath: model_path,
-    live2dPath: live2d_path,
+    modelPath: config.model_path,
+    live2dPath: config.live2d_path,
     tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
   });
 

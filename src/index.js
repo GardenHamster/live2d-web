@@ -116,12 +116,8 @@ function loadWidget(config) {
     }
 
     (function initModel() {
-        let modelId = localStorage.getItem("modelId");
-        let modelTexturesId = localStorage.getItem("modelTexturesId");
-        if (modelId === null) {
-            modelId = 0; // 模型 ID
-            modelTexturesId = 0; // 材质 ID
-        }
+        let modelId = Number(localStorage.getItem("modelId"));
+        let modelTexturesId = Number(localStorage.getItem("modelTexturesId"));
         model.loadModel(modelId, modelTexturesId);
         fetch(config.live2dPath + "waifu-tips.json")
             .then(response => response.json())
