@@ -8,48 +8,48 @@
 		"shake": [
 			{
 				"file": "motions/7.mtn",
-				"sound": "sound/kaguya_live2d_001.wav",
-				"text": 81781,
+				"sound": "sound/kaguya_live2d_007.mp3",
+				"text": "虽然知道你是无意，但请不要将自己的不满宣泄到我的身上。",
 				"sound_delay": -2
 			}
 		],
-		"flick_head": [
+		"tap_head": [
 			{
 				"file": "motions/1.mtn",
-				"sound": "sound/kaguya_live2d_004.wav",
-				"text": 81775,
+				"sound": "sound/kaguya_live2d_001.mp3",
+				"text": "我在这边的一切，终有一日会像泡沫一般消散吧......",
 				"sound_delay": -2
 			}
 		],
 		"tap_face": [
 			{
 				"file": "motions/2.mtn",
-				"sound": "sound/kaguya_live2d_006.wav",
-				"text": 81776,
+				"sound": "sound/kaguya_live2d_002.mp3",
+				"text": "你的手有点冷呢......这次就换我来温暖你吧......",
 				"sound_delay": -2
 			}
 		],
 		"tap_breast": [
 			{
 				"file": "motions/3.mtn",
-				"sound": "sound/kaguya_live2d_003.wav",
-				"text": 81777,
+				"sound": "sound/kaguya_live2d_003.mp3",
+				"text": "好色之徒！你都在摸些什么地方啊！给我停手！",
 				"sound_delay": -2
 			}
 		],
 		"tap_belly": [
 			{
 				"file": "motions/4.mtn",
-				"sound": "sound/kaguya_live2d_005.wav",
-				"text": 81778,
+				"sound": "sound/kaguya_live2d_004.mp3",
+				"text": "哈哈......好痒，下次请不要这样做了！",
 				"sound_delay": -2
 			}
 		],
 		"tap_leg": [
 			{
 				"file": "motions/4.mtn",
-				"sound": "sound/kaguya_live2d_005.wav",
-				"text": 81778,
+				"sound": "sound/kaguya_live2d_004.mp3",
+				"text": "哈哈......好痒，下次请不要这样做了！",
 				"sound_delay": -2
 			}
 		],
@@ -72,8 +72,8 @@
 		"born": [
 			{
 				"file": "motions/5.mtn",
-				"sound": "sound/kaguya_live2d_009.wav",
-				"text": 81779,
+				"sound": "sound/kaguya_live2d_005.mp3",
+				"text": "因为稀少，所以才显得弥足珍贵，生命也是如此吧。",
 				"sound_delay": -2
 			}
 		],

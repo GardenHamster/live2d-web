@@ -161,6 +161,7 @@
             model.once('ready', () => {
                 console.log('live2d mode ready');
                 model.internalModel.motionManager.on('motionStart', (group, index, audio) => {
+                    console.log(`live2d mode motion '${group}' start`);
                     const motionGroups = model.motionGroups();
                     if (motionGroups == null) return;
                     let motions = motionGroups[group];

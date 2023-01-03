@@ -13,7 +13,7 @@
 				"sound_delay": -1
 			}
 		],
-		"flick_head": [
+		"tap_head": [
 			{
 				"file": "motions/happy.mtn",
 				"sound": "sound/D_Sak_Live2D002.wav",
@@ -86,7 +86,7 @@
 		],
 		"born": [
 			{
-				"file": "motions/soft.mtn",
+				"file": "motions/smart.mtn",
 				"sound": "sound/D_Sak_Live2D009.wav",
 				"text": 155087,
 				"sound_delay": -1
