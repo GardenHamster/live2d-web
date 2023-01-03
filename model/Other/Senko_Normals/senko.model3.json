@@ -32,9 +32,14 @@
           "Name": "Sleep",
           "File": "motions/Sleeping.motion3.json",
           "Weight": 1
+        },
+        {
+          "Name": "Anim",
+          "File": "motions/Anim_1.motion3.json",
+          "Weight": 1
         }
       ],
-      "flick_head": [
+      "tap_head": [
         {
           "Name": "Sing",
           "File": "motions/Singing.motion3.json",
@@ -43,6 +48,11 @@
         {
           "Name": "Sleep",
           "File": "motions/Sleeping.motion3.json",
+          "Weight": 1
+        },
+        {
+          "Name": "Anim",
+          "File": "motions/Anim_1.motion3.json",
           "Weight": 1
         }
       ],

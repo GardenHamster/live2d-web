@@ -105,21 +105,15 @@
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "model_json": "HyperdimensionNeptunia/nepswim/model.json",
-                "model_scale": 0.3,
-                "center_y": 0,
-                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
-            },
-            {
                 "model_json": "HyperdimensionNeptunia/neptune_santa/model.json",
                 "model_scale": 0.3,
                 "center_y": -0.3,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
             },
             {
-                "model_json": "HyperdimensionNeptunia/noir_classic/model.json",
+                "model_json": "HyperdimensionNeptunia/nepswim/model.json",
                 "model_scale": 0.3,
-                "center_y": -0.5,
+                "center_y": 0,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
             }
         ],

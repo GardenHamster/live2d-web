@@ -3,7 +3,7 @@
  * https://github.com/stevenjoezhang/live2d-widget
  */
 
-(function (l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 (function () {
     'use strict';
 
@@ -12,7 +12,7 @@
     }
 
     function randomIndex(length, current) {
-        current = Number(current);
+        current=Number(current);
         if (length == 1) return 0;
         if (length == 2) return nextIndex(length, current);
         let index = Math.floor(Math.random() * length);
@@ -20,7 +20,7 @@
     }
 
     function nextIndex(length, current) {
-        current = Number(current);
+        current=Number(current);
         return current + 1 < length ? current + 1 : 0;
     }
 
@@ -105,18 +105,18 @@
             if (target.anchor_y == null) target.anchor_y = 0.5;
 
             PIXI.live2d.config.cubism4.setOpacityFromMotion = true;
-            PIXI.live2d.SoundManager.volume = 0.9;
+            PIXI.live2d.SoundManager.volume = 1;
 
             if (this.loadedList[modelId] != null && this.loadedList[modelId][modelTexturesId] != null) {
                 let model = this.loadedList[modelId][modelTexturesId];
                 if (this.currentModel != null) this.currentModel.visible = false;
-                model.visible = true;
                 this.currentModel = model;
-                model.motion('born');
+                this.currentModel.visible = true;
+                this.currentModel.motion('born');
             }
             else {
                 if (this.currentModel != null) this.currentModel.visible = false;
-                let model = PIXI.live2d.Live2DModel.fromSync(this.modelPath + target.model_json);
+                let model = await PIXI.live2d.Live2DModel.fromSync(this.modelPath + target.model_json);
                 await this.addModelEvent(model, target);
                 if (this.loadedList[modelId] == null) this.loadedList[modelId] = new Array();
                 this.loadedList[modelId][modelTexturesId] = model;
@@ -134,8 +134,15 @@
         }
 
         async addModelEvent(model, target) {
+            model.motionGroups = function () {
+                let motionGroups = model.settings.motions;
+                if (motionGroups == null) motionGroups = model.settings.Motions;
+                if (motionGroups == null) motionGroups = model.settings.FileReferences?.Motions;
+                if (motionGroups == null) motionGroups = model.settings.FileReferences?.motions;
+                return motionGroups;
+            };
+
             model.once('load', () => {
-                console.log('live2d mode load');
                 const liv2dDom = document.getElementById('live2d');
                 model.rotation = Math.PI;
                 model.skew.x = Math.PI;
@@ -154,49 +161,31 @@
             model.once('ready', () => {
                 console.log('live2d mode ready');
                 model.internalModel.motionManager.on('motionStart', (group, index, audio) => {
-                    let motionGroups = model.settings.motions;
-                    if (motionGroups == null) motionGroups = model.settings.Motions;
-                    if (motionGroups == null) motionGroups = model.settings.FileReferences?.Motions;
-                    if (motionGroups == null) motionGroups = model.settings.FileReferences?.motions;
+                    const motionGroups = model.motionGroups();
                     if (motionGroups == null) return;
                     let motions = motionGroups[group];
                     if (motions == null) return;
                     if (motions.length < index + 1) return;
                     let motion = motions[index];
                     if (motion == null) return;
-                    let text = motion.text;
-                    if (text == null) text = motion.Text;
-                    if (text == null) text = target.born_tip;
-                    if (text == null) return;
-                    showMessage(text, 5000, 50);
+                    if (motion.text != null) showMessage(motion.text, 5000, 50);
                 });
                 this.currentModel = model;
                 this.app.stage.addChild(model);
+                if (target.born_tip != null) showMessage(target.born_tip, 5000, 60);
                 model.motion('born');
             });
 
             model.on('hit', (hitAreas) => {
                 console.log('live2d mode hit,hitAreas=' + hitAreas.join(','));
-                if (hitAreas.includes('head')) {
-                    model.motion('flick_head');
-                }
-                if (hitAreas.includes("face")) {
-                    model.motion('tap_face');
-                }
-                if (hitAreas.includes("breast")) {
-                    model.motion('tap_breast');
-                }
-                if (hitAreas.includes("belly")) {
-                    model.motion('tap_belly');
-                }
-                if (hitAreas.includes("leg")) {
-                    model.motion('tap_leg');
-                }
-                if (hitAreas.includes("hand")) {
-                    model.motion('tap_hand');
-                }
-                if (hitAreas.includes("hm")) {
-                    model.motion('tap_hm');
+                if (model.settings == null) return;
+                const hitArea = hitAreas.length > 0 ? hitAreas[0].trim().toLowerCase() : randomSelection(hitAreas).trim().toLowerCase();
+                const motionGroups = model.motionGroups();
+                if (motionGroups == null || motionGroups.length == 0) return;
+                for (let motionName in motionGroups) {
+                    if (motionName.trim().toLowerCase() != ('tap_' + hitArea)) continue;
+                    model.motion(motionName);
+                    break;
                 }
             });
 

@@ -13,7 +13,7 @@
 				"sound_delay": -2
 			}
 		],
-		"flick_head": [
+		"tap_head": [
 			{
 				"file": "motions/4.mtn",
 				"sound": "sound/reward.mp3",
