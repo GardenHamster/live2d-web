@@ -10,30 +10,30 @@
 ### 本地加载
 - 将本项目克隆到本地，然后在页面中引入
 ```js
-    <script src="./live2d-web.js"></script>
-    <script>
-        if (screen.width >= 768) {
-            let localConfig = {
-                live2d_path: './',
-                model_path: './model/'
-            };
-            initLive2d(localConfig);
-        }
-    </script>
+<script src="/live2d-web/live2d-web.js"></script>
+<script>
+    if (screen.width >= 768) {
+        let localConfig = {
+            live2d_path: '/live2d-web/',
+            model_path: '/live2d-web/model/'
+        };
+        initLive2d(localConfig);
+    }
+</script>
 ```
 
 ### 通过CDN加载
 ```js
-    <script src="https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/live2d-web.js"></script>
-    <script>
-        if (screen.width >= 768) {
-            let cdnConfig = {
-                live2d_path: 'https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/',
-                model_path: 'https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/model/'
-            };
-            initLive2d(cdnConfig);
-        }
-    </script>
+<script src="https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/live2d-web.js"></script>
+<script>
+    if (screen.width >= 768) {
+        let cdnConfig = {
+            live2d_path: 'https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/',
+            model_path: 'https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/model/'
+        };
+        initLive2d(cdnConfig);
+    }
+</script>
 ```
 
 ## 效果
