@@ -63,14 +63,15 @@ class Model {
         if (target.anchor_y == null) target.anchor_y = 0.5;
 
         PIXI.live2d.config.cubism4.setOpacityFromMotion = true;
-        PIXI.live2d.SoundManager.volume = 1;
+        PIXI.live2d.SoundManager.volume = 0.5;
 
         if (this.loadedList[modelId] != null && this.loadedList[modelId][modelTexturesId] != null) {
             let model = this.loadedList[modelId][modelTexturesId];
             if (this.currentModel != null) this.currentModel.visible = false;
             this.currentModel = model;
             this.currentModel.visible = true;
-            this.currentModel.motion('born');
+            this.currentModel.target = target;
+            this.currentModel.motion('born', undefined, PIXI.live2d.MotionPriority.NORMAL);
         }
         else {
             if (this.currentModel != null) this.currentModel.visible = false;
@@ -89,6 +90,12 @@ class Model {
     async hideModel() {
         if (this.currentModel == null) return;
         this.currentModel.visible = false;
+    }
+
+    async showWaifuTips(text, timeout, priority) {
+        if (this.currentModel == null) return false;
+        if (this.currentModel.target.showWaifuTips == false) return false;
+        showMessage(text, timeout, priority);
     }
 
     async addModelEvent(model, target) {
@@ -129,10 +136,20 @@ class Model {
                 if (motion == null) return;
                 if (motion.text != null) showMessage(motion.text, 5000, 50);
             });
+            if (target.idleInterval != null && target.idleInterval > 0) {
+                model.internalModel.motionManager.state.shouldRequestIdleMotion = () => false;
+                model.internalModel.motionManager.on('motionFinish', () => {
+                    setTimeout(function () {
+                        if (!model.visible) return;
+                        model.motion('idle', undefined, PIXI.live2d.MotionPriority.IDLE)
+                    }, target.idleInterval);
+                });
+            }
             this.currentModel = model;
+            this.currentModel.target = target;
             this.app.stage.addChild(model);
             if (target.born_tip != null) showMessage(target.born_tip, 5000, 60);
-            model.motion('born');
+            model.motion('born', undefined, PIXI.live2d.MotionPriority.NORMAL);
         });
 
         model.on('hit', (hitAreas) => {
@@ -143,7 +160,7 @@ class Model {
             if (motionGroups == null || motionGroups.length == 0) return;
             for (let motionName in motionGroups) {
                 if (motionName.trim().toLowerCase() != ('tap_' + hitArea)) continue;
-                model.motion(motionName);
+                model.motion(motionName, undefined, PIXI.live2d.MotionPriority.FORCE);
                 break;
             }
         });

@@ -5,8 +5,8 @@ import fa_street_view from "@fortawesome/fontawesome-free/svgs/solid/street-view
 import fa_camera_retro from "@fortawesome/fontawesome-free/svgs/solid/camera-retro.svg";
 import fa_info_circle from "@fortawesome/fontawesome-free/svgs/solid/circle-info.svg";
 import fa_xmark from "@fortawesome/fontawesome-free/svgs/solid/xmark.svg";
-
 import showMessage from "./message.js";
+import { randomSelection } from "./utils.js";
 
 function showHitokoto() {
     // 增加 hitokoto.cn 的 API
@@ -49,23 +49,31 @@ const tools = {
     },
     "photo": {
         icon: fa_camera_retro,
-        callback: () => {
-            showMessage("照好了嘛，是不是很可爱呢？", 6000, 9);
+        callback: (json) => {
+            let message = "照好了嘛，是不是很可爱呢？";
+            if (json && json.message && json.message.photo) {
+                message = randomSelection(json.message.photo);
+            }
+            showMessage(message, 6000, 9);
             Live2D.captureName = "photo.png";
             Live2D.captureFrame = true;
         }
     },
     "info": {
         icon: fa_info_circle,
-        callback: () => {
+        callback: (json) => {
             open("https://github.com/GardenHamster/live2d-web");
         }
     },
     "quit": {
         icon: fa_xmark,
-        callback: () => {
+        callback: (json) => {
+            let message = "愿你有一天能与重要的人重逢。";
+            if (json && json.message && json.message.quit) {
+                message = randomSelection(json.message.quit);
+            }
             localStorage.setItem("waifu-display", Date.now());
-            showMessage("愿你有一天能与重要的人重逢。", 2000, 11);
+            showMessage(message, 2000, 11);
             document.getElementById("waifu").style.bottom = "-1000px";
             setTimeout(() => {
                 Live2dModel.hideModel();

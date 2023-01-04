@@ -5,7 +5,8 @@
                 "model_json": "Houkai-Gakuen2/theresa/model.json",
                 "model_scale": 0.3,
                 "center_x": 0.5,
-                "center_y": 0.65
+                "center_y": 0.65,
+                "showWaifuTips": false
             },
             {
                 "model_json": "Houkai-Gakuen2/bronya/model.json",
@@ -22,7 +23,8 @@
             {
                 "model_json": "Houkai-Gakuen2/kaguya/model.json",
                 "model_scale": 0.5,
-                "center_y": 0.7
+                "center_y": 0.7,
+                "idleInterval": 30000
             },
             {
                 "model_json": "Houkai-Gakuen2/keluoyi/model.json",

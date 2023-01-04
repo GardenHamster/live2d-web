@@ -105,14 +105,15 @@
             if (target.anchor_y == null) target.anchor_y = 0.5;
 
             PIXI.live2d.config.cubism4.setOpacityFromMotion = true;
-            PIXI.live2d.SoundManager.volume = 1;
+            PIXI.live2d.SoundManager.volume = 0.5;
 
             if (this.loadedList[modelId] != null && this.loadedList[modelId][modelTexturesId] != null) {
                 let model = this.loadedList[modelId][modelTexturesId];
                 if (this.currentModel != null) this.currentModel.visible = false;
                 this.currentModel = model;
                 this.currentModel.visible = true;
-                this.currentModel.motion('born');
+                this.currentModel.target = target;
+                this.currentModel.motion('born', undefined, PIXI.live2d.MotionPriority.NORMAL);
             }
             else {
                 if (this.currentModel != null) this.currentModel.visible = false;
@@ -131,6 +132,12 @@
         async hideModel() {
             if (this.currentModel == null) return;
             this.currentModel.visible = false;
+        }
+
+        async showWaifuTips(text, timeout, priority) {
+            if (this.currentModel == null) return false;
+            if (this.currentModel.target.showWaifuTips == false) return false;
+            showMessage(text, timeout, priority);
         }
 
         async addModelEvent(model, target) {
@@ -171,10 +178,20 @@
                     if (motion == null) return;
                     if (motion.text != null) showMessage(motion.text, 5000, 50);
                 });
+                if (target.idleInterval != null && target.idleInterval > 0) {
+                    model.internalModel.motionManager.state.shouldRequestIdleMotion = () => false;
+                    model.internalModel.motionManager.on('motionFinish', () => {
+                        setTimeout(function () {
+                            if (!model.visible) return;
+                            model.motion('idle', undefined, PIXI.live2d.MotionPriority.IDLE);
+                        }, target.idleInterval);
+                    });
+                }
                 this.currentModel = model;
+                this.currentModel.target = target;
                 this.app.stage.addChild(model);
                 if (target.born_tip != null) showMessage(target.born_tip, 5000, 60);
-                model.motion('born');
+                model.motion('born', undefined, PIXI.live2d.MotionPriority.NORMAL);
             });
 
             model.on('hit', (hitAreas) => {
@@ -185,7 +202,7 @@
                 if (motionGroups == null || motionGroups.length == 0) return;
                 for (let motionName in motionGroups) {
                     if (motionName.trim().toLowerCase() != ('tap_' + hitArea)) continue;
-                    model.motion(motionName);
+                    model.motion(motionName, undefined, PIXI.live2d.MotionPriority.FORCE);
                     break;
                 }
             });
@@ -253,23 +270,31 @@
         },
         "photo": {
             icon: fa_camera_retro,
-            callback: () => {
-                showMessage("照好了嘛，是不是很可爱呢？", 6000, 9);
+            callback: (json) => {
+                let message = "照好了嘛，是不是很可爱呢？";
+                if (json && json.message && json.message.photo) {
+                    message = randomSelection(json.message.photo);
+                }
+                showMessage(message, 6000, 9);
                 Live2D.captureName = "photo.png";
                 Live2D.captureFrame = true;
             }
         },
         "info": {
             icon: fa_info_circle,
-            callback: () => {
+            callback: (json) => {
                 open("https://github.com/GardenHamster/live2d-web");
             }
         },
         "quit": {
             icon: fa_xmark,
-            callback: () => {
+            callback: (json) => {
+                let message = "愿你有一天能与重要的人重逢。";
+                if (json && json.message && json.message.quit) {
+                    message = randomSelection(json.message.quit);
+                }
                 localStorage.setItem("waifu-display", Date.now());
-                showMessage("愿你有一天能与重要的人重逢。", 2000, 11);
+                showMessage(message, 2000, 11);
                 document.getElementById("waifu").style.bottom = "-1000px";
                 setTimeout(() => {
                     Live2dModel.hideModel();
@@ -293,14 +318,29 @@
             if (!Array.isArray(config.tools)) {
                 config.tools = Object.keys(tools);
             }
-            for (let tool of config.tools) {
-                if (tools[tool]) {
-                    const { icon, callback } = tools[tool];
-                    document.getElementById("waifu-tool").insertAdjacentHTML("beforeend", `<span id="waifu-tool-${tool}">${icon}</span>`);
-                    document.getElementById(`waifu-tool-${tool}`).addEventListener("click", callback);
-                }
-            }
+            fetch(config.live2dPath + "waifu-tips.json")
+                .then(response => response.json())
+                .then(function (result) {
+                    for (let tool of config.tools) {
+                        if (tools[tool]) {
+                            const { icon, callback } = tools[tool];
+                            document.getElementById("waifu-tool").insertAdjacentHTML("beforeend", `<span id="waifu-tool-${tool}">${icon}</span>`);
+                            document.getElementById(`waifu-tool-${tool}`).addEventListener("click", () => { callback(result); });
+                        }
+                    }
+                });
         })();
+
+        (function initModel() {
+            let modelId = Number(localStorage.getItem("modelId"));
+            let modelTexturesId = Number(localStorage.getItem("modelTexturesId"));
+            model.loadModel(modelId, modelTexturesId);
+            fetch(config.live2dPath + "waifu-tips.json")
+                .then(response => response.json())
+                .then(result => registerEventListener(result));
+        })();
+
+
 
         function welcomeMessage(time) {
             if (location.pathname === "/") { // 如果是主页
@@ -337,6 +377,7 @@
             let userAction = false;
             let userActionTimer;
             let messageArray = result.message.default;
+            let model = window.Live2dModel;
             window.addEventListener("mousemove", () => userAction = true);
             window.addEventListener("keydown", () => userAction = true);
             setInterval(() => {
@@ -346,17 +387,17 @@
                     userActionTimer = null;
                 } else if (!userActionTimer) {
                     userActionTimer = setInterval(() => {
-                        showMessage(messageArray, 5000, 9);
+                        model.showWaifuTips(messageArray, 5000, 9);
                     }, 20000);
                 }
             }, 1000);
-            showMessage(welcomeMessage(result.time), 5000, 11);
+            model.showWaifuTips(welcomeMessage(result.time), 5000, 11);
             window.addEventListener("mouseover", event => {
                 for (let { selector, text } of result.mouseover) {
                     if (!event.target.matches(selector)) continue;
                     text = randomSelection(text);
                     text = text.replace("{text}", event.target.innerText);
-                    showMessage(text, 1000, 8);
+                    model.showWaifuTips(text, 3000, 8);
                     return;
                 }
             });
@@ -365,7 +406,7 @@
                     if (!event.target.matches(selector)) continue;
                     text = randomSelection(text);
                     text = text.replace("{text}", event.target.innerText);
-                    showMessage(text, 1000, 8);
+                    model.showWaifuTips(text, 3000, 8);
                     return;
                 }
             });
@@ -383,24 +424,17 @@
             const devtools = () => { };
             console.log("%c", devtools);
             devtools.toString = () => {
-                showMessage(result.message.console, 6000, 9);
+                model.showWaifuTips(randomSelection(result.message.console), 6000, 9);
             };
             window.addEventListener("copy", () => {
-                showMessage(result.message.copy, 6000, 9);
+                model.showWaifuTips(randomSelection(result.message.copy), 6000, 9);
             });
             window.addEventListener("visibilitychange", () => {
-                if (!document.hidden) showMessage(result.message.visibilitychange, 6000, 9);
+                if (document.hidden) return;
+                model.showWaifuTips(randomSelection(result.message.visibilitychange), 6000, 9);
             });
         }
 
-        (function initModel() {
-            let modelId = Number(localStorage.getItem("modelId"));
-            let modelTexturesId = Number(localStorage.getItem("modelTexturesId"));
-            model.loadModel(modelId, modelTexturesId);
-            fetch(config.live2dPath + "waifu-tips.json")
-                .then(response => response.json())
-                .then(registerEventListener);
-        })();
     }
 
     function initWidget(config) {

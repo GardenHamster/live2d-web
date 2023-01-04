@@ -1,5 +1,4 @@
 import Model from "./model.js";
-import showMessage from "./message.js";
 import { randomSelection } from "./utils.js";
 import tools from "./tools.js";
 
@@ -15,14 +14,29 @@ function loadWidget(config) {
         if (!Array.isArray(config.tools)) {
             config.tools = Object.keys(tools);
         }
-        for (let tool of config.tools) {
-            if (tools[tool]) {
-                const { icon, callback } = tools[tool];
-                document.getElementById("waifu-tool").insertAdjacentHTML("beforeend", `<span id="waifu-tool-${tool}">${icon}</span>`);
-                document.getElementById(`waifu-tool-${tool}`).addEventListener("click", callback);
-            }
-        }
+        fetch(config.live2dPath + "waifu-tips.json")
+            .then(response => response.json())
+            .then(function (result) {
+                for (let tool of config.tools) {
+                    if (tools[tool]) {
+                        const { icon, callback } = tools[tool];
+                        document.getElementById("waifu-tool").insertAdjacentHTML("beforeend", `<span id="waifu-tool-${tool}">${icon}</span>`);
+                        document.getElementById(`waifu-tool-${tool}`).addEventListener("click", () => { callback(result) });
+                    }
+                }
+            });
     })();
+
+    (function initModel() {
+        let modelId = Number(localStorage.getItem("modelId"));
+        let modelTexturesId = Number(localStorage.getItem("modelTexturesId"));
+        model.loadModel(modelId, modelTexturesId);
+        fetch(config.live2dPath + "waifu-tips.json")
+            .then(response => response.json())
+            .then(result => registerEventListener(result));
+    })();
+
+
 
     function welcomeMessage(time) {
         if (location.pathname === "/") { // 如果是主页
@@ -59,6 +73,7 @@ function loadWidget(config) {
         let userAction = false;
         let userActionTimer;
         let messageArray = result.message.default;
+        let model = window.Live2dModel;
         window.addEventListener("mousemove", () => userAction = true);
         window.addEventListener("keydown", () => userAction = true);
         setInterval(() => {
@@ -68,17 +83,17 @@ function loadWidget(config) {
                 userActionTimer = null;
             } else if (!userActionTimer) {
                 userActionTimer = setInterval(() => {
-                    showMessage(messageArray, 5000, 9);
+                    model.showWaifuTips(messageArray, 5000, 9);
                 }, 20000);
             }
         }, 1000);
-        showMessage(welcomeMessage(result.time), 5000, 11);
+        model.showWaifuTips(welcomeMessage(result.time), 5000, 11);
         window.addEventListener("mouseover", event => {
             for (let { selector, text } of result.mouseover) {
                 if (!event.target.matches(selector)) continue;
                 text = randomSelection(text);
                 text = text.replace("{text}", event.target.innerText);
-                showMessage(text, 1000, 8);
+                model.showWaifuTips(text, 3000, 8);
                 return;
             }
         });
@@ -87,7 +102,7 @@ function loadWidget(config) {
                 if (!event.target.matches(selector)) continue;
                 text = randomSelection(text);
                 text = text.replace("{text}", event.target.innerText);
-                showMessage(text, 1000, 8);
+                model.showWaifuTips(text, 3000, 8);
                 return;
             }
         });
@@ -105,24 +120,17 @@ function loadWidget(config) {
         const devtools = () => { };
         console.log("%c", devtools);
         devtools.toString = () => {
-            showMessage(result.message.console, 6000, 9);
+            model.showWaifuTips(randomSelection(result.message.console), 6000, 9);
         };
         window.addEventListener("copy", () => {
-            showMessage(result.message.copy, 6000, 9);
+            model.showWaifuTips(randomSelection(result.message.copy), 6000, 9);
         });
         window.addEventListener("visibilitychange", () => {
-            if (!document.hidden) showMessage(result.message.visibilitychange, 6000, 9);
+            if (document.hidden) return;
+            model.showWaifuTips(randomSelection(result.message.visibilitychange), 6000, 9);
         });
     }
 
-    (function initModel() {
-        let modelId = Number(localStorage.getItem("modelId"));
-        let modelTexturesId = Number(localStorage.getItem("modelTexturesId"));
-        model.loadModel(modelId, modelTexturesId);
-        fetch(config.live2dPath + "waifu-tips.json")
-            .then(response => response.json())
-            .then(registerEventListener);
-    })();
 }
 
 function initWidget(config) {

@@ -63,7 +63,20 @@
 				"file": "motions/idle.mtn"
 			}
 		],
-		"idle": [],
+		"idle": [
+			{
+				"file": "motions/1.mtn",
+				"sound": "sound/kaguya_live2d_001.mp3",
+				"text": "我在这边的一切，终有一日会像泡沫一般消散吧......",
+				"sound_delay": -2
+			},
+			{
+				"file": "motions/2.mtn",
+				"sound": "sound/kaguya_live2d_002.mp3",
+				"text": "你的手有点冷呢......这次就换我来温暖你吧......",
+				"sound_delay": -2
+			}
+		],
 		"activity": [
 			{
 				"file": "motions/idle.mtn"
