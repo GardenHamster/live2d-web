@@ -10,12 +10,12 @@
 ### 本地加载
 - 将本项目克隆到本地，然后在页面中引入
 ```js
-<script src="/live2d-web/live2d-web.js"></script>
+<script src="./live2d-web/live2d-web.js"></script>
 <script>
     if (screen.width >= 768) {
         let localConfig = {
-            live2d_path: '/live2d-web/',
-            model_path: '/live2d-web/model/'
+            live2d_path: './live2d-web/',
+            model_path: './live2d-web/model/'
         };
         initLive2d(localConfig);
     }
