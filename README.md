@@ -3,9 +3,9 @@
 - 一个自用的web端的看板娘项目，魔改自 [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)
 
 ## 魔改部分
-- 引用了 [guansss/pixi-live2d-display](https://github.com/guansss/pixi-live2d-display) 的项目，以便支持其他版本的模型，Cubism 2.1、Cubism 3、Cubism 4
+- 引用了 [guansss/pixi-live2d-display](https://github.com/guansss/pixi-live2d-display) 的项目，以便支持其他版本的模型，基于[PixiJSv6.5.6](https://github.com/pixijs/pixijs/releases/tag/v6.5.6)
 - 触发点击事件的同时，对话框中显示model.json中与之对应的motion的text信息
-- 修改了`model_list.json`的格式，可自行调整模型大小和位置，播放对应的音频，显示对应的对话信息，可调整闲时动画的间隔
+- 修改了`model_list.json`的格式，可自行调整模型大小和位置，播放对应的音频，显示对应的对话信息，可调整闲时动画的间隔，移除了对[live2d_api](https://github.com/fghrsh/live2d_api)的依赖
 
 ## 声明
 - 因为是本人自用的项目，因此并不会帮解决使用过程中出现的任何问题，请理性使用
@@ -65,6 +65,10 @@
     "showWaifuTips": false //对话框中是否显示waifu-tips.json中的信息,可不填,默认为true
 }
 ```
+
+### 分享一些我找到的模型仓库
+- https://github.com/Eikanya/Live2d-model
+- https://github.com/imuncle/live2d
 
 ## 效果
 - 可以在 [Github Page](https://gardenhamster.github.io/live2d-web) 左下角看到效果 
