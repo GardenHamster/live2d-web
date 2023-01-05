@@ -5,6 +5,7 @@
 ## 魔改部分
 - 引用了 [guansss/pixi-live2d-display](https://github.com/guansss/pixi-live2d-display) 的项目，以便支持其他版本的模型，Cubism 2.1、Cubism 3、Cubism 4
 - 触发点击事件的同时，对话框中显示model.json中与之对应的motion的text信息
+- 修改了`model_list.json`的格式，可自行调整模型大小和位置，播放对应的音频，显示对应的对话信息，可调整闲时动画的间隔
 
 ## 声明
 - 因为是本人自用的项目，因此并不会帮解决使用过程中出现的任何问题，请理性使用
@@ -60,7 +61,7 @@
     "anchor_x": 0.5,    //相当于模型的中心点,center_x基于它进行偏移,可不填,默认:0.5
     "anchor_y": 0.5,    //相当于模型的中心点,center_y基于它进行偏移,可不填,默认:0.5
     "born_tip": "德丽莎世界第一可爱",//模型加载完毕后,对话框中显示的信息,比model.json中text的优先级高
-    "idleInterval": 30000,//idle动画的间隔时间,可不填,默认表示连续播放
+    "idleInterval": 30000,//idle动画的间隔时间(毫秒),可不填,默认表示连续播放
     "showWaifuTips": false //对话框中是否显示waifu-tips.json中的信息,可不填,默认为true
 }
 ```
