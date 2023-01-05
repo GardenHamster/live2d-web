@@ -50,11 +50,10 @@ const tools = {
     "photo": {
         icon: fa_camera_retro,
         callback: (json) => {
-            let message = "照好了嘛，是不是很可爱呢？";
             if (json && json.message && json.message.photo) {
-                message = randomSelection(json.message.photo);
+                const message = randomSelection(json.message.photo);
+                showMessage(message, 6000, 9);
             }
-            showMessage(message, 6000, 9);
             Live2D.captureName = "photo.png";
             Live2D.captureFrame = true;
         }
@@ -68,12 +67,11 @@ const tools = {
     "quit": {
         icon: fa_xmark,
         callback: (json) => {
-            let message = "愿你有一天能与重要的人重逢。";
             if (json && json.message && json.message.quit) {
-                message = randomSelection(json.message.quit);
+                const message = randomSelection(json.message.quit);
+                showMessage(message, 2000, 11);
             }
             localStorage.setItem("waifu-display", Date.now());
-            showMessage(message, 2000, 11);
             document.getElementById("waifu").style.bottom = "-1000px";
             setTimeout(() => {
                 Live2dModel.hideModel();
