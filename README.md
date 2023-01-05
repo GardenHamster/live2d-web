@@ -52,7 +52,7 @@
 
 ### model_list.json
 - `models[0][0]`是启动页面后第一个加载的模型，可以根据自己的需要调整模型的位置
-```json
+```jsonc
 {
     "model_json": "Houkai-Gakuen2/theresa/model.json",//相对于model_path中的model.json路径
     "model_scale": 0.3, //模型缩放比例,可不填,默认:1
