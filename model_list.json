@@ -33,9 +33,9 @@
                 "showWaifuTips": false
             },
             {
-                "model_json": "Houkai-Gakuen2/keluoyi/model.json",
-                "model_scale": 0.5,
-                "center_y": 0.7,
+                "model_json": "Houkai-Gakuen2/kuroe/model.json",
+                "model_scale": 0.6,
+                "center_y": 0.9,
                 "idleInterval": 30000,
                 "showWaifuTips": false
             },

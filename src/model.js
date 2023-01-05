@@ -112,7 +112,7 @@ class Model {
             model.rotation = Math.PI;
             model.skew.x = Math.PI;
             model.skew.y = Math.PI;
-            model.scale.set(target.model_scale);
+            model.scale.set(target.model_scale, target.model_scale);
             model.anchor.set(target.anchor_x, target.anchor_y);
             model.x = liv2dDom.width * target.center_x;
             model.y = liv2dDom.height * target.center_y;

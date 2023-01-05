@@ -8,75 +8,68 @@
 		"shake": [
 			{
 				"file": "motions/1.mtn",
-				"sound": "sound/shake.mp3",
+				"sound": "sound/theresa_live2d_001.mp3",
 				"text": "哦？即使晃动也不会摇的哦，死心吧",
+				"sound_delay": -2
+			}
+		],
+		"idle": [
+			{
+				"file": "motions/9.mtn",
+				"sound": "sound/theresa_live2d_009.mp3",
+				"text": "战斗？看在你这么请求的份上，就用一根手指帮你一下吧",
 				"sound_delay": -2
 			}
 		],
 		"tap_head": [
 			{
-				"file": "motions/4.mtn",
-				"sound": "sound/reward.mp3",
-				"text": "好好表现的话，今天晚上就会好好奖励你哟",
+				"file": "motions/2.mtn",
+				"sound": "sound/theresa_live2d_002.mp3",
+				"text": "什...什么嘛，才没有舒服呢",
 				"sound_delay": -2
 			}
 		],
 		"tap_face": [
 			{
-				"file": "motions/4.mtn",
-				"sound": "sound/reward.mp3",
-				"text": "好好表现的话，今天晚上就会好好奖励你哟",
-				"sound_delay": -2
-			}
-		],
-		"tap_shake": [
-			{
 				"file": "motions/2.mtn",
-				"sound": "sound/battle.mp3",
-				"text": "战斗？看在你这么请求的份上，就用一根手指帮你一下吧",
-				"sound_delay": -2
-			}
-		],
-		"tap_belly": [
-			{
-				"file": "motions/2.mtn",
-				"sound": "sound/comfortable.mp3",
+				"sound": "sound/theresa_live2d_002.mp3",
 				"text": "什...什么嘛，才没有舒服呢",
 				"sound_delay": -2
 			}
 		],
 		"tap_breast": [
 			{
-				"file": "motions/2.mtn",
-				"sound": "sound/comfortable.mp3",
-				"text": "什...什么嘛，才没有舒服呢",
+				"file": "motions/4.mtn",
+				"sound": "sound/theresa_live2d_004.mp3",
+				"text": "好好表现的话，今天晚上就会好好奖励你哟",
+				"sound_delay": -2
+			}
+		],
+		"tap_belly": [
+			{
+				"file": "motions/4.mtn",
+				"sound": "sound/theresa_live2d_004.mp3",
+				"text": "好好表现的话，今天晚上就会好好奖励你哟",
 				"sound_delay": -2
 			}
 		],
 		"tap_leg": [
 			{
-				"file": "motions/1.mtn",
-				"sound": "sound/shake.mp3",
-				"text": "哦？即使晃动也不会摇的哦，死心吧",
+				"file": "motions/4.mtn",
+				"sound": "sound/theresa_live2d_004.mp3",
+				"text": "好好表现的话，今天晚上就会好好奖励你哟",
 				"sound_delay": -2
 			}
 		],
 		"born": [
 			{
 				"file": "motions/15.mtn",
-				"sound": "sound/welcome.mp3",
+				"sound": "sound/theresa_live2d_015.mp3",
 				"text": "德丽莎，参上~",
 				"sound_delay": -2
 			}
 		],
-		"activity": [
-			{
-				"file": "motions/1.mtn",
-				"sound": "sound/shake.mp3",
-				"text": "哦？即使晃动也不会摇的哦，死心吧",
-				"sound_delay": -2
-			}
-		]
+		"activity": []
 	},
 	"physics": "physics.json",
 	"project_settings": "embed://111.json",
