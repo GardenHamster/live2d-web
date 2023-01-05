@@ -66,6 +66,9 @@
 }
 ```
 
+### 修改样式
+- 图标大小和看板娘位置等需要自行修改根目录下的`waifu.css`
+
 ### 分享一些我找到的模型仓库
 - https://github.com/Eikanya/Live2d-model
 - https://github.com/imuncle/live2d
