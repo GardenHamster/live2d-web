@@ -6,6 +6,7 @@ class Model {
         let { modelPath, live2dPath } = config;
         if (!modelPath.endsWith("/")) modelPath += "/";
         if (!live2dPath.endsWith("/")) live2dPath += "/";
+        this.lock = false;
         this.live2dPath = live2dPath;
         this.modelPath = modelPath;
         this.app = new PIXI.Application({
@@ -31,6 +32,7 @@ class Model {
     }
 
     async loadNextModel() {
+        if (this.lock) return;
         let modelId = localStorage.getItem("modelId");
         if (!this.modelList) await this.loadModelList();
         const index = (++modelId >= this.modelList.models.length) ? 0 : modelId;
@@ -38,6 +40,7 @@ class Model {
     }
 
     async loadNextTexture() {
+        if (this.lock) return;
         const modelId = Number(localStorage.getItem("modelId"));
         const modelTexturesId = Number(localStorage.getItem("modelTexturesId"));
         if (!this.modelList) await this.loadModelList();
@@ -47,6 +50,7 @@ class Model {
     }
 
     async loadRandTexture() {
+        if (this.lock) return;
         const modelId = Number(localStorage.getItem("modelId"));
         const modelTexturesId = Number(localStorage.getItem("modelTexturesId"));
         if (!this.modelList) await this.loadModelList();
@@ -62,10 +66,12 @@ class Model {
         if (target.anchor_x == null) target.anchor_x = 0.5;
         if (target.anchor_y == null) target.anchor_y = 0.5;
 
+        this.lock = true;
         PIXI.live2d.config.cubism4.setOpacityFromMotion = true;
         PIXI.live2d.SoundManager.volume = 0.5;
 
         if (this.loadedList[modelId] != null && this.loadedList[modelId][modelTexturesId] != null) {
+            setTimeout(() => { this.lock = false; }, 1000);
             let model = this.loadedList[modelId][modelTexturesId];
             if (this.currentModel != null) this.currentModel.visible = false;
             this.currentModel = model;
@@ -108,6 +114,7 @@ class Model {
         }
 
         model.once('load', () => {
+            console.log('live2d mode loaded');
             const liv2dDom = document.getElementById('live2d');
             model.rotation = Math.PI;
             model.skew.x = Math.PI;
@@ -125,6 +132,7 @@ class Model {
 
         model.once('ready', () => {
             console.log('live2d mode ready');
+            setTimeout(() => { this.lock = false; }, 1000);
             model.internalModel.motionManager.on('motionStart', (group, index, audio) => {
                 console.log(`live2d mode motion '${group}' start`);
                 const motionGroups = model.motionGroups();
