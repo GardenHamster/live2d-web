@@ -8,114 +8,98 @@
 		"shake": [
 			{
 				"file": "motions/confused.mtn",
-				"sound": "sound/D_Sak_Live2D001.wav",
-				"text": 155079,
+				"sound": "sound/confused.mp3",
+				"text": "呜哇哇哇快停下，不要再转了，头都快要晕了",
 				"sound_delay": -1
 			}
 		],
 		"tap_head": [
 			{
 				"file": "motions/happy.mtn",
-				"sound": "sound/D_Sak_Live2D002.wav",
-				"text": 155080,
+				"sound": "sound/happy.mp3",
+				"text": "呐呐，你说我和小狐狸哪一个更可爱？应该是我吧？诶嘿嘿。",
 				"sound_delay": -1
 			}
 		],
 		"tap_face": [
 			{
-				"file": "motions/happy.mtn",
-				"sound": "sound/D_Sak_Live2D002.wav",
-				"text": 155080,
+				"file": "motions/laugh.mtn",
+				"sound": "sound/hat.mp3",
+				"text": "诶嘿嘿，要是能够一直戴着这顶小狐狸帽子就好了，真希望它不要长大啊......",
 				"sound_delay": -1
 			}
 		],
 		"tap_breast": [
 			{
-				"file": "motions/happy.mtn",
-				"sound": "sound/D_Sak_Live2D002.wav",
-				"text": 155080,
+				"file": "motions/laugh.mtn",
+				"sound": "sound/littleFox.mp3",
+				"text": "这只小狐狸很不一般哦，虽然现在还无法听懂他的话语，但是似乎它一直想要诉说什么呢。",
 				"sound_delay": -1
 			}
 		],
 		"tap_belly": [
 			{
-				"file": "motions/happy.mtn",
-				"sound": "sound/D_Sak_Live2D002.wav",
-				"text": 155080,
+				"file": "motions/soft.mtn",
+				"sound": "sound/urgent.mp3",
+				"text": "紧急的事态吗？那就快去吧，我们会在这里等你回来的！",
 				"sound_delay": -1
 			}
 		],
 		"tap_leg": [
 			{
-				"file": "motions/happy.mtn",
-				"sound": "sound/D_Sak_Live2D002.wav",
-				"text": 155080,
-				"sound_delay": -1
-			}
-		],
-		"mail": [
-			{
-				"file": "motions/soft.mtn",
-				"sound": "sound/D_Sak_Live2D003.wav",
-				"text": 155081,
-				"sound_delay": -1
-			}
-		],
-		"morning": [
-			{
-				"file": "motions/smart.mtn",
-				"sound": "sound/D_Sak_Live2D004.wav",
-				"text": 155082,
-				"sound_delay": -1
-			},
-			{
-				"file": "motions/soft.mtn",
-				"sound": "sound/D_Sak_Live2D011.wav",
-				"text": 155089,
-				"sound_delay": -1
-			}
-		],
-		"idle": [],
-		"activity": [
-			{
-				"file": "motions/soft.mtn",
-				"sound": "sound/D_Sak_Live2D006.wav",
-				"text": 155084,
+				"file": "motions/joke.mtn",
+				"sound": "sound/joke.mp3",
+				"text": "绯狱丸，不要这么抱着我的脚，我都走不动了啦。",
 				"sound_delay": -1
 			}
 		],
 		"born": [
 			{
 				"file": "motions/smart.mtn",
-				"sound": "sound/D_Sak_Live2D009.wav",
-				"text": 155087,
+				"sound": "sound/smart.mp3",
+				"text": "哈啰，八重樱她的小伙伴们来找你玩了哦。快表示欢迎吧！",
+				"sound_delay": -1
+			}
+		],
+		"mail": [
+			{
+				"file": "motions/soft.mtn",
+				"sound": "sound/mail.mp3",
+				"text": "你的信到了，先帮你放在这里，到时候要记得看哦。",
 				"sound_delay": -1
 			}
 		],
 		"friend": [
 			{
 				"file": "motions/soft.mtn",
-				"sound": "sound/D_Sak_Live2D010.wav",
-				"text": 155088,
+				"sound": "sound/friend.mp3",
+				"text": "哦哦，有人想要和你做朋友哦，看来你还挺受欢迎的嘛",
 				"sound_delay": -1
 			}
 		],
-		"afternoon": [
+		"morning": [],
+		"idle": [
+			{
+				"file": "motions/idle.mtn"
+			}
+		],
+		"timing": [
 			{
 				"file": "motions/soft.mtn",
-				"sound": "sound/D_Sak_Live2D012.wav",
-				"text": 155090,
+				"sound": "sound/urgent.mp3",
+				"text": "紧急的事态吗？那就快去吧，我们会在这里等你回来的！",
+				"sound_delay": -1
+			},
+			{
+				"file": "motions/laugh.mtn",
+				"sound": "sound/littleFox.mp3",
+				"text": "这只小狐狸很不一般哦，虽然现在还无法听懂他的话语，但是似乎它一直想要诉说什么呢。",
 				"sound_delay": -1
 			}
 		],
-		"evening": [
-			{
-				"file": "motions/soft.mtn",
-				"sound": "sound/D_Sak_Live2D013.wav",
-				"text": 155091,
-				"sound_delay": -1
-			}
-		]
+		"activity": [],
+		"afternoon": [],
+		"evening": []
 	},
 	"physics": "physics.json",
 	"project_settings": "embed://111.json",

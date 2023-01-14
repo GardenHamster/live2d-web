@@ -53,7 +53,20 @@
 				"sound_delay": 0
 			}
 		],
+		"born": [
+			{
+				"file": "motions/3.mtn",
+				"sound": "sound/kiro_live2d_003.mp3",
+				"text": "你知道晴时雨么？当阳光透过雨滴的时候，那一定是雨滴一生中最闪耀的时刻吧~",
+				"sound_delay": 0
+			}
+		],
 		"idle": [
+			{
+				"file": "motions/idle.mtn"
+			}
+		],
+		"timing": [
 			{
 				"file": "motions/3.mtn",
 				"sound": "sound/kiro_live2d_003.mp3",
@@ -64,14 +77,6 @@
 				"file": "motions/4.mtn",
 				"sound": "sound/kiro_live2d_004.mp3",
 				"text": "不管是作为一名女武神还是作为一名女性,塞西莉亚大人都是我永远的偶像",
-				"sound_delay": 0
-			}
-		],
-		"born": [
-			{
-				"file": "motions/3.mtn",
-				"sound": "sound/kiro_live2d_003.mp3",
-				"text": "你知道晴时雨么？当阳光透过雨滴的时候，那一定是雨滴一生中最闪耀的时刻吧~",
 				"sound_delay": 0
 			}
 		],

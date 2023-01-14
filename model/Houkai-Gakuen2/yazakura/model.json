@@ -53,7 +53,20 @@
 				"sound_delay": -2
 			}
 		],
+		"born": [
+			{
+				"file": "motions/5.mtn",
+				"sound": "sound/yazakura_live2d_005.mp3",
+				"text": "汝相信神明吗？",
+				"sound_delay": -2
+			}
+		],
 		"idle": [
+			{
+				"file": "motions/idle.mtn"
+			}
+		],
+		"timing": [
 			{
 				"file": "motions/5.mtn",
 				"sound": "sound/yazakura_live2d_005.mp3",
@@ -64,14 +77,6 @@
 				"file": "motions/6.mtn",
 				"sound": "sound/yazakura_live2d_006.mp3",
 				"text": "汝要吃饭团吗？",
-				"sound_delay": -2
-			}
-		],
-		"born": [
-			{
-				"file": "motions/5.mtn",
-				"sound": "sound/yazakura_live2d_005.mp3",
-				"text": "汝相信神明吗？",
 				"sound_delay": -2
 			}
 		],

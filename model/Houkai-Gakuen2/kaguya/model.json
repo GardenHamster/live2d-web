@@ -53,17 +53,20 @@
 				"sound_delay": -2
 			}
 		],
-		"mail": [
+		"born": [
 			{
-				"file": "motions/idle.mtn"
-			}
-		],
-		"morning": [
-			{
-				"file": "motions/idle.mtn"
+				"file": "motions/5.mtn",
+				"sound": "sound/kaguya_live2d_005.mp3",
+				"text": "因为稀少，所以才显得弥足珍贵，生命也是如此吧。",
+				"sound_delay": -2
 			}
 		],
 		"idle": [
+			{
+				"file": "motions/idle.mtn"
+			}
+		],
+		"timing": [
 			{
 				"file": "motions/1.mtn",
 				"sound": "sound/kaguya_live2d_001.mp3",
@@ -77,17 +80,19 @@
 				"sound_delay": -2
 			}
 		],
-		"activity": [
+		"mail": [
 			{
 				"file": "motions/idle.mtn"
 			}
 		],
-		"born": [
+		"morning": [
 			{
-				"file": "motions/5.mtn",
-				"sound": "sound/kaguya_live2d_005.mp3",
-				"text": "因为稀少，所以才显得弥足珍贵，生命也是如此吧。",
-				"sound_delay": -2
+				"file": "motions/idle.mtn"
+			}
+		],
+		"activity": [
+			{
+				"file": "motions/idle.mtn"
 			}
 		],
 		"friend": [
