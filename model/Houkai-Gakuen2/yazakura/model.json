@@ -1,94 +1,190 @@
 {
-	"version":"Sample 1.0.0",
-	"model":"yazakura.moc",
-	"textures":[
+	"version": "Sample 1.0.0",
+	"model": "yazakura.moc",
+	"textures": [
 		"yazakura.2048/texture_00.png"
 	],
-	"motions":{
-		"flick_head":[
-			{"file":"motions/1.mtn","sound":"sound/sakura_live2d_002.wav","text":81196,"sound_delay":-2}
+	"motions": {
+		"shake": [
+			{
+				"file": "motions/7.mtn",
+				"sound": "sound/yazakura_live2d_007.mp3",
+				"text": "对于经历过修行的我来说，这种程度根本不足为惧",
+				"sound_delay": -2
+			}
 		],
-		"born":[
-			{"file":"motions/6.mtn","sound":"sound/sakura_live2d_011.wav","text":81205,"sound_delay":-2}
+		"tap_head": [
+			{
+				"file": "motions/2.mtn",
+				"sound": "sound/yazakura_live2d_002.mp3",
+				"text": "从汝的手心可以感觉到柔和的温暖......",
+				"sound_delay": -2
+			}
 		],
-		"friend":[
-			{"file":"motions/idle.mtn"}
+		"tap_face": [
+			{
+				"file": "motions/2.mtn",
+				"sound": "sound/yazakura_live2d_002.mp3",
+				"text": "从汝的手心可以感觉到柔和的温暖......",
+				"sound_delay": -2
+			}
 		],
-		"mail":[
-			{"file":"motions/idle.mtn"}
+		"tap_belly": [
+			{
+				"file": "motions/4.mtn",
+				"sound": "sound/yazakura_live2d_004.mp3",
+				"text": "不要摸吾，吾正在吃饭团！",
+				"sound_delay": -2
+			}
 		],
-		"other":[
-			{"file":"motions/idle.mtn"}
+		"tap_breast": [
+			{
+				"file": "motions/3.mtn",
+				"sound": "sound/yazakura_live2d_003.mp3",
+				"text": "唔......！不许碰那里！",
+				"sound_delay": -2
+			}
 		],
-		"tap_face":[
-			{"file":"motions/2.mtn","sound":"sound/sakura_live2d_003.wav","text":81197,"sound_delay":-2}
+		"tap_leg": [
+			{
+				"file": "motions/4.mtn",
+				"sound": "sound/yazakura_live2d_004.mp3",
+				"text": "不要摸吾，吾正在吃饭团！",
+				"sound_delay": -2
+			}
 		],
-		"tap_belly":[
-			{"file":"motions/4.mtn","sound":"sound/sakura_live2d_005.wav","text":81199,"sound_delay":-2}
-		],		
-		"tap_breast":[
-
-			{"file":"motions/3.mtn","sound":"sound/sakura_live2d_004.wav","text":81198,"sound_delay":-2}
+		"idle": [
+			{
+				"file": "motions/5.mtn",
+				"sound": "sound/yazakura_live2d_005.mp3",
+				"text": "汝相信神明吗？",
+				"sound_delay": -2
+			},
+			{
+				"file": "motions/6.mtn",
+				"sound": "sound/yazakura_live2d_006.mp3",
+				"text": "汝要吃饭团吗？",
+				"sound_delay": -2
+			}
 		],
-		"tap_leg":[
-
-			{"file":"motions/4.mtn","sound":"sound/sakura_live2d_005.wav","text":81199,"sound_delay":-2}
-		],				
-		"morning":[
-			{"file":"motions/idle.mtn"}
+		"born": [
+			{
+				"file": "motions/5.mtn",
+				"sound": "sound/yazakura_live2d_005.mp3",
+				"text": "汝相信神明吗？",
+				"sound_delay": -2
+			}
 		],
-		"evening":[
-			{"file":"motions/idle.mtn"}
+		"friend": [
+			{
+				"file": "motions/idle.mtn"
+			}
 		],
-		"afternoon":[
-			{"file":"motions/idle.mtn"}
+		"mail": [
+			{
+				"file": "motions/idle.mtn"
+			}
 		],
-		"idle":[
-			{"file":"motions/5.mtn","sound":"sound/sakura_live2d_006.wav","text":81200,"sound_delay":-2},
-			{"file":"motions/6.mtn","sound":"sound/sakura_live2d_011.wav","text":81205,"sound_delay":-2},
-			{"file":"motions/idle.mtn"}
+		"other": [
+			{
+				"file": "motions/idle.mtn"
+			}
 		],
-		"shake":[
-			{"file":"motions/7.mtn","sound":"sound/sakura_live2d_001.wav","text":81195,"sound_delay":-2}
+		"morning": [
+			{
+				"file": "motions/idle.mtn"
+			}
 		],
-		"activity":[
-			{"file":"motions/idle.mtn"}
+		"evening": [
+			{
+				"file": "motions/idle.mtn"
+			}
+		],
+		"afternoon": [
+			{
+				"file": "motions/idle.mtn"
+			}
+		],
+		"activity": [
+			{
+				"file": "motions/idle.mtn"
+			}
 		]
 	},
-	"physics":"physics.json",
-	"project_settings":"embed://111.json",
-	"name":"",
-	"layout":
-	{
+	"physics": "physics.json",
+	"project_settings": "embed://111.json",
+	"name": "",
+	"layout": {
 		"image_height": 1136,
 		"image_center_y": 0.5,
 		"head_center_y": 0.25,
 		"time_to_max_speed": 0.08,
 		"face_max_angle": 20
 	},
-	"hit_areas":
-	[
-		{"name":"head", "id":"D_CORE_HEAD"},
-		{"name":"face", "id":"D_CORE_FACE"},
-		{"name":"breast", "id":"D_CORE_BREAST"},
-		{"name":"belly", "id":"D_CORE_BELLY"},
-		{"name":"leg", "id":"D_CORE_LEG"}
+	"hit_areas": [
+		{
+			"name": "head",
+			"id": "D_CORE_HEAD"
+		},
+		{
+			"name": "face",
+			"id": "D_CORE_FACE"
+		},
+		{
+			"name": "breast",
+			"id": "D_CORE_BREAST"
+		},
+		{
+			"name": "belly",
+			"id": "D_CORE_BELLY"
+		},
+		{
+			"name": "leg",
+			"id": "D_CORE_LEG"
+		}
 	],
-	"motion_settings":
-	{
-		"idle":{"cd":20},
-		"morning":{"cd":3600},
-		"afternoon":{"cd":3600},
-		"evening":{"cd":3600},
-		"activity":{"cd":3600},
-		"friend":{"cd":18000},
-		"mail":{"cd":18000},
-		"tap_breast":{"cd":10},
-		"tap_belly":{"cd":10},
-		"tap_leg":{"cd":10},
-		"tap_face":{"cd":10},
-		"flick_head":{"cd":20},
-		"shake":{"cd":60},
-		"born":{"cd":60}
+	"motion_settings": {
+		"idle": {
+			"cd": 20
+		},
+		"morning": {
+			"cd": 3600
+		},
+		"afternoon": {
+			"cd": 3600
+		},
+		"evening": {
+			"cd": 3600
+		},
+		"activity": {
+			"cd": 3600
+		},
+		"friend": {
+			"cd": 18000
+		},
+		"mail": {
+			"cd": 18000
+		},
+		"tap_breast": {
+			"cd": 10
+		},
+		"tap_belly": {
+			"cd": 10
+		},
+		"tap_leg": {
+			"cd": 10
+		},
+		"tap_face": {
+			"cd": 10
+		},
+		"flick_head": {
+			"cd": 20
+		},
+		"shake": {
+			"cd": 60
+		},
+		"born": {
+			"cd": 60
+		}
 	}
 }

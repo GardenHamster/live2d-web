@@ -15,13 +15,6 @@
                 "center_y": 0.75,
                 "idleInterval": 30000,
                 "showWaifuTips": false
-            },
-            {
-                "model_json": "Houkai-Gakuen2/bronya/model.json",
-                "model_scale": 0.8,
-                "center_y": 0.6,
-                "idleInterval": 30000,
-                "showWaifuTips": false
             }
         ],
         [
@@ -41,14 +34,14 @@
             },
             {
                 "model_json": "Houkai-Gakuen2/kiro/model.json",
-                "model_scale": 0.6,
-                "center_y": 0.8,
+                "model_scale": 0.55,
+                "center_y": 0.72,
                 "idleInterval": 30000,
                 "showWaifuTips": false
             },
             {
                 "model_json": "Houkai-Gakuen2/yazakura/model.json",
-                "model_scale": 0.25,
+                "model_scale": 0.23,
                 "center_y": 0.85,
                 "idleInterval": 30000,
                 "showWaifuTips": false
