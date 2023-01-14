@@ -21,7 +21,7 @@
             live2d_path: './live2d-web/',
             model_path: './live2d-web/model/'
         };
-        initLive2d(localConfig);
+        initLive2d(localConfig);//在合适的时机初始化
     }
 </script>
 ```
@@ -35,7 +35,7 @@
             live2d_path: 'https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/',
             model_path: 'https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/model/'
         };
-        initLive2d(cdnConfig);
+        initLive2d(cdnConfig);//在合适的时机初始化
     }
 </script>
 ```
@@ -48,7 +48,11 @@
 ### model.json
 - 假如：`hit_areas`中存在`head`，那么`motions`中与之对应为'tap_head'
 - 假如：`hit_areas`中存在`face`，那么`motions`中与之对应为'tap_face'
-- 以此类推......可以参考[kaguya/model.json](https://github.com/GardenHamster/live2d-web/blob/main/model/Houkai-Gakuen2/kaguya/model.json)
+- 以此类推......
+
+- "motions"中如果存在key为`Idle`时，需要将`Idle`统一修改为`idle`，否则无法循环播放'idle'动作，模型会显得比较呆板
+- "motions"中的"timing"是我额外添加的参数，用于在循环播放`idle`的同时间可以间隔播放`timing`中的内容
+- 详细可以参考[kaguya/model.json](https://github.com/GardenHamster/live2d-web/blob/main/model/Houkai-Gakuen2/kaguya/model.json)
 
 ### model_list.json
 - `models[0][0]`是启动页面后第一个加载的模型，可以根据自己的需要调整模型的位置
@@ -61,7 +65,7 @@
     "anchor_x": 0.5,    //相当于模型的中心点,center_x基于它进行偏移,可不填,默认:0.5
     "anchor_y": 0.5,    //相当于模型的中心点,center_y基于它进行偏移,可不填,默认:0.5
     "born_tip": "德丽莎世界第一可爱",//模型加载完毕后,对话框中显示的信息,比model.json中text的优先级高
-    "idleInterval": 30000,//idle动画的间隔时间(毫秒),可不填,默认表示连续播放
+    "timingInterval": 60000,//如果该值>0，则会按照这个间隔播放名为'timing'的motions，单位：毫秒
     "showWaifuTips": false //对话框中是否显示waifu-tips.json中的信息,可不填,默认为true
 }
 ```
