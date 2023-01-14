@@ -61,17 +61,17 @@
 				"sound_delay": -2
 			}
 		],
-		"idle": [
-			{
-				"file": "motions/idle.mtn"
-			}
-		],
 		"timing": [
 			{
 				"file": "motions/9.mtn",
 				"sound": "sound/theresa_live2d_009.mp3",
 				"text": "战斗？看在你这么请求的份上，就用一根手指帮你一下吧",
 				"sound_delay": -2
+			}
+		],
+		"idle": [
+			{
+				"file": "motions/idle.mtn"
 			}
 		],
 		"activity": []

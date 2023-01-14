@@ -61,6 +61,37 @@
 				"sound_delay": -1
 			}
 		],
+		"timing": [
+			{
+				"file": "motions/soft.mtn",
+				"sound": "sound/urgent.mp3",
+				"text": "紧急的事态吗？那就快去吧，我们会在这里等你回来的！",
+				"sound_delay": -1
+			},
+			{
+				"file": "motions/laugh.mtn",
+				"sound": "sound/littleFox.mp3",
+				"text": "这只小狐狸很不一般哦，虽然现在还无法听懂他的话语，但是似乎它一直想要诉说什么呢。",
+				"sound_delay": -1
+			},
+			{
+				"file": "motions/joke.mtn",
+				"sound": "sound/joke.mp3",
+				"text": "绯狱丸，不要这么抱着我的脚，我都走不动了啦。",
+				"sound_delay": -1
+			},
+			{
+				"file": "motions/laugh.mtn",
+				"sound": "sound/hat.mp3",
+				"text": "诶嘿嘿，要是能够一直戴着这顶小狐狸帽子就好了，真希望它不要长大啊......",
+				"sound_delay": -1
+			}
+		],
+		"idle": [
+			{
+				"file": "motions/idle.mtn"
+			}
+		],
 		"mail": [
 			{
 				"file": "motions/soft.mtn",
@@ -78,25 +109,6 @@
 			}
 		],
 		"morning": [],
-		"idle": [
-			{
-				"file": "motions/idle.mtn"
-			}
-		],
-		"timing": [
-			{
-				"file": "motions/soft.mtn",
-				"sound": "sound/urgent.mp3",
-				"text": "紧急的事态吗？那就快去吧，我们会在这里等你回来的！",
-				"sound_delay": -1
-			},
-			{
-				"file": "motions/laugh.mtn",
-				"sound": "sound/littleFox.mp3",
-				"text": "这只小狐狸很不一般哦，虽然现在还无法听懂他的话语，但是似乎它一直想要诉说什么呢。",
-				"sound_delay": -1
-			}
-		],
 		"activity": [],
 		"afternoon": [],
 		"evening": []

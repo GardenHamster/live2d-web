@@ -61,11 +61,6 @@
 				"sound_delay": -2
 			}
 		],
-		"idle": [
-			{
-				"file": "motions/idle.mtn"
-			}
-		],
 		"timing": [
 			{
 				"file": "motions/6.mtn",
@@ -78,6 +73,11 @@
 				"sound": "sound/kuroe_live2d_007.mp3",
 				"text": "您能听见么，来自灵魂深处的律动。",
 				"sound_delay": -2
+			}
+		],
+		"idle": [
+			{
+				"file": "motions/idle.mtn"
 			}
 		],
 		"mail": [

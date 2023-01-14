@@ -8,11 +8,13 @@
                 "center_y": 0.65,
                 "timingInterval": 60000,
                 "showWaifuTips": false
-            },
+            }
+        ],
+        [
             {
                 "model_json": "Houkai-Gakuen2/sirin/model.json",
-                "model_scale": 0.45,
-                "center_y": 0.75,
+                "model_scale": 0.48,
+                "center_y": 0.87,
                 "timingInterval": 60000,
                 "showWaifuTips": false
             }
@@ -43,7 +45,7 @@
                 "model_json": "Houkai-Gakuen2/yazakura/model.json",
                 "model_scale": 0.23,
                 "center_y": 0.85,
-                "timingInterval": 60000,
+                "timingInterval": 300000,
                 "showWaifuTips": false
             },
             {

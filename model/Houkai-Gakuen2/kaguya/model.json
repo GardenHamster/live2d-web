@@ -61,11 +61,6 @@
 				"sound_delay": -2
 			}
 		],
-		"idle": [
-			{
-				"file": "motions/idle.mtn"
-			}
-		],
 		"timing": [
 			{
 				"file": "motions/1.mtn",
@@ -78,6 +73,11 @@
 				"sound": "sound/kaguya_live2d_002.mp3",
 				"text": "你的手有点冷呢......这次就换我来温暖你吧......",
 				"sound_delay": -2
+			}
+		],
+		"idle": [
+			{
+				"file": "motions/idle.mtn"
 			}
 		],
 		"mail": [

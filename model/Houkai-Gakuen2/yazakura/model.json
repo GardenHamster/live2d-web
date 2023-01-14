@@ -29,19 +29,19 @@
 				"sound_delay": -2
 			}
 		],
-		"tap_belly": [
-			{
-				"file": "motions/4.mtn",
-				"sound": "sound/yazakura_live2d_004.mp3",
-				"text": "不要摸吾，吾正在吃饭团！",
-				"sound_delay": -2
-			}
-		],
 		"tap_breast": [
 			{
 				"file": "motions/3.mtn",
 				"sound": "sound/yazakura_live2d_003.mp3",
 				"text": "唔......！不许碰那里！",
+				"sound_delay": -2
+			}
+		],
+		"tap_belly": [
+			{
+				"file": "motions/4.mtn",
+				"sound": "sound/yazakura_live2d_004.mp3",
+				"text": "不要摸吾，吾正在吃饭团！",
 				"sound_delay": -2
 			}
 		],
@@ -61,11 +61,6 @@
 				"sound_delay": -2
 			}
 		],
-		"idle": [
-			{
-				"file": "motions/idle.mtn"
-			}
-		],
 		"timing": [
 			{
 				"file": "motions/5.mtn",
@@ -78,6 +73,11 @@
 				"sound": "sound/yazakura_live2d_006.mp3",
 				"text": "汝要吃饭团吗？",
 				"sound_delay": -2
+			}
+		],
+		"idle": [
+			{
+				"file": "motions/idle.mtn"
 			}
 		],
 		"friend": [

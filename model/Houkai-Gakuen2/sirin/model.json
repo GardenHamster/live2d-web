@@ -5,64 +5,92 @@
 		"sirin.2048/texture_00.png"
 	],
 	"motions": {
-		"flick_head": [
+		"shake": [
 			{
-				"file": "motions/1.mtn",
-				"sound": "Ev_Cv_Partner_1220_002_cn",
-				"text": 155160,
-				"sound_delay": 0,
-				"sound1": "Ev_Cv_Partner_1220_002",
-				"text1": 155154,
-				"sound_delay1": 0
+				"file": "motions/7.mtn",
+				"sound": "sound/sirin_live2d_007.mp3",
+				"text": "啊！吓死西琳了！再这样恶作剧的话，西琳就不跟你一起玩了！哼！",
+				"sound_delay": 0
+			}
+		],
+		"tap_head": [
+			{
+				"file": "motions/2.mtn",
+				"sound": "sound/sirin_live2d_002.mp3",
+				"text": "西琳想创造一个美好的世界。你会跟西琳一起来吗？",
+				"sound_delay": 0
 			}
 		],
 		"tap_face": [
 			{
 				"file": "motions/2.mtn",
-				"sound": "Ev_Cv_Partner_1220_003_cn",
-				"text": 155161,
-				"sound_delay": 0,
-				"sound1": "Ev_Cv_Partner_1220_003",
-				"text1": 155155,
-				"sound_delay1": 0
+				"sound": "sound/sirin_live2d_002.mp3",
+				"text": "西琳想创造一个美好的世界。你会跟西琳一起来吗？",
+				"sound_delay": 0
 			}
 		],
 		"tap_breast": [
 			{
 				"file": "motions/3.mtn",
-				"sound": "Ev_Cv_Partner_1220_004_cn",
-				"text": 155162,
-				"sound_delay": 0,
-				"sound1": "Ev_Cv_Partner_1220_004",
-				"text1": 155156,
-				"sound_delay1": 0
-			}
-		],
-		"tap_leg": [
-			{
-				"file": "motions/3.mtn",
-				"sound": "Ev_Cv_Partner_1220_004_cn",
-				"text": 155162,
-				"sound_delay": 0,
-				"sound1": "Ev_Cv_Partner_1220_004",
-				"text1": 155156,
-				"sound_delay1": 0
+				"sound": "sound/sirin_live2d_003.mp3",
+				"text": "好啦好啦，好孩子是不能吵架的哟",
+				"sound_delay": 0
 			}
 		],
 		"tap_belly": [
 			{
 				"file": "motions/3.mtn",
-				"sound": "Ev_Cv_Partner_1220_004_cn",
-				"text": 155162,
-				"sound_delay": 0,
-				"sound1": "Ev_Cv_Partner_1220_004",
-				"text1": 155156,
-				"sound_delay1": 0
+				"sound": "sound/sirin_live2d_003.mp3",
+				"text": "好啦好啦，好孩子是不能吵架的哟",
+				"sound_delay": 0
 			}
 		],
-		"mail": [
+		"tap_leg": [
 			{
-				"file": "motions/idle.mtn"
+				"file": "motions/3.mtn",
+				"sound": "sound/sirin_live2d_003.mp3",
+				"text": "好啦好啦，好孩子是不能吵架的哟",
+				"sound_delay": 0
+			}
+		],
+		"born": [
+			{
+				"file": "motions/5.mtn",
+				"sound": "sound/sirin_live2d_005_1.mp3",
+				"text": "兵噗噜~乓噗噜~嘟噜噜噜噜嗙！怎么样，是让心情变好的魔法哟！",
+				"sound_delay": 0
+			},
+			{
+				"file": "motions/5.mtn",
+				"sound": "sound/sirin_live2d_005_2.mp3",
+				"text": "兵噗噜~乓噗噜~嘟噜噜噜噜嗙！怎么样，心情有变好点了吗？",
+				"sound_delay": 0
+			},
+			{
+				"file": "motions/6.mtn",
+				"sound": "sound/sirin_live2d_006.mp3",
+				"text": "拉钩上吊~一百年不许变！约好了就不能反悔了哟！",
+				"sound_delay": 0
+			}
+		],
+		"timing": [
+			{
+				"file": "motions/5.mtn",
+				"sound": "sound/sirin_live2d_005_1.mp3",
+				"text": "兵噗噜~乓噗噜~嘟噜噜噜噜嗙！怎么样，是让心情变好的魔法哟！",
+				"sound_delay": 0
+			},
+			{
+				"file": "motions/5.mtn",
+				"sound": "sound/sirin_live2d_005_2.mp3",
+				"text": "兵噗噜~乓噗噜~嘟噜噜噜噜嗙！怎么样，心情有变好点了吗？",
+				"sound_delay": 0
+			},
+			{
+				"file": "motions/6.mtn",
+				"sound": "sound/sirin_live2d_006.mp3",
+				"text": "拉钩上吊~一百年不许变！约好了就不能反悔了哟！",
+				"sound_delay": 0
 			}
 		],
 		"idle": [
@@ -70,63 +98,14 @@
 				"file": "motions/idle.mtn"
 			}
 		],
-		"timing": [
-			{
-				"file": "motions/5.mtn",
-				"sound": "Ev_Cv_Partner_1220_009_cn",
-				"text": 155166,
-				"sound_delay": 0,
-				"sound1": "Ev_Cv_Partner_1220_009",
-				"text1": 155157,
-				"sound_delay1": 0
-			},
-			{
-				"file": "motions/5.mtn",
-				"sound": "Ev_Cv_Partner_1220_005_cn",
-				"text": 155163,
-				"sound_delay": 0,
-				"sound1": "Ev_Cv_Partner_1220_009",
-				"text1": 155157,
-				"sound_delay1": 0
-			},
-			{
-				"file": "motions/6.mtn",
-				"sound": "Ev_Cv_Partner_1220_010_cn",
-				"text": 155164,
-				"sound_delay": 0,
-				"sound1": "Ev_Cv_Partner_1220_010",
-				"text1": 155158,
-				"sound_delay1": 0
-			},
+		"mail": [
 			{
 				"file": "motions/idle.mtn"
-			}
-		],
-		"shake": [
-			{
-				"file": "motions/7.mtn",
-				"sound": "Ev_Cv_Partner_1220_001_cn",
-				"text": 155165,
-				"sound_delay": 0,
-				"sound1": "Ev_Cv_Partner_1220_001",
-				"text1": 155159,
-				"sound_delay1": 0
 			}
 		],
 		"activity": [
 			{
 				"file": "motions/idle.mtn"
-			}
-		],
-		"born": [
-			{
-				"file": "motions/2.mtn",
-				"sound": "Ev_Cv_Partner_1220_003_cn",
-				"text": 155161,
-				"sound_delay": 0,
-				"sound1": "Ev_Cv_Partner_1220_003",
-				"text1": 155155,
-				"sound_delay1": 0
 			}
 		],
 		"friend": [
