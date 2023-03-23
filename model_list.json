@@ -6,7 +6,7 @@
                 "model_scale": 0.3,
                 "center_x": 0.5,
                 "center_y": 0.65,
-                "timingInterval": 60000,
+                "timingInterval": 300000,
                 "showWaifuTips": false
             }
         ],
@@ -15,7 +15,7 @@
                 "model_json": "Houkai-Gakuen2/sirin/model.json",
                 "model_scale": 0.48,
                 "center_y": 0.87,
-                "timingInterval": 60000,
+                "timingInterval": 300000,
                 "showWaifuTips": false
             }
         ],
@@ -24,21 +24,21 @@
                 "model_json": "Houkai-Gakuen2/kaguya/model.json",
                 "model_scale": 0.5,
                 "center_y": 0.7,
-                "timingInterval": 60000,
+                "timingInterval": 300000,
                 "showWaifuTips": false
             },
             {
                 "model_json": "Houkai-Gakuen2/kuroe/model.json",
                 "model_scale": 0.6,
                 "center_y": 0.9,
-                "timingInterval": 60000,
+                "timingInterval": 300000,
                 "showWaifuTips": false
             },
             {
                 "model_json": "Houkai-Gakuen2/kiro/model.json",
                 "model_scale": 0.55,
                 "center_y": 0.72,
-                "timingInterval": 60000,
+                "timingInterval": 300000,
                 "showWaifuTips": false
             },
             {
@@ -52,7 +52,7 @@
                 "model_json": "Houkai-Gakuen2/bachongying/model.json",
                 "model_scale": 0.3,
                 "center_y": 0.3,
-                "timingInterval": 60000,
+                "timingInterval": 300000,
                 "showWaifuTips": false
             }
         ],
