@@ -1,0 +1,131 @@
+{
+	"Version": 3,
+	"Type": 0,
+	"FileReferences": {
+		"Moc": "model.moc3",
+		"Textures": [
+			"model.8192/texture_00.png",
+			"model.8192/texture_01.png",
+			"model.8192/texture_02.png"
+		],
+		"Physics": "model.physics3.json",
+		"PhysicsV2": {
+			"File": "model.physics3.json"
+		},
+		"Motions": {
+			"idle": [
+				{
+					"File": "motions/idle.motion3.json"
+				}
+			],
+			"born": [
+				{
+					"text": "兄弟你好香~~~~~",
+					"File": "motions/idle.motion3.json"
+				}
+			]
+		},
+		"Expressions": [
+			{
+				"Name": "exp01",
+				"File": "expressions/Param.exp3.json"
+			},
+			{
+				"Name": "exp02",
+				"File": "expressions/Param2.exp3.json"
+			},
+			{
+				"Name": "exp03",
+				"File": "expressions/Param3.exp3.json"
+			},
+			{
+				"Name": "exp04",
+				"File": "expressions/Param4.exp3.json"
+			},
+			{
+				"Name": "exp05",
+				"File": "expressions/Param5.exp3.json"
+			},
+			{
+				"Name": "exp06",
+				"File": "expressions/Param6.exp3.json"
+			},
+			{
+				"Name": "exp07",
+				"File": "expressions/Param7.exp3.json"
+			}
+		]
+	},
+	"Controllers": {
+		"ParamHit": {},
+		"ParamLoop": {},
+		"KeyTrigger": {},
+		"ParamTrigger": {},
+		"AreaTrigger": {},
+		"HandTrigger": {},
+		"EyeBlink": {
+			"MinInterval": 500,
+			"MaxInterval": 6000,
+			"Items": [
+				{
+					"Id": "ParamEyeROpen",
+					"Min": 0.0,
+					"Max": 1.0,
+					"BlendMode": 2,
+					"Input": 0
+				},
+				{
+					"Id": "ParamEyeLOpen",
+					"Min": 0.0,
+					"Max": 1.0,
+					"BlendMode": 2,
+					"Input": 0
+				}
+			],
+			"Enabled": true
+		},
+		"LipSync": {
+			"Gain": 5.0
+		},
+		"MouseTracking": {
+			"SmoothTime": 0.15,
+			"Enabled": true
+		},
+		"AutoBreath": {
+			"Enabled": true
+		},
+		"ExtraMotion": {
+			"Enabled": true
+		},
+		"Accelerometer": {
+			"Enabled": true
+		},
+		"Microphone": {},
+		"Transform": {},
+		"FaceTracking": {
+			"Enabled": true
+		},
+		"HandTracking": {},
+		"ParamValue": {},
+		"PartOpacity": {},
+		"ArtmeshOpacity": {},
+		"ArtmeshColor": {},
+		"ArtmeshCulling": {
+			"DefaultMode": 0
+		},
+		"IntimacySystem": {}
+	},
+	"HitAreas": [
+		{
+			"Name": "head",
+			"Id": "ArtMesh143",
+			"Motion": "Tap:head"
+		},
+		{
+			"Name": "breast",
+			"Id": "ArtMesh118",
+			"Motion": "Tap:breast"
+		}
+	],
+	"Options": {}
+}
