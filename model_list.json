@@ -12,32 +12,6 @@
         ],
         [
             {
-                "model_json": "palworld/chillet/model.model3.json",
-                "model_scale": 0.17,
-                "center_x": 0.5,
-                "center_y": 0.82,
-                "timingInterval": 300000,
-                "showWaifuTips": true
-            },
-            {
-                "model_json": "palworld/petallia/model.model3.json",
-                "model_scale": 0.17,
-                "center_x": 0.5,
-                "center_y": 0.75,
-                "timingInterval": 300000,
-                "showWaifuTips": true
-            },
-            {
-                "model_json": "palworld/cattiva/model.model3.json",
-                "model_scale": 0.18,
-                "center_x": 0.5,
-                "center_y": 0.75,
-                "timingInterval": 300000,
-                "showWaifuTips": true
-            }
-        ],
-        [
-            {
                 "model_json": "Houkai-Gakuen2/sirin/model.json",
                 "model_scale": 0.48,
                 "center_y": 0.87,
@@ -159,6 +133,32 @@
                 "model_json": "Other/Senko_Normals/senko.model3.json",
                 "model_scale": 0.28,
                 "born_tip": "Senko!"
+            }
+        ],
+        [
+            {
+                "model_json": "palworld/chillet/model.model3.json",
+                "model_scale": 0.17,
+                "center_x": 0.5,
+                "center_y": 0.82,
+                "timingInterval": 300000,
+                "showWaifuTips": true
+            },
+            {
+                "model_json": "palworld/petallia/model.model3.json",
+                "model_scale": 0.17,
+                "center_x": 0.5,
+                "center_y": 0.75,
+                "timingInterval": 300000,
+                "showWaifuTips": true
+            },
+            {
+                "model_json": "palworld/cattiva/model.model3.json",
+                "model_scale": 0.18,
+                "center_x": 0.5,
+                "center_y": 0.75,
+                "timingInterval": 300000,
+                "showWaifuTips": true
             }
         ]
     ]
