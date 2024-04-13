@@ -146,7 +146,8 @@ class Model {
                 if (motions.length < index + 1) return;
                 let motion = motions[index];
                 if (motion == null) return;
-                if (motion.text != null) showMessage(motion.text, 5000, 50);
+                let text = motion.text || motion.Text;
+                if (text != null) showMessage(text, 5000, 50);
             });
 
             model.internalModel.motionManager.state.shouldRequestIdleMotion = () => false;

@@ -12,6 +12,14 @@
         ],
         [
             {
+                "model_json": "Houkai-Gakuen2/红叶香水/1833_cn.model3.json",
+                "model_scale": 0.3,
+                "center_x": 0.5,
+                "center_y": 0.8,
+                "timingInterval": 300000,
+                "showWaifuTips": false
+            },
+            {
                 "model_json": "Houkai-Gakuen2/sirin/model.json",
                 "model_scale": 0.48,
                 "center_y": 0.87,

@@ -3,7 +3,7 @@
  * https://github.com/stevenjoezhang/live2d-widget
  */
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function (l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 (function () {
     'use strict';
 
@@ -12,7 +12,7 @@
     }
 
     function randomIndex(length, current) {
-        current=Number(current);
+        current = Number(current);
         if (length == 1) return 0;
         if (length == 2) return nextIndex(length, current);
         let index = Math.floor(Math.random() * length);
@@ -20,7 +20,7 @@
     }
 
     function nextIndex(length, current) {
-        current=Number(current);
+        current = Number(current);
         return current + 1 < length ? current + 1 : 0;
     }
 
@@ -188,7 +188,8 @@
                     if (motions.length < index + 1) return;
                     let motion = motions[index];
                     if (motion == null) return;
-                    if (motion.text != null) showMessage(motion.text, 5000, 50);
+                    let text = motion.text || motion.Text;
+                    if (text != null) showMessage(text, 5000, 50);
                 });
 
                 model.internalModel.motionManager.state.shouldRequestIdleMotion = () => false;
