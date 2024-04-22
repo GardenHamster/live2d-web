@@ -365,6 +365,14 @@
         (function initModel() {
             let modelId = Number(localStorage.getItem("modelId"));
             let modelTexturesId = Number(localStorage.getItem("modelTexturesId"));
+            let lastLoadAt = Number(localStorage.getItem("lastLoadAt"));
+            let currentTime = new Date().getTime();
+            if (lastLoadAt == null) lastLoadAt = 0;
+            if (lastLoadAt < currentTime - 7 * 24 * 60 * 60 * 1000) {
+                modelId = 0;
+                modelTexturesId = 0;
+                lastLoadAt = currentTime;
+            }
             model.loadModel(modelId, modelTexturesId);
             fetch(config.live2dPath + "waifu-tips.json")
                 .then(response => response.json())
