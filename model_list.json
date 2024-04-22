@@ -18,7 +18,9 @@
                 "center_y": 0.8,
                 "timingInterval": 300000,
                 "showWaifuTips": false
-            },
+            }
+        ],
+        [
             {
                 "model_json": "Houkai-Gakuen2/sirin/model.json",
                 "model_scale": 0.48,
@@ -34,21 +36,27 @@
                 "center_y": 0.7,
                 "timingInterval": 300000,
                 "showWaifuTips": false
-            },
+            }
+        ],
+        [
             {
                 "model_json": "Houkai-Gakuen2/kuroe/model.json",
                 "model_scale": 0.6,
                 "center_y": 0.9,
                 "timingInterval": 300000,
                 "showWaifuTips": false
-            },
+            }
+        ],
+        [
             {
                 "model_json": "Houkai-Gakuen2/kiro/model.json",
                 "model_scale": 0.55,
                 "center_y": 0.72,
                 "timingInterval": 300000,
                 "showWaifuTips": false
-            },
+            }
+        ],
+        [
             {
                 "model_json": "Houkai-Gakuen2/yazakura/model.json",
                 "model_scale": 0.23,
@@ -66,39 +74,13 @@
         ],
         [
             {
-                "model_json": "Potion-Maker/Pio/index.json",
-                "model_scale": 0.85,
-                "center_y": 0.5,
-                "born_tip": "来自 Potion Maker 的 Pio 酱 ~"
-            },
-            {
-                "model_json": "Potion-Maker/Tia/index.json",
-                "model_scale": 0.75,
-                "center_y": 0.5,
-                "born_tip": "来自 Potion Maker 的 Tia 酱 ~"
-            }
-        ],
-        [
-            {
-                "model_json": "bilibili-live/22/index.json",
-                "model_scale": 0.55,
-                "center_y": 0.55,
-                "born_tip": "来自 Bilibili Live 的 22 哦 ~"
-            },
-            {
-                "model_json": "bilibili-live/33/index.json",
-                "model_scale": 0.55,
-                "center_y": 0.55,
-                "born_tip": "来自 Bilibili Live 的 33 的说"
-            }
-        ],
-        [
-            {
                 "model_json": "HyperdimensionNeptunia/histoire/model.json",
                 "model_scale": 0.6,
                 "center_y": -0.20,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
-            },
+            }
+        ],
+        [
             {
                 "model_json": "HyperdimensionNeptunia/nepgear/model.json",
                 "model_scale": 0.28,
@@ -116,7 +98,9 @@
                 "model_scale": 0.28,
                 "center_y": -0.4,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列"
-            },
+            }
+        ],
+        [
             {
                 "model_json": "HyperdimensionNeptunia/nepmaid/model.json",
                 "model_scale": 0.3,
@@ -151,18 +135,12 @@
                 "center_y": 0.82,
                 "timingInterval": 300000,
                 "showWaifuTips": true
-            },
+            }
+        ],
+        [
             {
                 "model_json": "palworld/petallia/model.model3.json",
                 "model_scale": 0.17,
-                "center_x": 0.5,
-                "center_y": 0.75,
-                "timingInterval": 300000,
-                "showWaifuTips": true
-            },
-            {
-                "model_json": "palworld/cattiva/model.model3.json",
-                "model_scale": 0.18,
                 "center_x": 0.5,
                 "center_y": 0.75,
                 "timingInterval": 300000,
