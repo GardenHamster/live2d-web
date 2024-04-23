@@ -7,6 +7,9 @@
 (function () {
     'use strict';
 
+    let messageTimer;
+    let currentModel;
+
     function randomSelection(obj) {
         return Array.isArray(obj) ? obj[Math.floor(Math.random() * obj.length)] : obj;
     }
@@ -23,9 +26,6 @@
         current = Number(current);
         return current + 1 < length ? current + 1 : 0;
     }
-
-    let messageTimer;
-    let currentModel;
 
     function showMessage(text, timeout, priority) {
         if (!text || (sessionStorage.getItem("waifu-text") && sessionStorage.getItem("waifu-text") > priority)) return;
@@ -84,11 +84,12 @@
 
         async loadRandModel() {
             if (this.lock) return;
-            const modelId = Number(localStorage.getItem("modelId"));
+            const currentModelId = Number(localStorage.getItem("modelId"));
             if (!this.modelList) await this.loadModelList();
-            const index = randomIndex(this.modelList.models.length, modelId);
-            if (index == modelId) return;
-            this.loadModel(index, 0);
+            const modelId = randomIndex(this.modelList.models.length, currentModelId);
+            if (modelId == currentModelId) return;
+            const modelTexturesId = Math.floor(Math.random() * this.modelList.models[modelId].length);
+            this.loadModel(modelId, modelTexturesId);
         }
 
         async loadNextTexture() {
