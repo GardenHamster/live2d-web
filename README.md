@@ -61,6 +61,8 @@
 
 - 出场动画对应的key为`born`，区分大小写
 
+- 震机动画对应的key为`shake`，区分大小写
+
 - "motions"中的"timing"是我额外添加的参数，用于在循环播放`idle`的同时间可以间隔播放`timing`中的内容
 
 - 详细可以参考 [theresa/model.json](https://github.com/GardenHamster/live2d-web/blob/main/model/Houkai-Gakuen2/theresa/model.json)
