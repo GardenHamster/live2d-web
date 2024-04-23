@@ -7,7 +7,7 @@
 
 - 修改了`model_list.json`的格式，可自行调整模型大小和位置，播放对应的音频，显示对应的对话信息，可调整闲时动画的间隔
 
-- 移除了对[live2d_api](https://github.com/fghrsh/live2d_api)的依赖，触发点击事件的同时，对话框中显示model.json中与之对应的motion的text信息
+- 移除了对 [live2d_api](https://github.com/fghrsh/live2d_api) 的依赖，触发点击事件的同时，对话框中显示model.json中与之对应的motion的text信息
 
 - 移除了飞机大战和照相功能，加入了手机震动和看板随机按钮
 
@@ -52,9 +52,9 @@
 - 将模型注册到根目录下的 [model_list.json](https://github.com/GardenHamster/live2d-web/blob/main/model_list.json)
 
 ### model.json
-- 触摸动画对应的key为`tap_*****`
-- 例如：`hit_areas`中存在`head`，那么`motions`中与之对应为'tap_head'
-- 例如：`hit_areas`中存在`face`，那么`motions`中与之对应为'tap_face'
+- 触摸动画对应的key为`tap_*****`，区分大小写
+- 例如：触摸`head`对应的key为'tap_head'
+- 例如：触摸`face`对应的key为'tap_face'
 - 以此类推......
 
 - 待机动画对应的key为`idle`，区分大小写
