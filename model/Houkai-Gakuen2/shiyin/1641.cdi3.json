@@ -1,0 +1,1266 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "PARAM_ANGLE_X",
+			"GroupId": "",
+			"Name": "角度 X"
+		},
+		{
+			"Id": "PARAM_ANGLE_Y",
+			"GroupId": "",
+			"Name": "角度 Y"
+		},
+		{
+			"Id": "PARAM_ANGLE_Z",
+			"GroupId": "",
+			"Name": "角度 Z"
+		},
+		{
+			"Id": "PARAM_HEAD__Y",
+			"GroupId": "",
+			"Name": "Head_Y"
+		},
+		{
+			"Id": "PARAM_FACE_BAD",
+			"GroupId": "",
+			"Name": "失落阴影"
+		},
+		{
+			"Id": "PARAM_CHEEK",
+			"GroupId": "",
+			"Name": "脸颊泛红"
+		},
+		{
+			"Id": "PARAM_HAIR_MOE_1",
+			"GroupId": "",
+			"Name": "呆毛绷直"
+		},
+		{
+			"Id": "PARAM_EYE_L_OPEN",
+			"GroupId": "ParamGroup2",
+			"Name": "左眼　开闭"
+		},
+		{
+			"Id": "PARAM_EYE_L_SMILE",
+			"GroupId": "ParamGroup2",
+			"Name": "左眼　微笑"
+		},
+		{
+			"Id": "PARAM_EYE_R_OPEN",
+			"GroupId": "ParamGroup2",
+			"Name": "右眼"
+		},
+		{
+			"Id": "PARAM_EYE_R_SMILE",
+			"GroupId": "ParamGroup2",
+			"Name": "右眼　微笑"
+		},
+		{
+			"Id": "PARAM_EYE_BALL_X",
+			"GroupId": "ParamGroup2",
+			"Name": "眼珠 X"
+		},
+		{
+			"Id": "PARAM_EYE_BALL_Y",
+			"GroupId": "ParamGroup2",
+			"Name": "眼珠 Y"
+		},
+		{
+			"Id": "PARAM_EYE_STAR_OPACITY",
+			"GroupId": "ParamGroup2",
+			"Name": "星星眼Star_Opacity"
+		},
+		{
+			"Id": "PARAM_EYE_STAR_1",
+			"GroupId": "ParamGroup2",
+			"Name": "星星眼Star_1"
+		},
+		{
+			"Id": "PARAM_EYE_DIZZY_OPACITY",
+			"GroupId": "ParamGroup2",
+			"Name": "晕眼Opacity"
+		},
+		{
+			"Id": "PARAM_EYE_DIZZY_ANGLE",
+			"GroupId": "ParamGroup2",
+			"Name": "晕眼_旋转"
+		},
+		{
+			"Id": "PARAM_EYE_EMOTION",
+			"GroupId": "ParamGroup2",
+			"Name": "眼睛情绪"
+		},
+		{
+			"Id": "PARAM_BROW_L_X",
+			"GroupId": "ParamGroup3",
+			"Name": "左眉　左右"
+		},
+		{
+			"Id": "PARAM_BROW_L_Y",
+			"GroupId": "ParamGroup3",
+			"Name": "左眉上下"
+		},
+		{
+			"Id": "PARAM_BROW_R_X",
+			"GroupId": "ParamGroup3",
+			"Name": "右眉　左右"
+		},
+		{
+			"Id": "PARAM_BROW_R_Y",
+			"GroupId": "ParamGroup3",
+			"Name": "右眉　上下"
+		},
+		{
+			"Id": "PARAM_BROW_L_ANGLE",
+			"GroupId": "ParamGroup3",
+			"Name": "左眉　角度"
+		},
+		{
+			"Id": "PARAM_BROW_R_ANGLE",
+			"GroupId": "ParamGroup3",
+			"Name": "右眉　角度"
+		},
+		{
+			"Id": "PARAM_BROW_L_FORM",
+			"GroupId": "ParamGroup3",
+			"Name": "左眉　変形"
+		},
+		{
+			"Id": "PARAM_BROW_R_FORM",
+			"GroupId": "ParamGroup3",
+			"Name": "右眉　変形"
+		},
+		{
+			"Id": "PARAM_MOUTH_FORM",
+			"GroupId": "ParamGroup4",
+			"Name": "嘴　变形"
+		},
+		{
+			"Id": "PARAM_MOUTH_OPEN_Y",
+			"GroupId": "ParamGroup4",
+			"Name": "嘴　张开和闭合"
+		},
+		{
+			"Id": "PARAM_TEETH_OPEN",
+			"GroupId": "ParamGroup4",
+			"Name": "牙齿_开合"
+		},
+		{
+			"Id": "PARAM_MOUTH_SCALE_X",
+			"GroupId": "ParamGroup4",
+			"Name": "嘴_大小X"
+		},
+		{
+			"Id": "PARAM_MOUTH_SCALE_Y",
+			"GroupId": "ParamGroup4",
+			"Name": "嘴_大小Y"
+		},
+		{
+			"Id": "PARAM_EAR_L__X",
+			"GroupId": "ParamGroup",
+			"Name": "耳朵L_X"
+		},
+		{
+			"Id": "PARAM_EAR_R__X",
+			"GroupId": "ParamGroup",
+			"Name": "耳朵R_X"
+		},
+		{
+			"Id": "PARAM_EAR_L__1",
+			"GroupId": "ParamGroup",
+			"Name": "耳朵L_1"
+		},
+		{
+			"Id": "PARAM_EAR_L__2",
+			"GroupId": "ParamGroup",
+			"Name": "耳朵L_2"
+		},
+		{
+			"Id": "PARAM_EAR_L__3",
+			"GroupId": "ParamGroup",
+			"Name": "耳朵L_3"
+		},
+		{
+			"Id": "PARAM_EAR_R__1",
+			"GroupId": "ParamGroup",
+			"Name": "耳朵R_1"
+		},
+		{
+			"Id": "PARAM_EAR_R__2",
+			"GroupId": "ParamGroup",
+			"Name": "耳朵R_2"
+		},
+		{
+			"Id": "PARAM_EAR_R__3",
+			"GroupId": "ParamGroup",
+			"Name": "耳朵R_3"
+		},
+		{
+			"Id": "PARAM_BODY_ANGLE_X",
+			"GroupId": "ParamGroup9",
+			"Name": "身体旋转　X"
+		},
+		{
+			"Id": "PARAM_BODY_ANGLE_Y",
+			"GroupId": "ParamGroup9",
+			"Name": "身体旋转　Y"
+		},
+		{
+			"Id": "PARAM_BODY_ANGLE_Z",
+			"GroupId": "ParamGroup9",
+			"Name": "身体旋转　Z"
+		},
+		{
+			"Id": "PARAM_WAIST_Z",
+			"GroupId": "ParamGroup9",
+			"Name": "Waist_Z"
+		},
+		{
+			"Id": "PARAM_ALL_X",
+			"GroupId": "ParamGroup9",
+			"Name": "All_X"
+		},
+		{
+			"Id": "PARAM_ALL_Y",
+			"GroupId": "ParamGroup9",
+			"Name": "All_Y"
+		},
+		{
+			"Id": "PARAM_ALL_SCALE",
+			"GroupId": "ParamGroup9",
+			"Name": "All_Scale"
+		},
+		{
+			"Id": "PARAM_LEG_L_1",
+			"GroupId": "ParamGroup9",
+			"Name": "LegL1"
+		},
+		{
+			"Id": "PARAM_LEG_R_1",
+			"GroupId": "ParamGroup9",
+			"Name": "LegR1"
+		},
+		{
+			"Id": "PARAM_BREATH",
+			"GroupId": "ParamGroup9",
+			"Name": "呼吸"
+		},
+		{
+			"Id": "PARAM_ARM_L_1",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL1"
+		},
+		{
+			"Id": "PARAM_ARM_L_2",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL2"
+		},
+		{
+			"Id": "PARAM_ARM_L_3",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL3"
+		},
+		{
+			"Id": "PARAM_ARM_L__DE_1",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL_De1"
+		},
+		{
+			"Id": "PARAM_ARM_L_UP",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL_UP"
+		},
+		{
+			"Id": "PARAM_ARM_L_2_COLOR_2",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL2_Color2"
+		},
+		{
+			"Id": "PARAM_ARM_L_3__ADD_1",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL3_Add1"
+		},
+		{
+			"Id": "PARAM_ARM_L_3__ADD_2",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL3_Add2"
+		},
+		{
+			"Id": "PARAM_ARM_L_3__ADD_3",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL3_Add3"
+		},
+		{
+			"Id": "PARAM_ARM_L_3__ADD_4",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL3_Add4"
+		},
+		{
+			"Id": "PARAM_ARM_L_3__ADD_5",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL3_Add5"
+		},
+		{
+			"Id": "PARAM_ARM_L_3__ADD_6",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL3_Add6"
+		},
+		{
+			"Id": "PARAM_ARM_L_3__ADD_7",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL3_Add7"
+		},
+		{
+			"Id": "PARAM_ARM_L_3__ADD_8",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmL3_Add8"
+		},
+		{
+			"Id": "PARAM_ARM_L_FINGER_1",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmLFinger1"
+		},
+		{
+			"Id": "PARAM_ARM_L_FINGER_2",
+			"GroupId": "ParamGroup10",
+			"Name": "ArmLFinger2"
+		},
+		{
+			"Id": "PARAM_AMULET_1__TAKE",
+			"GroupId": "ParamGroup10",
+			"Name": "Amulet1_take"
+		},
+		{
+			"Id": "PARAM_AMULET_1__OPACITY",
+			"GroupId": "ParamGroup10",
+			"Name": "Amulet1_Opacity"
+		},
+		{
+			"Id": "PARAM_AMULET_1__FIRE__OPACITY",
+			"GroupId": "ParamGroup10",
+			"Name": "Amulet1_Fire_Opacity"
+		},
+		{
+			"Id": "PARAM_AMULET_1__FIRE_1",
+			"GroupId": "ParamGroup10",
+			"Name": "Amulet1_Fire1"
+		},
+		{
+			"Id": "PARAM_AMULET_1__FIRE_2",
+			"GroupId": "ParamGroup10",
+			"Name": "Amulet1_Fire2"
+		},
+		{
+			"Id": "PARAM_AMULET_1__1",
+			"GroupId": "ParamGroup10",
+			"Name": "Amulet1_1"
+		},
+		{
+			"Id": "PARAM_AMULET_1__2",
+			"GroupId": "ParamGroup10",
+			"Name": "Amulet1_2"
+		},
+		{
+			"Id": "PARAM_AMULET_1__3",
+			"GroupId": "ParamGroup10",
+			"Name": "Amulet1_3"
+		},
+		{
+			"Id": "PARAM_ARM_R_1",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR1"
+		},
+		{
+			"Id": "PARAM_ARM_R_2",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR2"
+		},
+		{
+			"Id": "PARAM_ARM_R_3",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR3"
+		},
+		{
+			"Id": "PARAM_ARM_R__DE_1",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR_De1"
+		},
+		{
+			"Id": "PARAM_ARM_R_UP",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR_UP"
+		},
+		{
+			"Id": "PARAM_ARM_R_2__COLOR_2",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR2_Color2"
+		},
+		{
+			"Id": "PARAM_ARM_R_3__ADD_1",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR3_Add1"
+		},
+		{
+			"Id": "PARAM_ARM_R_3__ADD_2",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR3_Add2"
+		},
+		{
+			"Id": "PARAM_ARM_R_3__ADD",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR3_Add3"
+		},
+		{
+			"Id": "PARAM_ARM_R_3__ADD_4",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR3_Add4"
+		},
+		{
+			"Id": "PARAM_ARM_R_3__ADD_5",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR3_Add5"
+		},
+		{
+			"Id": "PARAM_ARM_R_3__ADD_6",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR3_Add6"
+		},
+		{
+			"Id": "PARAM_ARM_R_3__ADD_7",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR3_Add7"
+		},
+		{
+			"Id": "PARAM_ARM_R_3__ADD_8",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR3_Add8"
+		},
+		{
+			"Id": "PARAM_ARM_R_3__FINGER_1",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR3_Finger1"
+		},
+		{
+			"Id": "PARAM_ARM_R_3__FINGER_2",
+			"GroupId": "ParamGroup11",
+			"Name": "ArmR3_Finger2"
+		},
+		{
+			"Id": "PARAM_HAIR_F_1__1",
+			"GroupId": "ParamGroup5",
+			"Name": "HairF1_1"
+		},
+		{
+			"Id": "PARAM_HAIR_F_1__2",
+			"GroupId": "ParamGroup5",
+			"Name": "HairF1_2"
+		},
+		{
+			"Id": "PARAM_HAIR_F_1__3",
+			"GroupId": "ParamGroup5",
+			"Name": "HairF1_3"
+		},
+		{
+			"Id": "PARAM_HAIR_F_1__Y_1",
+			"GroupId": "ParamGroup5",
+			"Name": "HairF1_Y1"
+		},
+		{
+			"Id": "PARAM_HAIR_F_1__Y_2",
+			"GroupId": "ParamGroup5",
+			"Name": "HairF1_Y2"
+		},
+		{
+			"Id": "PARAM_HAIR_F_1__Y_3",
+			"GroupId": "ParamGroup5",
+			"Name": "HairF1_Y3"
+		},
+		{
+			"Id": "PARAM_HAIR_MOE_1__1",
+			"GroupId": "ParamGroup6",
+			"Name": "HairMoe1_1"
+		},
+		{
+			"Id": "PARAM_HAIR_MOE_1__2",
+			"GroupId": "ParamGroup6",
+			"Name": "HairMoe1_2"
+		},
+		{
+			"Id": "PARAM_HAIR_MOE_1__3",
+			"GroupId": "ParamGroup6",
+			"Name": "HairMoe1_3"
+		},
+		{
+			"Id": "PARAM_HAIR_MOE_1__Y_1",
+			"GroupId": "ParamGroup6",
+			"Name": "HairMoe1_Y1"
+		},
+		{
+			"Id": "PARAM_HAIR_MOE_1__Y_2",
+			"GroupId": "ParamGroup6",
+			"Name": "HairMoe1_Y2"
+		},
+		{
+			"Id": "PARAM_HAIR_MOE_1__Y_3",
+			"GroupId": "ParamGroup6",
+			"Name": "HairMoe1_Y3"
+		},
+		{
+			"Id": "PARAM_HAIR_S_1__1",
+			"GroupId": "ParamGroup7",
+			"Name": "HairS1_1"
+		},
+		{
+			"Id": "PARAM_HAIR_S_1__2",
+			"GroupId": "ParamGroup7",
+			"Name": "HairS1_2"
+		},
+		{
+			"Id": "PARAM_HAIR_S_1__3",
+			"GroupId": "ParamGroup7",
+			"Name": "HairS1_3"
+		},
+		{
+			"Id": "PARAM_HAIR_S_1__DE_1",
+			"GroupId": "ParamGroup7",
+			"Name": "HairS1_De1"
+		},
+		{
+			"Id": "PARAM_HAIR_S_1__DE_2",
+			"GroupId": "ParamGroup7",
+			"Name": "HairS1_De2"
+		},
+		{
+			"Id": "PARAM_HAIR_S_1__Y_1",
+			"GroupId": "ParamGroup7",
+			"Name": "HairS1_Y1"
+		},
+		{
+			"Id": "PARAM_HAIR_S_1__Y_2",
+			"GroupId": "ParamGroup7",
+			"Name": "HairS1_Y2"
+		},
+		{
+			"Id": "PARAM_HAIR_S_1__Y_3",
+			"GroupId": "ParamGroup7",
+			"Name": "HairS1_Y3"
+		},
+		{
+			"Id": "PARAM_HAIR_B_1__1",
+			"GroupId": "ParamGroup8",
+			"Name": "HairB1_1"
+		},
+		{
+			"Id": "PARAM_HAIR_B_1__2",
+			"GroupId": "ParamGroup8",
+			"Name": "HairB1_2"
+		},
+		{
+			"Id": "PARAM_HAIR_B_1__3",
+			"GroupId": "ParamGroup8",
+			"Name": "HairB1_3"
+		},
+		{
+			"Id": "PARAM_HAIR_B_1__4",
+			"GroupId": "ParamGroup8",
+			"Name": "HairB1_4"
+		},
+		{
+			"Id": "PARAM_HAIR_B_1__5",
+			"GroupId": "ParamGroup8",
+			"Name": "HairB1_5"
+		},
+		{
+			"Id": "PARAM_HAIR_B_1__6",
+			"GroupId": "ParamGroup8",
+			"Name": "HairB1_6"
+		},
+		{
+			"Id": "PARAM_HAIR_B_1__7",
+			"GroupId": "ParamGroup8",
+			"Name": "HairB1_7"
+		},
+		{
+			"Id": "PARAM_DRESS_R__M_1",
+			"GroupId": "ParamGroup15",
+			"Name": "DressR_M1"
+		},
+		{
+			"Id": "PARAM_DRESS_R__M_2",
+			"GroupId": "ParamGroup15",
+			"Name": "DressR_M2"
+		},
+		{
+			"Id": "PARAM_DRESS_R__M_3",
+			"GroupId": "ParamGroup15",
+			"Name": "DressR_M3"
+		},
+		{
+			"Id": "PARAM_DRESS_R__M_Y_1",
+			"GroupId": "ParamGroup15",
+			"Name": "DressR_MY1"
+		},
+		{
+			"Id": "PARAM_DRESS_R__M_Y_2",
+			"GroupId": "ParamGroup15",
+			"Name": "DressR_MY2"
+		},
+		{
+			"Id": "PARAM_DRESS_R__M_Y_3",
+			"GroupId": "ParamGroup15",
+			"Name": "DressR_MY3"
+		},
+		{
+			"Id": "PARAM_DRESS_R__L_R_1",
+			"GroupId": "ParamGroup15",
+			"Name": "DressR_LR1"
+		},
+		{
+			"Id": "PARAM_DRESS_R__L_R_2",
+			"GroupId": "ParamGroup15",
+			"Name": "DressR_LR2"
+		},
+		{
+			"Id": "PARAM_DRESS_R__L_R_3",
+			"GroupId": "ParamGroup15",
+			"Name": "DressR_LR3"
+		},
+		{
+			"Id": "PARAM_DRESS_R__L_R_Y_1",
+			"GroupId": "ParamGroup15",
+			"Name": "DressR_LRY1"
+		},
+		{
+			"Id": "PARAM_DRESS_R__L_R_Y_2",
+			"GroupId": "ParamGroup15",
+			"Name": "DressR_LRY2"
+		},
+		{
+			"Id": "PARAM_DRESS_R__L_R_Y_3",
+			"GroupId": "ParamGroup15",
+			"Name": "DressR_LRY3"
+		},
+		{
+			"Id": "PARAM_DRESS_W__M_1",
+			"GroupId": "ParamGroup15",
+			"Name": "DressW_M1"
+		},
+		{
+			"Id": "PARAM_DRESS_W__M_2",
+			"GroupId": "ParamGroup15",
+			"Name": "DressW_M2"
+		},
+		{
+			"Id": "PARAM_DRESS_W__M_3",
+			"GroupId": "ParamGroup15",
+			"Name": "DressW_M3"
+		},
+		{
+			"Id": "PARAM_DRESS_W__M_Y_1",
+			"GroupId": "ParamGroup15",
+			"Name": "DressW_MY1"
+		},
+		{
+			"Id": "PARAM_DRESS_W__M_Y_2",
+			"GroupId": "ParamGroup15",
+			"Name": "DressW_MY2"
+		},
+		{
+			"Id": "PARAM_DRESS_W__M_Y_3",
+			"GroupId": "ParamGroup15",
+			"Name": "DressW_MY3"
+		},
+		{
+			"Id": "PARAM_DRESS_W__L_R_1",
+			"GroupId": "ParamGroup15",
+			"Name": "DressW_LR1"
+		},
+		{
+			"Id": "PARAM_DRESS_W__L_R_2",
+			"GroupId": "ParamGroup15",
+			"Name": "DressW_LR2"
+		},
+		{
+			"Id": "PARAM_DRESS_W__L_R_3",
+			"GroupId": "ParamGroup15",
+			"Name": "DressW_LR3"
+		},
+		{
+			"Id": "PARAM_DRESS_W__L_R_Y_1",
+			"GroupId": "ParamGroup15",
+			"Name": "DressW_LRY1"
+		},
+		{
+			"Id": "PARAM_DRESS_W__L_R_Y_2",
+			"GroupId": "ParamGroup15",
+			"Name": "DressW_LRY2"
+		},
+		{
+			"Id": "PARAM_DRESS_W__L_R_Y_3",
+			"GroupId": "ParamGroup15",
+			"Name": "DressW_LRY3"
+		},
+		{
+			"Id": "PARAM_BELL_X_1",
+			"GroupId": "ParamGroup12",
+			"Name": "Bell_X1"
+		},
+		{
+			"Id": "PARAM_BELL_X_2",
+			"GroupId": "ParamGroup12",
+			"Name": "Bell_X2"
+		},
+		{
+			"Id": "PARAM_BELL__X_3",
+			"GroupId": "ParamGroup12",
+			"Name": "Bell_X3"
+		},
+		{
+			"Id": "PARAM_BELL_X_4",
+			"GroupId": "ParamGroup12",
+			"Name": "Bell_X4"
+		},
+		{
+			"Id": "PARAM_BELL_ANGLE",
+			"GroupId": "ParamGroup12",
+			"Name": "Bell_Angle"
+		},
+		{
+			"Id": "PARAM_R_Y__1",
+			"GroupId": "ParamGroup12",
+			"Name": "RY_1"
+		},
+		{
+			"Id": "PARAM_R_Y__2",
+			"GroupId": "ParamGroup12",
+			"Name": "RY_2"
+		},
+		{
+			"Id": "PARAM_R_Y__3",
+			"GroupId": "ParamGroup12",
+			"Name": "RY_3"
+		},
+		{
+			"Id": "PARAM_R_Y__4",
+			"GroupId": "ParamGroup12",
+			"Name": "RY_4"
+		},
+		{
+			"Id": "PARAM_R_Y__5",
+			"GroupId": "ParamGroup12",
+			"Name": "RY_5"
+		},
+		{
+			"Id": "PARAM_R_Y__Y_1",
+			"GroupId": "ParamGroup12",
+			"Name": "RY_Y1"
+		},
+		{
+			"Id": "PARAM_R_Y__Y_2",
+			"GroupId": "ParamGroup12",
+			"Name": "RY_Y2"
+		},
+		{
+			"Id": "PARAM_R_Y__Y_3",
+			"GroupId": "ParamGroup12",
+			"Name": "RY_Y3"
+		},
+		{
+			"Id": "PARAM_R_Y__Y_4",
+			"GroupId": "ParamGroup12",
+			"Name": "RY_Y4"
+		},
+		{
+			"Id": "PARAM_R_Y__Y_5",
+			"GroupId": "ParamGroup12",
+			"Name": "RY_Y5"
+		},
+		{
+			"Id": "PARAM_R_Y_2__1",
+			"GroupId": "ParamGroup12",
+			"Name": "RY2_1"
+		},
+		{
+			"Id": "PARAM_R_Y_2__2",
+			"GroupId": "ParamGroup12",
+			"Name": "RY2_2"
+		},
+		{
+			"Id": "PARAM_R_Y_2__Y_1",
+			"GroupId": "ParamGroup12",
+			"Name": "RY2_Y1"
+		},
+		{
+			"Id": "PARAM_R_Y_2__Y_2",
+			"GroupId": "ParamGroup12",
+			"Name": "RY2_Y2"
+		},
+		{
+			"Id": "PARAM_R_R_1__1",
+			"GroupId": "ParamGroup12",
+			"Name": "RR1_1"
+		},
+		{
+			"Id": "PARAM_R_R_1__2",
+			"GroupId": "ParamGroup12",
+			"Name": "RR1_2"
+		},
+		{
+			"Id": "PARAM_R_R_1__3",
+			"GroupId": "ParamGroup12",
+			"Name": "RR1_3"
+		},
+		{
+			"Id": "PARAM_R_R_1__4",
+			"GroupId": "ParamGroup12",
+			"Name": "RR1_4"
+		},
+		{
+			"Id": "PARAM_R_R_1__Y_1",
+			"GroupId": "ParamGroup12",
+			"Name": "RR1_Y1"
+		},
+		{
+			"Id": "PARAM_R_R_1__Y_2",
+			"GroupId": "ParamGroup12",
+			"Name": "RR1_Y2"
+		},
+		{
+			"Id": "PARAM_R_R_1__Y_3",
+			"GroupId": "ParamGroup12",
+			"Name": "RR1_Y3"
+		},
+		{
+			"Id": "PARAM_R_R_1__Y_4",
+			"GroupId": "ParamGroup12",
+			"Name": "RR1_Y4"
+		},
+		{
+			"Id": "PARAM_HEAD_B_F_1__1",
+			"GroupId": "ParamGroup14",
+			"Name": "HeadBF1_1"
+		},
+		{
+			"Id": "PARAM_HEAD_B_F_1__2",
+			"GroupId": "ParamGroup14",
+			"Name": "HeadBF1_2"
+		},
+		{
+			"Id": "PARAM_HEAD_B_F_1__Y_1",
+			"GroupId": "ParamGroup14",
+			"Name": "HeadBF1_Y1"
+		},
+		{
+			"Id": "PARAM_HEAD_B_F_1__Y_2",
+			"GroupId": "ParamGroup14",
+			"Name": "HeadBF1_Y2"
+		},
+		{
+			"Id": "PARAM_HEAD_B_F_2__1",
+			"GroupId": "ParamGroup14",
+			"Name": "HeadBF2_1"
+		},
+		{
+			"Id": "PARAM_HEAD_B_F_2__2",
+			"GroupId": "ParamGroup14",
+			"Name": "HeadBF2_2"
+		},
+		{
+			"Id": "PARAM_HEAD_B_F_2__Y_1",
+			"GroupId": "ParamGroup14",
+			"Name": "HeadBF2_Y1"
+		},
+		{
+			"Id": "PARAM_HEAD_B_F_2__Y_2",
+			"GroupId": "ParamGroup14",
+			"Name": "HeadBF2_Y2"
+		},
+		{
+			"Id": "PARAM_ARM_FLOAT_L_1__1",
+			"GroupId": "ParamGroup13",
+			"Name": "ArmFloatL1_1"
+		},
+		{
+			"Id": "PARAM_ARM_FLOAT_L_1__2",
+			"GroupId": "ParamGroup13",
+			"Name": "ArmFloatL1_2"
+		},
+		{
+			"Id": "PARAM_ARM_FLOAT_L_1__3",
+			"GroupId": "ParamGroup13",
+			"Name": "ArmFloatL1_3"
+		},
+		{
+			"Id": "PARAM_ARM_FLOAT_R_1__1",
+			"GroupId": "ParamGroup13",
+			"Name": "ArmFloatR1_1"
+		},
+		{
+			"Id": "PARAM_ARM_FLOAT_R_1__2",
+			"GroupId": "ParamGroup13",
+			"Name": "ArmFloatR1_2"
+		},
+		{
+			"Id": "PARAM_ARM_FLOAT_R_1__3",
+			"GroupId": "ParamGroup13",
+			"Name": "ArmFloatR1_3"
+		},
+		{
+			"Id": "PARAM_TAIL_1",
+			"GroupId": "ParamGroup16",
+			"Name": "Tail1"
+		},
+		{
+			"Id": "PARAM_TAIL_2",
+			"GroupId": "ParamGroup16",
+			"Name": "Tail2"
+		},
+		{
+			"Id": "PARAM_TAIL_X_1",
+			"GroupId": "ParamGroup16",
+			"Name": "TailX1"
+		},
+		{
+			"Id": "PARAM_TAIL_X_2",
+			"GroupId": "ParamGroup16",
+			"Name": "TailX2"
+		},
+		{
+			"Id": "PARAM_TAIL_X_3",
+			"GroupId": "ParamGroup16",
+			"Name": "TailX3"
+		},
+		{
+			"Id": "PARAM_TAIL_X_4",
+			"GroupId": "ParamGroup16",
+			"Name": "TailX4"
+		}
+	],
+	"ParameterGroups": [
+		{
+			"Id": "ParamGroup2",
+			"GroupId": "",
+			"Name": "Eye"
+		},
+		{
+			"Id": "ParamGroup3",
+			"GroupId": "",
+			"Name": "Brow"
+		},
+		{
+			"Id": "ParamGroup4",
+			"GroupId": "",
+			"Name": "Mouth"
+		},
+		{
+			"Id": "ParamGroup",
+			"GroupId": "",
+			"Name": "Ear"
+		},
+		{
+			"Id": "ParamGroup9",
+			"GroupId": "",
+			"Name": "Body"
+		},
+		{
+			"Id": "ParamGroup10",
+			"GroupId": "",
+			"Name": "ArmL"
+		},
+		{
+			"Id": "ParamGroup11",
+			"GroupId": "",
+			"Name": "ArmR"
+		},
+		{
+			"Id": "ParamGroup5",
+			"GroupId": "",
+			"Name": "HairF"
+		},
+		{
+			"Id": "ParamGroup6",
+			"GroupId": "",
+			"Name": "HairMoe"
+		},
+		{
+			"Id": "ParamGroup7",
+			"GroupId": "",
+			"Name": "HairS"
+		},
+		{
+			"Id": "ParamGroup8",
+			"GroupId": "",
+			"Name": "HairB"
+		},
+		{
+			"Id": "ParamGroup15",
+			"GroupId": "",
+			"Name": "Dress"
+		},
+		{
+			"Id": "ParamGroup12",
+			"GroupId": "",
+			"Name": "BodyFloat"
+		},
+		{
+			"Id": "ParamGroup14",
+			"GroupId": "",
+			"Name": "HeadBF"
+		},
+		{
+			"Id": "ParamGroup13",
+			"GroupId": "",
+			"Name": "ArmFloat"
+		},
+		{
+			"Id": "ParamGroup16",
+			"GroupId": "",
+			"Name": "Folder 1"
+		}
+	],
+	"Parts": [
+		{
+			"Id": "PARTS_36",
+			"Name": "002031m3zy1bwzezeqofob_01.psd"
+		},
+		{
+			"Id": "PARTS_35",
+			"Name": "095229e88aiai8zr8ri2m8_01.psd"
+		},
+		{
+			"Id": "PARTS",
+			"Name": "人物"
+		},
+		{
+			"Id": "PARTS_9",
+			"Name": "头"
+		},
+		{
+			"Id": "PARTS_20",
+			"Name": "胸口装饰"
+		},
+		{
+			"Id": "PARTS_21",
+			"Name": "肩膀装饰 前"
+		},
+		{
+			"Id": "PARTS_22",
+			"Name": "身体"
+		},
+		{
+			"Id": "PARTS_23",
+			"Name": "脚"
+		},
+		{
+			"Id": "PARTS_26",
+			"Name": "右手all"
+		},
+		{
+			"Id": "PARTS_64",
+			"Name": "左手Add"
+		},
+		{
+			"Id": "PARTS_37",
+			"Name": "右手"
+		},
+		{
+			"Id": "PARTS_28",
+			"Name": "左手"
+		},
+		{
+			"Id": "PARTS_30",
+			"Name": "肩膀装饰 后"
+		},
+		{
+			"Id": "PARTS_31",
+			"Name": "结"
+		},
+		{
+			"Id": "PARTS_19",
+			"Name": "后发"
+		},
+		{
+			"Id": "PARTS_32",
+			"Name": "马尾"
+		},
+		{
+			"Id": "PARTS_33",
+			"Name": "尾巴"
+		},
+		{
+			"Id": "PARTS_10",
+			"Name": "前发"
+		},
+		{
+			"Id": "PARTS_11",
+			"Name": "耳朵"
+		},
+		{
+			"Id": "PARTS_14",
+			"Name": "眼睛"
+		},
+		{
+			"Id": "PARTS_17",
+			"Name": "晕"
+		},
+		{
+			"Id": "PARTS_18",
+			"Name": "嘴巴"
+		},
+		{
+			"Id": "PARTS_34",
+			"Name": "头"
+		},
+		{
+			"Id": "PARTS_24",
+			"Name": "右"
+		},
+		{
+			"Id": "PARTS_25",
+			"Name": "左"
+		},
+		{
+			"Id": "PARTS_27",
+			"Name": "手掌"
+		},
+		{
+			"Id": "PARTS_47",
+			"Name": "手6"
+		},
+		{
+			"Id": "PARTS_77",
+			"Name": "袖子"
+		},
+		{
+			"Id": "PARTS_40",
+			"Name": "动作 手"
+		},
+		{
+			"Id": "PARTS_46",
+			"Name": "手6"
+		},
+		{
+			"Id": "PARTS_76",
+			"Name": "袖子"
+		},
+		{
+			"Id": "PARTS_2",
+			"Name": "动作 手"
+		},
+		{
+			"Id": "PARTS_12",
+			"Name": "左"
+		},
+		{
+			"Id": "PARTS_13",
+			"Name": "右"
+		},
+		{
+			"Id": "PARTS_15",
+			"Name": "右"
+		},
+		{
+			"Id": "PARTS_16",
+			"Name": "左"
+		},
+		{
+			"Id": "MOUTH",
+			"Name": "Mouth"
+		},
+		{
+			"Id": "PARTS_41",
+			"Name": "手1"
+		},
+		{
+			"Id": "PARTS_39",
+			"Name": "手2"
+		},
+		{
+			"Id": "PARTS_44",
+			"Name": "手3"
+		},
+		{
+			"Id": "PARTS_45",
+			"Name": "手4"
+		},
+		{
+			"Id": "PARTS_48",
+			"Name": "手5"
+		},
+		{
+			"Id": "PARTS_49",
+			"Name": "手掌"
+		},
+		{
+			"Id": "PARTS_3",
+			"Name": "手1"
+		},
+		{
+			"Id": "PARTS_5",
+			"Name": "手2"
+		},
+		{
+			"Id": "PARTS_6",
+			"Name": "手3"
+		},
+		{
+			"Id": "PARTS_7",
+			"Name": "手4"
+		},
+		{
+			"Id": "PARTS_8",
+			"Name": "手5"
+		},
+		{
+			"Id": "PARTS_29",
+			"Name": "手掌"
+		},
+		{
+			"Id": "PARTS_42",
+			"Name": "手指"
+		},
+		{
+			"Id": "PARTS_43",
+			"Name": "符咒1"
+		},
+		{
+			"Id": "PARTS_52",
+			"Name": "Hand7.psd"
+		},
+		{
+			"Id": "PARTS_4",
+			"Name": "手指"
+		},
+		{
+			"Id": "PARTS_38",
+			"Name": "符咒1"
+		},
+		{
+			"Id": "PARTS_50",
+			"Name": "Fire"
+		},
+		{
+			"Id": "PARTS_51",
+			"Name": "Hand7.psd"
+		},
+		{
+			"Id": "HAND_7__8",
+			"Name": "Hand7_1"
+		},
+		{
+			"Id": "HAND_7__1",
+			"Name": "Hand7_1"
+		}
+	],
+	"CombinedParameters": [
+		[
+			"PARAM_BELL__X_3",
+			"PARAM_BELL_X_4"
+		],
+		[
+			"PARAM_TAIL_1",
+			"PARAM_TAIL_2"
+		]
+	]
+}

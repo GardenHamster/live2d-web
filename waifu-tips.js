@@ -373,6 +373,7 @@
                 modelId = 0;
                 modelTexturesId = 0;
                 lastLoadAt = currentTime;
+                localStorage.setItem("lastLoadAt", currentTime);
             }
             model.loadModel(modelId, modelTexturesId);
             fetch(config.live2dPath + "waifu-tips.json")

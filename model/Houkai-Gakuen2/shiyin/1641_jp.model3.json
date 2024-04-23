@@ -1,0 +1,137 @@
+{
+  "Version": 3,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "1641.moc3",
+    "Textures": [
+      "textures/texture_00.png"
+    ],
+    "Physics": "1641.physics3.json",
+    "PhysicsV2": {
+      "File": "1641.physics3.json"
+    },
+    "Motions": {
+      "Idle": [
+        {
+          "File": "motions/idle.motion3.json",
+          "FileLoop": true
+        }
+      ],
+      "Start": [
+        {
+          "File": "motions/touch7_JP.motion3.json",
+          "Sound": "sound/idle_jp.mp3",
+          "Text": "嗷呜......啊，好像有只兔子跑过去了......嗷，看错了......"
+        }
+      ],
+      "TapHead": [
+        {
+          "File": "motions/touch3_JP.motion3.json",
+          "Sound": "sound/touch_head_jp.mp3",
+          "Text": "嗷！你，你在碰哪里......好痒！"
+        }
+      ],
+      "TapFace": [
+        {
+          "File": "motions/touch4_JP.motion3.json",
+          "Sound": "sound/touch_face_jp.mp3",
+          "Text": "嗯嗯？是要去散步吗？"
+        }
+      ],
+      "TapBreast": [
+        {
+          "File": "motions/touch5_JP.motion3.json",
+          "Sound": "sound/touch_breast_jp.mp3",
+          "Text": "咬你哦。"
+        }
+      ],
+      "TapBelly": [
+        {
+          "File": "motions/touch6_JP.motion3.json",
+          "Sound": "sound/touch_belly_jp.mp3",
+          "Text": "呜呜，呜，挠挠肚子......"
+        }
+      ],
+      "TapLeg": [
+        {
+          "File": "motions/touch2_JP.motion3.json",
+          "Sound": "sound/touch_leg_jp.mp3",
+          "Text": "收到！用小白狐超硬尾巴攻击——喂！我可不是电子宠物啦！"
+        }
+      ],
+      "Shake": [
+        {
+          "File": "motions/touch1_JP.motion3.json",
+          "Sound": "sound/shake_jp.mp3",
+          "Text": "停停停，要晕倒了......哼，居然会喜欢这种恶作剧，真是幼稚的家伙！"
+        }
+      ]
+    }
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "Head",
+      "Id": "D_CORE_HEAD"
+    },
+    {
+      "Name": "Face",
+      "Id": "D_CORE_FACE"
+    },
+    {
+      "Name": "Breast",
+      "Id": "D_CORE_BREAST"
+    },
+    {
+      "Name": "Belly",
+      "Id": "D_CORE_BELLY"
+    },
+    {
+      "Name": "Leg",
+      "Id": "D_CORE_LEG"
+    }
+  ],
+  "Options": {}
+}
