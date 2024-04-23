@@ -4,8 +4,12 @@
 
 ## 魔改部分
 - 引用了 [guansss/pixi-live2d-display](https://github.com/guansss/pixi-live2d-display) 的项目，以便支持其他版本的模型，基于[PixiJSv6.5.6](https://github.com/pixijs/pixijs/releases/tag/v6.5.6)
-- 触发点击事件的同时，对话框中显示model.json中与之对应的motion的text信息
-- 修改了`model_list.json`的格式，可自行调整模型大小和位置，播放对应的音频，显示对应的对话信息，可调整闲时动画的间隔，移除了对[live2d_api](https://github.com/fghrsh/live2d_api)的依赖
+
+- 修改了`model_list.json`的格式，可自行调整模型大小和位置，播放对应的音频，显示对应的对话信息，可调整闲时动画的间隔
+
+- 移除了对[live2d_api](https://github.com/fghrsh/live2d_api)的依赖，触发点击事件的同时，对话框中显示model.json中与之对应的motion的text信息
+
+- 移除了飞机大战和照相功能，加入了手机震动和看板随机按钮
 
 ## 声明
 - 因为是本人自用的项目，因此并不会帮解决使用过程中出现的任何问题，请理性使用
@@ -42,17 +46,24 @@
 
 ## 添加模型
 - 将模型文件夹复制到model目录下
-- 根据自己的需要修改模型的`model.json`文件，不同版本的模型可能文件名和json格式都不一样
-- 将模型注册到根目录下的[model_list.json](https://github.com/GardenHamster/live2d-web/blob/main/model_list.json)中
+
+- 根据自己的需要修改模型的`model.json`文件
+
+- 将模型注册到根目录下的 [model_list.json](https://github.com/GardenHamster/live2d-web/blob/main/model_list.json)
 
 ### model.json
-- 假如：`hit_areas`中存在`head`，那么`motions`中与之对应为'tap_head'
-- 假如：`hit_areas`中存在`face`，那么`motions`中与之对应为'tap_face'
+- 触摸动画对应的key为`tap_*****`
+- 例如：`hit_areas`中存在`head`，那么`motions`中与之对应为'tap_head'
+- 例如：`hit_areas`中存在`face`，那么`motions`中与之对应为'tap_face'
 - 以此类推......
 
-- "motions"中如果存在key为`Idle`时，需要将`Idle`统一修改为`idle`，否则无法循环播放'idle'动作，模型会显得比较呆板
+- 待机动画对应的key为`idle`，区分大小写
+
+- 出场动画对应的key为`born`，区分大小写
+
 - "motions"中的"timing"是我额外添加的参数，用于在循环播放`idle`的同时间可以间隔播放`timing`中的内容
-- 详细可以参考[kaguya/model.json](https://github.com/GardenHamster/live2d-web/blob/main/model/Houkai-Gakuen2/kaguya/model.json)
+
+- 详细可以参考 [theresa/model.json](https://github.com/GardenHamster/live2d-web/blob/main/model/Houkai-Gakuen2/theresa/model.json)
 
 ### model_list.json
 - `models[0][0]`是启动页面后第一个加载的模型，可以根据自己的需要调整模型的位置
