@@ -70,6 +70,8 @@
             localStorage.setItem("modelId", modelId);
             localStorage.setItem("modelTexturesId", modelTexturesId);
             if (!this.modelList) await this.loadModelList();
+            if (modelId >= this.modelList.models.length) modelId = 0;
+            if (modelTexturesId >= this.modelList.models[modelId].length) modelTexturesId = 0;
             const target = this.modelList.models[modelId][modelTexturesId];
             this.loadlive2d(target, modelId, modelTexturesId);
         }
