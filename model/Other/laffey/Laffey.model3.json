@@ -13,6 +13,7 @@
     "Motions": {
       "born": [
         {
+          "text": "指挥官，欢迎回来~",
           "Expression": "HidePopUp"
         }
       ]
