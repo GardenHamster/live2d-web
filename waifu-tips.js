@@ -230,6 +230,19 @@
                 this.app.stage.addChild(model);
                 if (target.born_tip != null) showMessage(target.born_tip, 5000, 60);
                 if (motionGroups != null && motionGroups['born'] != null) {
+                    let born_expression = '';
+                    if (!born_expression) born_expression = motionGroups['born'].expression;
+                    if (!born_expression) born_expression = motionGroups['born'].Expression;
+                    for (let index = 0; index < motionGroups['born'].length; index++) {
+                        if (!born_expression) born_expression = motionGroups['born'][index].expression;
+                        if (!born_expression) born_expression = motionGroups['born'][index].Expression;
+                    }
+                    if(born_expression){
+                        model.expression(born_expression);
+                    }
+                }
+                
+                if (motionGroups != null && motionGroups['born'] != null) {
                     model.motion('born', undefined, PIXI.live2d.MotionPriority.NORMAL);
                 }
                 else {
