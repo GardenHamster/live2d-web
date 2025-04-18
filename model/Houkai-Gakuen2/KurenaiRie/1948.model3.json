@@ -1,0 +1,161 @@
+{
+  "Version": 3,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "1948.moc3",
+    "Textures": [
+      "textures/texture_00.png"
+    ],
+    "Physics": "1948.physics3.json",
+    "PhysicsV2": {
+      "File": "1948.physics3.json"
+    },
+    "Motions": {
+      "tap_head": [
+        {
+          "File": "motions/touch7_CN.motion3.json",
+          "Sound": "sound/touch_head_cn.mp3",
+          "Text": "真是的！别把我当成小孩子......"
+        }
+      ],
+      "tap_face": [
+        {
+          "File": "motions/touch8_CN.motion3.json",
+          "Sound": "sound/touch_face_cn.mp3",
+          "Text": "唔......嗯......啊！不，不能这样！"
+        }
+      ],
+      "tap_breast": [
+        {
+          "File": "motions/touch9_CN.motion3.json",
+          "Sound": "sound/touch_breast_cn.mp3",
+          "Text": "我，我叫警察叔叔了哦？！"
+        }
+      ],
+      "tap_belly": [
+        {
+          "File": "motions/touch10_CN.motion3.json",
+          "Sound": "sound/touch_belly_cn.mp3",
+          "Text": "唔啊啊啊？！这种事......难道是书上教的那种......？！"
+        }
+      ],
+      "tap_leg": [
+        {
+          "File": "motions/touch11_CN.motion3.json",
+          "Sound": "sound/touch_leg_cn.mp3",
+          "Text": "唔！我是医疗天使，不是病人你的玩具！"
+        }
+      ],
+      "timing": [
+        {
+          "File": "motions/touch2_CN.motion3.json",
+          "Sound": "sound/idle2_cn.mp3",
+          "Text": "这是我的医疗精灵，名字就叫......\"小蜜蜂\"！————嘿嘿~只要有你在，打针就不会害怕啦~"
+        },
+        {
+          "File": "motions/touch3_CN.motion3.json",
+          "Sound": "sound/idle3_cn.mp3",
+          "Text": "你，你想要抱抱？！可治愈病人心中的痛苦确实也是医疗天使的职责......只，只能一会儿哦?\r"
+        },
+        {
+          "File": "motions/touch4_CN.motion3.json",
+          "Sound": "sound/idle4_cn.mp3",
+          "Text": "每次看到病人生病，我的内心总是很难受。答应我，你一定要健健康康地活下去，好吗?"
+        },
+        {
+          "File": "motions/touch5_CN.motion3.json",
+          "Sound": "sound/idle5_cn.mp3",
+          "Text": "我再也不想看到任何人离世了。我想和喜欢的人永远在一起，直至死亡将我们分开。"
+        }
+      ],
+      "idle": [
+        {
+          "File": "motions/idle.motion3.json",
+          "FileLoop": true
+        }
+      ],
+      "born": [
+        {
+          "File": "motions/touch1_CN.motion3.json",
+          "Sound": "sound/born.cn.mp3",
+          "Text": "我是红理惠，是被梦境世界选中的医疗天使。无论未来遇到什么样的病痛和困难，我们都能一起克服!"
+        }
+      ],
+      "shake": [
+        {
+          "File": "motions/touch6_CN.motion3.json",
+          "Sound": "sound/shark.mp3",
+          "Text": "......请别乱动，乖乖躺在床上，好吗？"
+        }
+      ]
+    }
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "head",
+      "Id": "D_CORE_HEAD"
+    },
+    {
+      "Name": "face",
+      "Id": "D_CORE_FACE"
+    },
+    {
+      "Name": "breast",
+      "Id": "D_CORE_BREAST"
+    },
+    {
+      "Name": "belly",
+      "Id": "D_CORE_BELLY"
+    },
+    {
+      "Name": "leg",
+      "Id": "D_CORE_LEG"
+    }
+  ],
+  "Options": {
+    "TexType": 0
+  }
+}
