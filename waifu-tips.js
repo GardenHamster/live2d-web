@@ -496,22 +496,25 @@
         document.body.insertAdjacentHTML("beforeend", '<div id="waifu-toggle"><span>看板娘</span></div>');
         const toggle = document.getElementById("waifu-toggle");
         toggle.addEventListener("click", () => {
+            localStorage.removeItem("waifu-display");
             toggle.classList.remove("waifu-toggle-active");
+            document.getElementById("waifu-tips").style.display = "";
+            document.getElementById("waifu-tool").style.display = "";
+            setTimeout(() => {
+                document.getElementById("waifu").style.bottom = 0;
+            }, 0);
             if (toggle.getAttribute("first-time")) {
-                loadWidget(config);
                 toggle.removeAttribute("first-time");
+                loadWidget(config);
             } else {
-                localStorage.removeItem("waifu-display");
-                document.getElementById("waifu-tips").style.display = "";
-                document.getElementById("waifu-tool").style.display = "";
-                setTimeout(() => {
-                    Live2dModel.showModel();
-                    document.getElementById("waifu").style.bottom = 0;
-                }, 0);
+                Live2dModel.showModel();
             }
         });
         if (localStorage.getItem("waifu-display") && Date.now() - localStorage.getItem("waifu-display") <= 86400000) {
             toggle.setAttribute("first-time", true);
+            document.getElementById("waifu").style.bottom = "-1000px";
+            document.getElementById("waifu-tips").style.display = "none";
+            document.getElementById("waifu-tool").style.display = "none";
             setTimeout(() => {
                 toggle.classList.add("waifu-toggle-active");
             }, 0);
