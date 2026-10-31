@@ -9,6 +9,7 @@
 }
 
 #waifu {
+	position: relative;
 	bottom: 0;
 	left: 0;
 	line-height: 0;
@@ -110,6 +111,110 @@
 	fill: #0684bd;
 	/* #34495e */
 }
+
+/*------------------------------------缩略图-------------------------------------------------*/
+.waifu-grid-container {
+	position: absolute;
+	left: calc(100% + 15px);
+	top: 0;
+	bottom: 15px;
+	width: 220px;
+	background-color: rgba(255, 183, 197, 0.5);
+	border-radius: 12px;
+	padding: 15px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(5px);
+	z-index: 100;
+	display: none;
+}
+
+.waifu-grid-container.active {
+	display: block;
+}
+
+.waifu-grid-layout {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 8px;
+	max-height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-right: 10px;
+}
+
+.waifu-grid-layout::-webkit-scrollbar {
+	width: 4px;
+}
+
+.waifu-grid-layout::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 4px;
+}
+
+.waifu-grid-layout::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 4px;
+}
+
+.waifu-grid-layout::-webkit-scrollbar-thumb:hover {
+	background: #fff;
+}
+
+.waifu-grid-item {
+	width: 100%;
+	aspect-ratio: 1;
+	object-fit: cover;
+	border-radius: 6px;
+	cursor: pointer;
+	border: 2px solid transparent;
+	transition: transform 0.2s, border-color 0.2s;
+}
+
+.waifu-grid-item:hover {
+	transform: scale(1.05);
+	border-color: #fff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.waifu-preview-container {
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-bottom: 15px;
+	width: 220px;
+	height: 220px;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	padding: 5px;
+	display: none;
+	pointer-events: none;
+	z-index: 101;
+}
+
+.waifu-preview-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 4px;
+}
+
+.waifu-preview-container::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -8px;
+	border-width: 8px;
+	border-style: solid;
+	border-color: white transparent transparent transparent;
+}
+
+
+
+
+
 
 @keyframes shake {
 	2% {

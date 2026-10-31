@@ -2,6 +2,7 @@
     "models": [
         [
             {
+                "model_thumb": "Houkai-Gakuen2/KurenaiRie/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/KurenaiRie/1948.model3.json",
                 "model_scale": 0.25,
                 "center_x": 0.5,
@@ -12,6 +13,7 @@
         ],
         [
             {
+                "model_thumb": "Houkai-Gakuen2/theresa/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/theresa/model.json",
                 "model_scale": 0.3,
                 "center_x": 0.5,
@@ -22,6 +24,7 @@
         ],
         [
             {
+                "model_thumb": "Other/laffey/thumb.jpg",
                 "model_json": "Other/laffey/Laffey.model3.json",
                 "model_scale": 0.33,
                 "center_x": 0.5,
@@ -33,6 +36,7 @@
         ],
         [
             {
+                "model_thumb": "Houkai-Gakuen2/hongyexiangshui/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/hongyexiangshui/1833_cn.model3.json",
                 "model_scale": 0.3,
                 "center_x": 0.5,
@@ -43,6 +47,7 @@
         ],
         [
             {
+                "model_thumb": "Houkai-Gakuen2/shiyin/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/shiyin/1641_cn.model3.json",
                 "model_scale": 0.3,
                 "center_x": 0.5,
@@ -53,15 +58,17 @@
         ],
         [
             {
+                "model_thumb": "Houkai-Gakuen2/sirin/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/sirin/model.json",
                 "model_scale": 0.48,
-                "center_y": 0.87,
+                "center_y": 0.75,
                 "timingInterval": 300000,
                 "showWaifuTips": false
             }
         ],
         [
             {
+                "model_thumb": "Houkai-Gakuen2/kaguya/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/kaguya/model.json",
                 "model_scale": 0.5,
                 "center_y": 0.7,
@@ -71,6 +78,7 @@
         ],
         [
             {
+                "model_thumb": "Houkai-Gakuen2/kuroe/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/kuroe/model.json",
                 "model_scale": 0.6,
                 "center_y": 0.9,
@@ -80,6 +88,7 @@
         ],
         [
             {
+                "model_thumb": "Houkai-Gakuen2/kiro/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/kiro/model.json",
                 "model_scale": 0.55,
                 "center_y": 0.72,
@@ -89,6 +98,7 @@
         ],
         [
             {
+                "model_thumb": "Houkai-Gakuen2/yazakura/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/yazakura/model.json",
                 "model_scale": 0.23,
                 "center_y": 0.85,
@@ -96,6 +106,7 @@
                 "showWaifuTips": false
             },
             {
+                "model_thumb": "Houkai-Gakuen2/bachongying/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/bachongying/model.json",
                 "model_scale": 0.3,
                 "center_y": 0.3,
@@ -105,69 +116,7 @@
         ],
         [
             {
-                "model_json": "HyperdimensionNeptunia/histoire/model.json",
-                "model_scale": 0.6,
-                "center_y": -0.20,
-                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
-                "showWaifuTips": true
-            }
-        ],
-        [
-            {
-                "model_json": "HyperdimensionNeptunia/nepgear/model.json",
-                "model_scale": 0.25,
-                "center_y": -0.25,
-                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
-                "showWaifuTips": true
-            },
-            {
-                "model_json": "HyperdimensionNeptunia/nepgear_extra/model.json",
-                "model_scale": 0.25,
-                "center_y": -0.25,
-                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
-                "showWaifuTips": true
-            },
-            {
-                "model_json": "HyperdimensionNeptunia/nepgearswim/model.json",
-                "model_scale": 0.25,
-                "center_y": -0.25,
-                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
-                "showWaifuTips": true
-            }
-        ],
-        [
-            {
-                "model_json": "HyperdimensionNeptunia/nepmaid/model.json",
-                "model_scale": 0.26,
-                "center_y": -0.14,
-                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
-                "showWaifuTips": true
-            },
-            {
-                "model_json": "HyperdimensionNeptunia/neptune_santa/model.json",
-                "model_scale": 0.26,
-                "center_y": -0.2,
-                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
-                "showWaifuTips": true
-            },
-            {
-                "model_json": "HyperdimensionNeptunia/nepswim/model.json",
-                "model_scale": 0.28,
-                "center_y": 0,
-                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
-                "showWaifuTips": true
-            }
-        ],
-        [
-            {
-                "model_json": "Other/Senko_Normals/senko.model3.json",
-                "model_scale": 0.28,
-                "born_tip": "Senko!",
-                "showWaifuTips": true
-            }
-        ],
-        [
-            {
+                "model_thumb": "palworld/chillet/thumb.jpg",
                 "model_json": "palworld/chillet/model.model3.json",
                 "model_scale": 0.17,
                 "center_x": 0.5,
@@ -178,11 +127,72 @@
         ],
         [
             {
-                "model_json": "palworld/petallia/model.model3.json",
-                "model_scale": 0.17,
-                "center_x": 0.5,
-                "center_y": 0.75,
-                "timingInterval": 300000,
+                "model_thumb": "HyperdimensionNeptunia/histoire/thumb.jpg",
+                "model_json": "HyperdimensionNeptunia/histoire/model.json",
+                "model_scale": 0.6,
+                "center_y": -0.20,
+                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
+                "model_thumb": "HyperdimensionNeptunia/nepgear/thumb.jpg",
+                "model_json": "HyperdimensionNeptunia/nepgear/model.json",
+                "model_scale": 0.25,
+                "center_y": -0.32,
+                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
+                "showWaifuTips": true
+            },
+            {
+                "model_thumb": "HyperdimensionNeptunia/nepgear_extra/thumb.jpg",
+                "model_json": "HyperdimensionNeptunia/nepgear_extra/model.json",
+                "model_scale": 0.25,
+                "center_y": -0.32,
+                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
+                "showWaifuTips": true
+            },
+            {
+                "model_thumb": "HyperdimensionNeptunia/nepgear_swim/thumb.jpg",
+                "model_json": "HyperdimensionNeptunia/nepgear_swim/model.json",
+                "model_scale": 0.25,
+                "center_y": -0.32,
+                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
+                "model_thumb": "HyperdimensionNeptunia/neptune/thumb.jpg",
+                "model_json": "HyperdimensionNeptunia/neptune/model.json",
+                "model_scale": 0.26,
+                "center_y": -0.14,
+                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
+                "showWaifuTips": true
+            },
+            {
+                "model_thumb": "HyperdimensionNeptunia/neptune_santa/thumb.jpg",
+                "model_json": "HyperdimensionNeptunia/neptune_santa/model.json",
+                "model_scale": 0.26,
+                "center_y": -0.2,
+                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
+                "showWaifuTips": true
+            },
+            {
+                "model_thumb": "HyperdimensionNeptunia/neptune_swim/thumb.jpg",
+                "model_json": "HyperdimensionNeptunia/neptune_swim/model.json",
+                "model_scale": 0.28,
+                "center_y": 0,
+                "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
+                "model_thumb": "Other/Senko_Normals/thumb.jpg",
+                "model_json": "Other/Senko_Normals/senko.model3.json",
+                "model_scale": 0.28,
+                "born_tip": "Senko!",
                 "showWaifuTips": true
             }
         ]
