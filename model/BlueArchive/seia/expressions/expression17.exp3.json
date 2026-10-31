@@ -1,0 +1,75 @@
+{
+	"Type": "Live2D Expression",
+	"Parameters": [
+		{
+			"Id": "Param32",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param10",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param8",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param44",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"Value": -10.909,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBodyAngleZ2",
+			"Value": -3.766,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param26",
+			"Value": 2.727,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param27",
+			"Value": 17.532,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param28",
+			"Value": 26.883,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param29",
+			"Value": 30,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowLAngle",
+			"Value": 0.506,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowRAngle",
+			"Value": 0.558,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param63",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleY",
+			"Value": -10.519,
+			"Blend": "Add"
+		}
+	]
+}

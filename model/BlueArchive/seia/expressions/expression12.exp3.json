@@ -1,0 +1,130 @@
+{
+	"Type": "Live2D Expression",
+	"Parameters": [
+		{
+			"Id": "Param32",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param45",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleY",
+			"Value": -25.714,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"Value": -9.167,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleX",
+			"Value": -17.143,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"Value": -0.047,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"Value": -0.07,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeBallX",
+			"Value": 0.452,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBodyAngleZ2",
+			"Value": -7.143,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param31",
+			"Value": 2.987,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param26",
+			"Value": 13.636,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param27",
+			"Value": -0.39,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param28",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param29",
+			"Value": -10.519,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"Value": -0.024,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamMouthOpenY",
+			"Value": 0.36,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param58",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param59",
+			"Value": -20,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param60",
+			"Value": -15.714,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param56",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param64",
+			"Value": 6.977,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBodyAngleZ",
+			"Value": -1.628,
+			"Blend": "Add"
+		},
+		{
+			"Id": "WANYAO1",
+			"Value": 0.465,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param47",
+			"Value": -4.186,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param48",
+			"Value": 10,
+			"Blend": "Add"
+		}
+	]
+}

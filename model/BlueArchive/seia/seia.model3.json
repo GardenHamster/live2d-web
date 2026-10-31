@@ -1,0 +1,206 @@
+{
+  "ConfVer": 1,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "seia.moc3",
+    "Textures": [
+      "seia.4096/texture_00.png",
+      "seia.4096/texture_01.png"
+    ],
+    "Physics": "seia.physics3.json",
+    "PhysicsV2": {
+      "File": "seia.physics3.json"
+    },
+    "motions": {
+      "born": [
+        {
+          "text": "おかえり、Sensei",
+          "Expression": "exp12"
+        }
+      ],
+      "tap_head": [
+        {
+          "Expression": "exp00"
+        },
+        {
+          "Expression": "exp01"
+        },
+        {
+          "Expression": "exp02"
+        },
+        {
+          "Expression": "exp03"
+        },
+        {
+          "Expression": "exp04"
+        },
+        {
+          "Expression": "exp05"
+        },
+        {
+          "Expression": "exp06"
+        },
+        {
+          "Expression": "exp07"
+        },
+        {
+          "Expression": "exp08"
+        },
+        {
+          "Expression": "exp09"
+        },
+        {
+          "Expression": "exp10"
+        },
+        {
+          "Expression": "exp11"
+        },
+        {
+          "Expression": "exp12"
+        },
+        {
+          "Expression": "exp13"
+        },
+        {
+          "Expression": "exp14"
+        },
+        {
+          "Expression": "exp15"
+        },
+        {
+          "Expression": "exp16"
+        },
+        {
+          "Expression": "exp17"
+        }
+      ]
+    },
+    "Expressions": [
+      {
+        "Name": "exp00",
+        "File": "expressions/expression0.exp3.json"
+      },
+      {
+        "Name": "exp01",
+        "File": "expressions/expression1.exp3.json"
+      },
+      {
+        "Name": "exp02",
+        "File": "expressions/expression2.exp3.json"
+      },
+      {
+        "Name": "exp03",
+        "File": "expressions/expression3.exp3.json"
+      },
+      {
+        "Name": "exp04",
+        "File": "expressions/expression4.exp3.json"
+      },
+      {
+        "Name": "exp05",
+        "File": "expressions/expression5.exp3.json"
+      },
+      {
+        "Name": "exp06",
+        "File": "expressions/expression6.exp3.json"
+      },
+      {
+        "Name": "exp07",
+        "File": "expressions/expression7.exp3.json"
+      },
+      {
+        "Name": "exp08",
+        "File": "expressions/expression8.exp3.json"
+      },
+      {
+        "Name": "exp09",
+        "File": "expressions/expression9.exp3.json"
+      },
+      {
+        "Name": "exp10",
+        "File": "expressions/expression10.exp3.json"
+      },
+      {
+        "Name": "exp11",
+        "File": "expressions/expression11.exp3.json"
+      },
+      {
+        "Name": "exp12",
+        "File": "expressions/expression12.exp3.json"
+      },
+      {
+        "Name": "exp13",
+        "File": "expressions/expression13.exp3.json"
+      },
+      {
+        "Name": "exp14",
+        "File": "expressions/expression14.exp3.json"
+      },
+      {
+        "Name": "exp15",
+        "File": "expressions/expression15.exp3.json"
+      },
+      {
+        "Name": "exp16",
+        "File": "expressions/expression16.exp3.json"
+      },
+      {
+        "Name": "exp17",
+        "File": "expressions/expression17.exp3.json"
+      }
+    ]
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {},
+    "Battery": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "head",
+      "Id": "ArtMesh3"
+    }
+  ],
+  "Options": {
+    "TexType": 0
+  }
+}

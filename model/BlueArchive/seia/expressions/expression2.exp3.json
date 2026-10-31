@@ -1,0 +1,145 @@
+{
+	"Type": "Live2D Expression",
+	"Parameters": [
+		{
+			"Id": "Param32",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param26",
+			"Value": 16.364,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param27",
+			"Value": 12.727,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param28",
+			"Value": -15.455,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param29",
+			"Value": 30,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param46",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param30",
+			"Value": 10,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBodyAngleZ2",
+			"Value": 10,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"Value": 0.071,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamMouthOpenY",
+			"Value": 0.452,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"Value": -7.143,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleY",
+			"Value": -18.571,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"Value": -0.131,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"Value": -0.095,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeBallX",
+			"Value": 0.286,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeBallY",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param57",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "WANYAO1",
+			"Value": -1.19,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param52",
+			"Value": 5,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param35",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param56",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param58",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param33",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param53",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param65",
+			"Value": -2.791,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param59",
+			"Value": -11.86,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param60",
+			"Value": -6.279,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param64",
+			"Value": 6.279,
+			"Blend": "Add"
+		}
+	]
+}

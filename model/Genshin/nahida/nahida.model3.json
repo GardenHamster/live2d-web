@@ -1,0 +1,173 @@
+{
+  "ConfVer": 1,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "Nahida_1080.moc3",
+    "Textures": [
+      "Nahida.1024/texture_00.png",
+      "Nahida.1024/texture_01.png",
+      "Nahida.1024/texture_02.png",
+      "Nahida.1024/texture_03.png"
+    ],
+    "Physics": "Nahida_1080.physics3.json",
+    "PhysicsV2": {
+      "File": "Nahida_1080.physics3.json"
+    },
+    "motions": {
+      "born": [
+        {
+          "text": "知识，与你分享",
+          "Expression": "star_eye"
+        }
+      ],
+      "tap_head": [
+        {
+          "Expression": "angry"
+        },
+        {
+          "Expression": "black"
+        },
+        {
+          "Expression": "halfeyes"
+        },
+        {
+          "Expression": "handchange"
+        },
+        {
+          "Expression": "happy"
+        },
+        {
+          "Expression": "kusa"
+        },
+        {
+          "Expression": "mouth_change"
+        },
+        {
+          "Expression": "sad01"
+        },
+        {
+          "Expression": "sad02"
+        },
+        {
+          "Expression": "shy01"
+        },
+        {
+          "Expression": "shy02"
+        },
+        {
+          "Expression": "star_eye"
+        },
+        {
+          "Expression": "wink"
+        }
+      ]
+    },
+    "Expressions": [
+      {
+        "Name": "angry",
+        "File": "expressions/Angry.exp3.json"
+      },
+      {
+        "Name": "black",
+        "File": "expressions/black.exp3.json"
+      },
+      {
+        "Name": "halfeyes",
+        "File": "expressions/Halfeyes.exp3.json"
+      },
+      {
+        "Name": "handchange",
+        "File": "expressions/HandChange.exp3.json"
+      },
+      {
+        "Name": "happy",
+        "File": "expressions/Happy1.exp3.json"
+      },
+      {
+        "Name": "kusa",
+        "File": "expressions/kusa.exp3.json"
+      },
+      {
+        "Name": "mouth_change",
+        "File": "expressions/mouthchange.exp3.json"
+      },
+      {
+        "Name": "sad01",
+        "File": "expressions/Sad1.exp3.json"
+      },
+      {
+        "Name": "sad02",
+        "File": "expressions/Sad2.exp3.json"
+      },
+      {
+        "Name": "shy01",
+        "File": "expressions/Shy.exp3.json"
+      },
+      {
+        "Name": "shy02",
+        "File": "expressions/shy_normal.exp3.json"
+      },
+      {
+        "Name": "star_eye",
+        "File": "expressions/StarEye.exp3.json"
+      },
+      {
+        "Name": "wink",
+        "File": "expressions/Wink.exp3.json"
+      }
+    ]
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {},
+    "Battery": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "head",
+      "Id": "ArtMesh73"
+    }
+  ],
+  "Options": {
+    "TexType": 0
+  }
+}

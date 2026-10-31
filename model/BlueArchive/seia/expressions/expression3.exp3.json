@@ -1,0 +1,165 @@
+{
+	"Type": "Live2D Expression",
+	"Parameters": [
+		{
+			"Id": "Param32",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param45",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param42",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleY",
+			"Value": -19.091,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"Value": -23.571,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleX",
+			"Value": -4.545,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"Value": -0.238,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"Value": -0.214,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeBallX",
+			"Value": 0.417,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeBallY",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"Value": -0.095,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamMouthOpenY",
+			"Value": 0.31,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param6",
+			"Value": 0.512,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param26",
+			"Value": -6.429,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param27",
+			"Value": -20,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param28",
+			"Value": -25.814,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param29",
+			"Value": 30,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBodyAngleZ",
+			"Value": -0.714,
+			"Blend": "Add"
+		},
+		{
+			"Id": "WANYAO1",
+			"Value": -0.714,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param56",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param58",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param52",
+			"Value": 8.372,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param53",
+			"Value": 18.837,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param65",
+			"Value": -2.093,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param59",
+			"Value": -14.651,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param60",
+			"Value": -11.86,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param49",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowLAngle",
+			"Value": -0.163,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowRAngle",
+			"Value": -0.349,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBodyAngleX",
+			"Value": -5.349,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBodyAngleY",
+			"Value": -4.186,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param47",
+			"Value": -6.512,
+			"Blend": "Add"
+		}
+	]
+}

@@ -2,11 +2,47 @@
     "models": [
         [
             {
+                "model_thumb": "Other/deepseek/thumb.jpg",
+                "model_json": "Other/deepseek/deepseek.model3.json",
+                "model_scale": 0.18,
+                "center_x": 0.5,
+                "center_y": 0.71,
+                "timingInterval": 300000,
+                "born_tip": "Let me go♪ I'm making the calls♪ Let me write the JSON♪",
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
+                "model_thumb": "Genshin/nahida/thumb.jpg",
+                "model_json": "Genshin/nahida/nahida.model3.json",
+                "model_scale": 0.18,
+                "center_x": 0.5,
+                "center_y": 0.71,
+                "timingInterval": 300000,
+                "born_tip": "知识，与你分享",
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
+                "model_thumb": "BlueArchive/seia/thumb.jpg",
+                "model_json": "BlueArchive/seia/seia.model3.json",
+                "model_scale": 0.14,
+                "center_x": 0.5,
+                "center_y": 0.5,
+                "timingInterval": 300000,
+                "born_tip": "おかえり、Sensei",
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
                 "model_thumb": "Houkai-Gakuen2/KurenaiRie/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/KurenaiRie/1948.model3.json",
-                "model_scale": 0.25,
+                "model_scale": 0.2,
                 "center_x": 0.5,
-                "center_y": 0.65,
+                "center_y": 0.6,
                 "timingInterval": 300000,
                 "showWaifuTips": false
             }
@@ -15,9 +51,9 @@
             {
                 "model_thumb": "Houkai-Gakuen2/theresa/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/theresa/model.json",
-                "model_scale": 0.3,
+                "model_scale": 0.25,
                 "center_x": 0.5,
-                "center_y": 0.65,
+                "center_y": 0.58,
                 "timingInterval": 300000,
                 "showWaifuTips": false
             }
@@ -26,9 +62,9 @@
             {
                 "model_thumb": "Other/laffey/thumb.jpg",
                 "model_json": "Other/laffey/Laffey.model3.json",
-                "model_scale": 0.33,
+                "model_scale": 0.30,
                 "center_x": 0.5,
-                "center_y": 0.75,
+                "center_y": 0.7,
                 "timingInterval": 300000,
                 "born_tip": "指挥官，欢迎回来~",
                 "showWaifuTips": true
@@ -60,8 +96,8 @@
             {
                 "model_thumb": "Houkai-Gakuen2/sirin/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/sirin/model.json",
-                "model_scale": 0.48,
-                "center_y": 0.75,
+                "model_scale": 0.38,
+                "center_y": 0.6,
                 "timingInterval": 300000,
                 "showWaifuTips": false
             }
@@ -70,8 +106,8 @@
             {
                 "model_thumb": "Houkai-Gakuen2/kaguya/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/kaguya/model.json",
-                "model_scale": 0.5,
-                "center_y": 0.7,
+                "model_scale": 0.44,
+                "center_y": 0.66,
                 "timingInterval": 300000,
                 "showWaifuTips": false
             }
@@ -80,8 +116,8 @@
             {
                 "model_thumb": "Houkai-Gakuen2/kuroe/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/kuroe/model.json",
-                "model_scale": 0.6,
-                "center_y": 0.9,
+                "model_scale": 0.46,
+                "center_y": 0.70,
                 "timingInterval": 300000,
                 "showWaifuTips": false
             }
@@ -90,8 +126,8 @@
             {
                 "model_thumb": "Houkai-Gakuen2/kiro/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/kiro/model.json",
-                "model_scale": 0.55,
-                "center_y": 0.72,
+                "model_scale": 0.52,
+                "center_y": 0.7,
                 "timingInterval": 300000,
                 "showWaifuTips": false
             }
@@ -100,8 +136,8 @@
             {
                 "model_thumb": "Houkai-Gakuen2/yazakura/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/yazakura/model.json",
-                "model_scale": 0.23,
-                "center_y": 0.85,
+                "model_scale": 0.22,
+                "center_y": 0.84,
                 "timingInterval": 300000,
                 "showWaifuTips": false
             },
@@ -109,18 +145,18 @@
                 "model_thumb": "Houkai-Gakuen2/bachongying/thumb.jpg",
                 "model_json": "Houkai-Gakuen2/bachongying/model.json",
                 "model_scale": 0.3,
-                "center_y": 0.3,
+                "center_y": 0.28,
                 "timingInterval": 300000,
                 "showWaifuTips": false
             }
         ],
         [
             {
-                "model_thumb": "palworld/chillet/thumb.jpg",
-                "model_json": "palworld/chillet/model.model3.json",
-                "model_scale": 0.17,
+                "model_thumb": "Palworld/chillet/thumb.jpg",
+                "model_json": "Palworld/chillet/model.model3.json",
+                "model_scale": 0.16,
                 "center_x": 0.5,
-                "center_y": 0.82,
+                "center_y": 0.8,
                 "timingInterval": 300000,
                 "showWaifuTips": true
             }
@@ -129,8 +165,10 @@
             {
                 "model_thumb": "HyperdimensionNeptunia/histoire/thumb.jpg",
                 "model_json": "HyperdimensionNeptunia/histoire/model.json",
-                "model_scale": 0.6,
-                "center_y": -0.20,
+                "model_scale": 0.54,
+                "model_scale_x": 0.36,
+                "center_x": 0.5,
+                "center_y": -0.2,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
                 "showWaifuTips": true
             }
@@ -139,24 +177,30 @@
             {
                 "model_thumb": "HyperdimensionNeptunia/nepgear/thumb.jpg",
                 "model_json": "HyperdimensionNeptunia/nepgear/model.json",
-                "model_scale": 0.25,
-                "center_y": -0.32,
+                "model_scale": 0.22,
+                "model_scale_x": 0.17,
+                "center_x": 0.5,
+                "center_y": -0.24,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
                 "showWaifuTips": true
             },
             {
                 "model_thumb": "HyperdimensionNeptunia/nepgear_extra/thumb.jpg",
                 "model_json": "HyperdimensionNeptunia/nepgear_extra/model.json",
-                "model_scale": 0.25,
-                "center_y": -0.32,
+                "model_scale": 0.22,
+                "model_scale_x": 0.17,
+                "center_x": 0.5,
+                "center_y": -0.24,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
                 "showWaifuTips": true
             },
             {
                 "model_thumb": "HyperdimensionNeptunia/nepgear_swim/thumb.jpg",
                 "model_json": "HyperdimensionNeptunia/nepgear_swim/model.json",
-                "model_scale": 0.25,
-                "center_y": -0.32,
+                "model_scale": 0.22,
+                "model_scale_x": 0.17,
+                "center_x": 0.5,
+                "center_y": -0.24,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
                 "showWaifuTips": true
             }
@@ -165,15 +209,19 @@
             {
                 "model_thumb": "HyperdimensionNeptunia/neptune/thumb.jpg",
                 "model_json": "HyperdimensionNeptunia/neptune/model.json",
-                "model_scale": 0.26,
-                "center_y": -0.14,
+                "model_scale": 0.24,
+                "model_scale_x": 0.18,
+                "center_x": 0.5,
+                "center_y": -0.12,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
                 "showWaifuTips": true
             },
             {
                 "model_thumb": "HyperdimensionNeptunia/neptune_santa/thumb.jpg",
                 "model_json": "HyperdimensionNeptunia/neptune_santa/model.json",
-                "model_scale": 0.26,
+                "model_scale": 0.24,
+                "model_scale_x": 0.18,
+                "center_x": 0.5,
                 "center_y": -0.2,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
                 "showWaifuTips": true
@@ -181,7 +229,9 @@
             {
                 "model_thumb": "HyperdimensionNeptunia/neptune_swim/thumb.jpg",
                 "model_json": "HyperdimensionNeptunia/neptune_swim/model.json",
-                "model_scale": 0.28,
+                "model_scale": 0.26,
+                "model_scale_x": 0.2,
+                "center_x": 0.5,
                 "center_y": 0,
                 "born_tip": "Nep! Nep! 超次元游戏：海王星 系列",
                 "showWaifuTips": true
@@ -189,9 +239,12 @@
         ],
         [
             {
-                "model_thumb": "Other/Senko_Normals/thumb.jpg",
-                "model_json": "Other/Senko_Normals/senko.model3.json",
-                "model_scale": 0.28,
+                "model_thumb": "Other/senko/thumb.jpg",
+                "model_json": "Other/senko/senko.model3.json",
+                "model_scale": 0.26,
+                "model_scale_x": 0.24,
+                "center_x": 0.5,
+                "center_y": 0.5,
                 "born_tip": "Senko!",
                 "showWaifuTips": true
             }

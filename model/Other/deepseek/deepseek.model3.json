@@ -1,0 +1,172 @@
+{
+  "Version": 3,
+  "ConfVer": 1,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "deepseek.moc3",
+    "Textures": [
+      "deepseek.8192/texture_00.png"
+    ],
+    "Physics": "deepseek.physics3.json",
+    "PhysicsV2": {
+      "File": "deepseek.physics3.json"
+    },
+    "motions": {
+      "tap_head": [
+        {
+          "Expression": "Exp01"
+        },
+        {
+          "Expression": "Exp02"
+        },
+        {
+          "Expression": "Exp02_2"
+        },
+        {
+          "Expression": "Exp03"
+        },
+        {
+          "Expression": "Exp04"
+        },
+        {
+          "Expression": "Exp05"
+        },
+        {
+          "Expression": "Exp05_2"
+        },
+        {
+          "Expression": "Exp06"
+        },
+        {
+          "Expression": "Exp07"
+        },
+        {
+          "Expression": "Exp08"
+        },
+        {
+          "Expression": "Exp08_2"
+        },
+        {
+          "Expression": "Exp08_3"
+        },
+        {
+          "Expression": "Exp11"
+        },
+        {
+          "Expression": "Exp12"
+        }
+      ]
+    },
+    "Expressions": [
+      {
+        "Name": "Exp01",
+        "File": "expressions/01.exp3.json"
+      },
+      {
+        "Name": "Exp02",
+        "File": "expressions/02.exp3.json"
+      },
+      {
+        "Name": "Exp02_2",
+        "File": "expressions/02_2.exp3.json"
+      },
+      {
+        "Name": "Exp03",
+        "File": "expressions/03.exp3.json"
+      },
+      {
+        "Name": "Exp04",
+        "File": "expressions/04.exp3.json"
+      },
+      {
+        "Name": "Exp05",
+        "File": "expressions/05.exp3.json"
+      },
+      {
+        "Name": "Exp05_2",
+        "File": "expressions/05_2.exp3.json"
+      },
+      {
+        "Name": "Exp06",
+        "File": "expressions/06.exp3.json"
+      },
+      {
+        "Name": "Exp07",
+        "File": "expressions/07.exp3.json"
+      },
+      {
+        "Name": "Exp08",
+        "File": "expressions/08.exp3.json"
+      },
+      {
+        "Name": "Exp08_2",
+        "File": "expressions/08_2.exp3.json"
+      },
+      {
+        "Name": "Exp08_3",
+        "File": "expressions/08_3.exp3.json"
+      },
+      {
+        "Name": "Exp11",
+        "File": "expressions/11.exp3.json"
+      },
+      {
+        "Name": "Exp12",
+        "File": "expressions/12.exp3.json"
+      }
+    ]
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {},
+    "Battery": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "head",
+      "Id": "ArtMesh248"
+    }
+  ],
+  "Options": {
+    "TexType": 0
+  }
+}

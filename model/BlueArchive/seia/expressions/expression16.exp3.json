@@ -1,0 +1,75 @@
+{
+	"Type": "Live2D Expression",
+	"Parameters": [
+		{
+			"Id": "Param62",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param63",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param32",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param26",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param27",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param28",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param29",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param47",
+			"Value": -10,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param48",
+			"Value": 10,
+			"Blend": "Add"
+		},
+		{
+			"Id": "WANYAO1",
+			"Value": 2.208,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBodyAngleZ2",
+			"Value": -10,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"Value": -17.532,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleY",
+			"Value": -21.429,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param6",
+			"Value": 0.403,
+			"Blend": "Add"
+		}
+	]
+}

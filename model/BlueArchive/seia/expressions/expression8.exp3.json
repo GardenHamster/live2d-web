@@ -1,0 +1,100 @@
+{
+	"Type": "Live2D Expression",
+	"Parameters": [
+		{
+			"Id": "Param32",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param44",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param26",
+			"Value": 20.909,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param27",
+			"Value": -19.091,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param28",
+			"Value": -23.636,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param29",
+			"Value": -26.364,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param47",
+			"Value": -5.325,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBodyAngleZ2",
+			"Value": -8.182,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleX",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleY",
+			"Value": -8.961,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"Value": -5.844,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"Value": -0.351,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"Value": -0.299,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowLAngle",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowRAngle",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"Value": -1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param9",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param61",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeBallX",
+			"Value": 0.792,
+			"Blend": "Add"
+		}
+	]
+}
