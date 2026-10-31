@@ -9,10 +9,14 @@
 
 - 移除了对 [live2d_api](https://github.com/fghrsh/live2d_api) 的依赖，触发点击事件的同时，对话框中显示model.json中与之对应的motion的text信息
 
-- 移除了飞机大战和照相功能，加入了手机震动和看板随机按钮
+- 移除了飞机大战和照相功能
+
+- 加入了模型九宫格预览和切换指定模型功能
+
+- 加入了摇晃看板娘和看板娘随机按钮， 加入了同类模型切换(换装)功能
 
 ## 声明
-- 因为是本人自用的项目，因此并不会帮解决使用过程中出现的任何问题，请理性使用
+- 因为是本人自用的项目，因此并不会帮解决使用过程中出现的任何问题，请酌情使用
 
 ## 使用
 ### 本地加载
@@ -31,13 +35,14 @@
 ```
 
 ### 通过CDN加载
+- 将本项目克隆到你的仓库中,然后路径中替换为你的Github名称
 ```js
-<script src="https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/live2d-web.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/你的Github名称/live2d-web/live2d-web.js"></script>
 <script>
     if (screen.width >= 768) {
         let cdnConfig = {
-            live2d_path: 'https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/',
-            model_path: 'https://cdn.jsdelivr.net/gh/GardenHamster/live2d-web/model/'
+            live2d_path: 'https://cdn.jsdelivr.net/gh/你的Github名称/live2d-web/',
+            model_path: 'https://cdn.jsdelivr.net/gh/你的Github名称/live2d-web/model/'
         };
         initLive2d(cdnConfig);//在合适的时机初始化
     }
@@ -57,11 +62,11 @@
 - 例如：触摸`face`对应的key为'tap_face'
 - 以此类推......
 
-- 待机动画对应的key为`idle`，区分大小写
+- 待机事件对应的key为`idle`，区分大小写
 
-- 出场动画对应的key为`born`，区分大小写
+- 出场事件对应的key为`born`，区分大小写
 
-- 震机动画对应的key为`shake`，区分大小写
+- 晃动事件对应的key为`shake`，区分大小写
 
 - "motions"中的"timing"是我额外添加的参数，用于在循环播放`idle`的同时间可以间隔播放`timing`中的内容
 
@@ -72,11 +77,13 @@
 ```jsonc
 {
     "model_json": "Houkai-Gakuen2/theresa/model.json",//相对于model_path中的model.json路径
-    "model_scale": 0.3, //模型缩放比例,可不填,默认:1
-    "center_x": 0.5,    //模型的x坐标=(canvy.width*center_x),可不填,默认:0.5
-    "center_y": 0.65,   //模型的y坐标=(canvy.height*center_y),可不填,默认:0.5
-    "anchor_x": 0.5,    //相当于模型的中心点,center_x基于它进行偏移,可不填,默认:0.5
-    "anchor_y": 0.5,    //相当于模型的中心点,center_y基于它进行偏移,可不填,默认:0.5
+    "model_scale": 0.3,     //模型缩放比例,可不填,默认:1
+    "model_scale_x": 0.3,   //模型x轴的缩放比例,可不填,默认为model_scale
+    "model_scale_y": 0.3,   //模型y轴的缩放比例,可不填,默认为model_scale
+    "center_x": 0.5,        //模型的x坐标=(canvy.width*center_x),可不填,默认:0.5
+    "center_y": 0.65,       //模型的y坐标=(canvy.height*center_y),可不填,默认:0.5
+    "anchor_x": 0.5,        //相当于模型的中心点,center_x基于它进行偏移,可不填,默认:0.5
+    "anchor_y": 0.5,         //相当于模型的中心点,center_y基于它进行偏移,可不填,默认:0.5
     "born_tip": "德丽莎世界第一可爱",//模型加载完毕后,对话框中显示的信息,比model.json中text的优先级高
     "timingInterval": 60000,//如果该值>0，则会按照这个间隔播放名为'timing'的motions，单位：毫秒
     "showWaifuTips": false //对话框中是否显示waifu-tips.json中的信息,可不填,默认为true
