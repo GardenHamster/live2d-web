@@ -150,6 +150,8 @@
 
         async loadlive2d(target, modelId, modelTexturesId) {
             if (target.model_scale == null) target.model_scale = 1;
+            if (target.model_scale_x == null) target.model_scale_x = target.model_scale;
+            if (target.model_scale_y == null) target.model_scale_y = target.model_scale;
             if (target.center_x == null) target.center_x = 0.5;
             if (target.center_y == null) target.center_y = 0.5;
             if (target.anchor_x == null) target.anchor_x = 0.5;
@@ -211,7 +213,7 @@
                 model.rotation = Math.PI;
                 model.skew.x = Math.PI;
                 model.skew.y = Math.PI;
-                model.scale.set(target.model_scale, target.model_scale);
+                model.scale.set(target.model_scale_x, target.model_scale_y);
                 model.anchor.set(target.anchor_x, target.anchor_y);
                 model.x = liv2dDom.width * target.center_x;
                 model.y = liv2dDom.height * target.center_y;
@@ -287,15 +289,20 @@
             });
 
             model.on('hit', (hitAreas) => {
-                console.log('live2d mode hit,hitAreas=' + hitAreas.join(','));
                 if (model.settings == null) return;
                 const hitArea = hitAreas.length > 0 ? hitAreas[0].trim().toLowerCase() : randomSelection(hitAreas).trim().toLowerCase();
                 const motionGroups = model.motionGroups();
                 if (motionGroups == null || motionGroups.length == 0) return;
                 for (let motionName in motionGroups) {
                     if (motionName.trim().toLowerCase() != ('tap_' + hitArea)) continue;
-                    model.motion(motionName, undefined, PIXI.live2d.MotionPriority.FORCE);
+                    const motions = motionGroups[motionName];
+                    if (motions == null || motions.length == null || motions.length == 0) continue;
+                    const randomIndex = Math.floor(Math.random() * motions.length);
+                    const randomMotion = motions[randomIndex];
+                    model.motion(motionName, randomIndex, PIXI.live2d.MotionPriority.FORCE);
                     model.idleTime = 0;
+                    const motionExp = randomMotion.expression ?? randomMotion.Expression;
+                    if (motionExp) model.expression(motionExp);
                     break;
                 }
             });
