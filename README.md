@@ -82,7 +82,8 @@
 - `models[0][0]`是启动页面后第一个加载的模型，可以根据自己的需要调整模型的位置
 ```jsonc
 {
-    "model_json": "Houkai-Gakuen2/theresa/model.json",//相对于model_path中的model.json路径
+    "model_thumb": "Houkai-Gakuen2/theresa/thumb.jpg",    //live2d模型预览图，用于模型选择界面，相对于model_path的路径
+    "model_json": "Houkai-Gakuen2/theresa/model.json",    //live2d模型的主配置文件路径，相对于model_path的路径
     "model_scale": 0.3,     //模型缩放比例,可不填,默认:1
     "model_scale_x": 0.3,   //模型x轴的缩放比例,可不填,默认为model_scale
     "model_scale_y": 0.3,   //模型y轴的缩放比例,可不填,默认为model_scale
