@@ -8,7 +8,19 @@
                 "center_x": 0.5,
                 "center_y": 0.71,
                 "timingInterval": 300000,
-                "born_tip": "Let me go♪ I'm making the calls♪ Let me write the JSON♪",
+                "born_tip": "Let me go♪ <br/> I'm making the calls♪ <br/> Let me write the JSON♪",
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
+                "model_thumb": "Other/laffey/thumb.jpg",
+                "model_json": "Other/laffey/Laffey.model3.json",
+                "model_scale": 0.30,
+                "center_x": 0.5,
+                "center_y": 0.7,
+                "timingInterval": 300000,
+                "born_tip": "指挥官，欢迎回来~<br/>BY-B站画师-小逝lullaby",
                 "showWaifuTips": true
             }
         ],
@@ -21,18 +33,6 @@
                 "center_y": 0.71,
                 "timingInterval": 300000,
                 "born_tip": "知识，与你分享",
-                "showWaifuTips": true
-            }
-        ],
-        [
-            {
-                "model_thumb": "BlueArchive/seia/thumb.jpg",
-                "model_json": "BlueArchive/seia/seia.model3.json",
-                "model_scale": 0.14,
-                "center_x": 0.5,
-                "center_y": 0.5,
-                "timingInterval": 300000,
-                "born_tip": "おかえり、Sensei",
                 "showWaifuTips": true
             }
         ],
@@ -60,13 +60,35 @@
         ],
         [
             {
-                "model_thumb": "Other/laffey/thumb.jpg",
-                "model_json": "Other/laffey/Laffey.model3.json",
-                "model_scale": 0.30,
+                "model_thumb": "BlueArchive/seia/thumb.jpg",
+                "model_json": "BlueArchive/seia/seia.model3.json",
+                "model_scale": 0.14,
                 "center_x": 0.5,
-                "center_y": 0.7,
+                "center_y": 0.5,
                 "timingInterval": 300000,
-                "born_tip": "指挥官，欢迎回来~",
+                "born_tip": "おかえり、Sensei",
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
+                "model_thumb": "Miku/miku/thumb.jpg",
+                "model_json": "Miku/miku/miku.model3.json",
+                "model_scale": 0.1,
+                "center_x": 0.3,
+                "center_y": 0.73,
+                "timingInterval": 300000,
+                "born_tip": "BY-B站画师-玄宝酱<br/>https://www.bilibili.com/video/BV1cAtN69ET2",
+                "showWaifuTips": true
+            },
+            {
+                "model_thumb": "Miku/miku_sakura/thumb.jpg",
+                "model_json": "Miku/miku_sakura/miku.model3.json",
+                "model_scale": 0.1,
+                "center_x": 0.3,
+                "center_y": 0.73,
+                "timingInterval": 300000,
+                "born_tip": "BY-B站画师-玄宝酱<br/>https://www.bilibili.com/video/BV1cAtN69ET2",
                 "showWaifuTips": true
             }
         ],

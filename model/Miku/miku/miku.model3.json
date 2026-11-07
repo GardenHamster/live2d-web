@@ -1,0 +1,134 @@
+{
+  "Version": 3,
+  "ConfVer": 1,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "miku.moc3",
+    "Textures": [
+      "miku.4096/texture_00.png",
+      "miku.4096/texture_01.png",
+      "miku.4096/texture_02.png",
+      "miku.4096/texture_03.png",
+      "miku.4096/texture_04.png",
+      "miku.4096/texture_05.png"
+    ],
+    "Physics": "miku.physics3.json",
+    "PhysicsV2": {
+      "File": "miku.physics3.json"
+    },
+    "Motions": {
+      "born": [
+        {
+          "text": "BY-B站画师-玄宝酱<br/>https://www.bilibili.com/video/BV1cAtN69ET2",
+          "File": "motions/Scene1.motion3.json",
+          "Expression": "Love"
+        }
+      ],
+      "idle": [
+        {
+          "File": "motions/Scene1.motion3.json",
+          "FileLoop": true
+        }
+      ],
+      "tap_head": [
+        {
+          "Expression": "Love"
+        },
+        {
+          "Expression": "Scallion"
+        },
+        {
+          "Expression": "Sing"
+        },
+        {
+          "Expression": "CircleEye"
+        },
+        {
+          "Expression": "Blush"
+        },
+        {
+          "Expression": "Normal"
+        }
+      ]
+    },
+    "Expressions": [
+      {
+        "Name": "Blush",
+        "File": "expressions/blush.exp3.json"
+      },
+      {
+        "Name": "CircleEye",
+        "File": "expressions/circle_eye.exp3.json"
+      },
+      {
+        "Name": "Love",
+        "File": "expressions/love.exp3.json"
+      },
+      {
+        "Name": "Scallion",
+        "File": "expressions/scallion.exp3.json"
+      },
+      {
+        "Name": "Sing",
+        "File": "expressions/sing.exp3.json"
+      },
+      {
+        "Name": "Normal",
+        "File": "expressions/normal.exp3.json"
+      }
+    ]
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {},
+    "Battery": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "head",
+      "Id": "ArtMesh207"
+    }
+  ],
+  "Options": {
+    "TexType": 0
+  }
+}
