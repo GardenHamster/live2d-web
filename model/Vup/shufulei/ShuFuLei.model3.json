@@ -1,0 +1,166 @@
+{
+  "Version": 3,
+  "ConfVer": 1,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "ShuFuLei.moc3",
+    "Textures": [
+      "ShuFuLei.4096/texture_00.png",
+      "ShuFuLei.4096/texture_01.png",
+      "ShuFuLei.4096/texture_02.png",
+      "ShuFuLei.4096/texture_03.png",
+      "ShuFuLei.4096/texture_04.png",
+      "ShuFuLei.4096/texture_05.png",
+      "ShuFuLei.4096/texture_06.png",
+      "ShuFuLei.4096/texture_07.png",
+      "ShuFuLei.4096/texture_08.png",
+      "ShuFuLei.4096/texture_09.png"
+    ],
+    "Physics": "ShuFuLei.physics3.json",
+    "PhysicsV2": {
+      "File": "ShuFuLei.physics3.json",
+      "MaxWeight": 0.8
+    },
+    "Motions": {
+      "born": [
+        {
+          "text": "By - B站作者 - 鸢梦企划",
+          "File": "motions/IDLE.motion3.json",
+          "Expression": "StarEye"
+        }
+      ],
+      "idle": [
+        {
+          "File": "motions/IDLE.motion3.json"
+        }
+      ],
+      "tap_head": [
+        {
+          "Expression": "Cry"
+        },
+        {
+          "Expression": "Handle"
+        },
+        {
+          "Expression": "StarEye"
+        },
+        {
+          "Expression": "Normal"
+        },
+        {
+          "Expression": "LoveEve"
+        },
+        {
+          "Expression": "CatHand"
+        },
+        {
+          "Expression": "Angry"
+        },
+        {
+          "Expression": "Blush"
+        },
+        {
+          "Expression": "Microphone"
+        },
+        {
+          "Expression": "Black"
+        }
+      ]
+    },
+    "Expressions": [
+      {
+        "Name": "Cry",
+        "File": "expressions/哭哭.exp3.json"
+      },
+      {
+        "Name": "Handle",
+        "File": "expressions/手柄.exp3.json"
+      },
+      {
+        "Name": "StarEye",
+        "File": "expressions/星星.exp3.json"
+      },
+      {
+        "Name": "Normal",
+        "File": "expressions/水印.exp3.json"
+      },
+      {
+        "Name": "LoveEve",
+        "File": "expressions/爱心.exp3.json"
+      },
+      {
+        "Name": "CatHand",
+        "File": "expressions/猫猫手.exp3.json"
+      },
+      {
+        "Name": "Angry",
+        "File": "expressions/生气.exp3.json"
+      },
+      {
+        "Name": "Blush",
+        "File": "expressions/脸红.exp3.json"
+      },
+      {
+        "Name": "Microphone",
+        "File": "expressions/麦克风.exp3.json"
+      },
+      {
+        "Name": "Black",
+        "File": "expressions/黑脸.exp3.json"
+      }
+    ]
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {},
+    "Battery": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "head",
+      "Id": "ArtMesh338"
+    }
+  ],
+  "Options": {
+    "TexType": 0
+  }
+}

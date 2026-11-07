@@ -1,0 +1,21 @@
+{
+    "Type": "Live2D Expression",
+    "IsModelCustomizationExpression": false,
+    "Parameters": [
+        {
+            "Id": "Paramsleeplocksmile",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamBrowLY",
+            "Value": -0.6000000238418579,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamBrowRY",
+            "Value": -0.6000000238418579,
+            "Blend": "Add"
+        }
+    ]
+}

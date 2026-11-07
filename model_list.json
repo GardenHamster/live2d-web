@@ -57,23 +57,22 @@
         ],
         [
             {
-                "model_thumb": "BlueArchive/mari_idol/thumb.jpg",
-                "model_json": "BlueArchive/mari_idol/mari.model3.json",
-                "model_scale": 0.16,
+                "model_thumb": "Vup/shufulei/thumb.jpg",
+                "model_json": "Vup/shufulei/ShuFuLei.model3.json",
+                "model_scale": 0.112,
                 "center_x": 0.5,
-                "center_y": 0.74,
-                "born_tip": "おかえり、Sensei",
+                "center_y": 0.82,
+                "born_tip": "By - B站作者 - 鸢梦企划",
                 "showWaifuTips": true
             }
         ],
         [
             {
-                "model_thumb": "BlueArchive/seia/thumb.jpg",
-                "model_json": "BlueArchive/seia/seia.model3.json",
-                "model_scale": 0.14,
+                "model_thumb": "BlueArchive/mari_idol/thumb.jpg",
+                "model_json": "BlueArchive/mari_idol/mari.model3.json",
+                "model_scale": 0.16,
                 "center_x": 0.5,
-                "center_y": 0.5,
-                "timingInterval": 3600000,
+                "center_y": 0.74,
                 "born_tip": "おかえり、Sensei",
                 "showWaifuTips": true
             }
@@ -185,6 +184,18 @@
                 "model_scale": 0.16,
                 "center_x": 0.5,
                 "center_y": 0.8,
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
+                "model_thumb": "BlueArchive/seia/thumb.jpg",
+                "model_json": "BlueArchive/seia/seia.model3.json",
+                "model_scale": 0.14,
+                "center_x": 0.5,
+                "center_y": 0.5,
+                "timingInterval": 3600000,
+                "born_tip": "おかえり、Sensei",
                 "showWaifuTips": true
             }
         ],
