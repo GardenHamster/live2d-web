@@ -12,6 +12,51 @@
 			"Name": "角度 Y"
 		},
 		{
+			"Id": "ParamKiraKira0",
+			"GroupId": "ParamGroup3",
+			"Name": "闪闪 显示"
+		},
+		{
+			"Id": "ParambrowUP",
+			"GroupId": "ParamGroup3",
+			"Name": "眉毛上"
+		},
+		{
+			"Id": "ParamKiraKira1",
+			"GroupId": "ParamGroup3",
+			"Name": "闪闪 物理"
+		},
+		{
+			"Id": "Parambiti0",
+			"GroupId": "ParamGroup3",
+			"Name": "鼻涕泡 显示"
+		},
+		{
+			"Id": "Parambiti1",
+			"GroupId": "ParamGroup3",
+			"Name": "鼻涕泡 缩放"
+		},
+		{
+			"Id": "ParamAngry",
+			"GroupId": "ParamGroup3",
+			"Name": "生气"
+		},
+		{
+			"Id": "Parammouth0",
+			"GroupId": "ParamGroup3",
+			"Name": "默认嘴巴的显示"
+		},
+		{
+			"Id": "ParamtorpedoArm",
+			"GroupId": "ParamGroup3",
+			"Name": "鱼雷胳膊显示"
+		},
+		{
+			"Id": "ParamtorpedoArm0",
+			"GroupId": "ParamGroup3",
+			"Name": "默认胳膊显示"
+		},
+		{
 			"Id": "ParamAngleZ",
 			"GroupId": "",
 			"Name": "角度 Z"
@@ -100,6 +145,11 @@
 			"Id": "ParamMouthOpenY",
 			"GroupId": "",
 			"Name": "嘴　张开和闭合"
+		},
+		{
+			"Id": "ParamMouthX",
+			"GroupId": "",
+			"Name": "歪嘴"
 		},
 		{
 			"Id": "ParamCheek",
@@ -244,6 +294,11 @@
 	],
 	"ParameterGroups": [
 		{
+			"Id": "ParamGroup3",
+			"GroupId": "",
+			"Name": "表情"
+		},
+		{
 			"Id": "ParamGroup",
 			"GroupId": "",
 			"Name": "胳膊L摇"
@@ -262,6 +317,10 @@
 		{
 			"Id": "Part27",
 			"Name": "发光兔子"
+		},
+		{
+			"Id": "Part29",
+			"Name": "追加部件"
 		},
 		{
 			"Id": "Part2",
@@ -336,6 +395,22 @@
 			"Name": "后发"
 		},
 		{
+			"Id": "Part30",
+			"Name": "鱼雷"
+		},
+		{
+			"Id": "Part34",
+			"Name": "泡泡"
+		},
+		{
+			"Id": "Part35",
+			"Name": "生气"
+		},
+		{
+			"Id": "Part36",
+			"Name": "闪闪"
+		},
+		{
 			"Id": "Part20",
 			"Name": "发光兔子"
 		},
@@ -372,18 +447,30 @@
 			"Name": "兔"
 		},
 		{
+			"Id": "Part31",
+			"Name": "丝带1"
+		},
+		{
+			"Id": "Part32",
+			"Name": "丝带2"
+		},
+		{
+			"Id": "Part33",
+			"Name": "鱼雷"
+		},
+		{
 			"Id": "ear",
 			"Name": "ear"
 		}
 	],
 	"CombinedParameters": [
 		[
-			"ParamAngleX",
-			"ParamAngleY"
-		],
-		[
 			"ParamMouthForm",
 			"ParamMouthOpenY"
+		],
+		[
+			"ParamBodyAngleX",
+			"ParamBodyAngleY"
 		]
 	]
 }

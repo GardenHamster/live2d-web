@@ -1,5 +1,6 @@
 {
   "Version": 3,
+  "ConfVer": 1,
   "Type": 0,
   "FileReferences": {
     "Moc": "Laffey.moc3",
@@ -10,18 +11,44 @@
     "PhysicsV2": {
       "File": "Laffey.physics3.json"
     },
-    "Motions": {
+    "motions": {
       "born": [
         {
           "text": "指挥官，欢迎回来~",
-          "Expression": "HidePopUp"
+          "Expression": "torpedo"
+        }
+      ],
+      "tap_head": [
+        {
+          "Expression": "torpedo"
+        },
+        {
+          "Expression": "stareye"
+        },
+        {
+          "Expression": "angry"
+        },
+        {
+          "Expression": "normal"
         }
       ]
     },
     "Expressions": [
       {
-        "Name": "HidePopUp",
-        "File": "HidePopUp.exp3.json"
+        "Name": "normal",
+        "File": "expressions/normal.exp3.json"
+      },
+      {
+        "Name": "angry",
+        "File": "expressions/angry.exp3.json"
+      },
+      {
+        "Name": "stareye",
+        "File": "expressions/stareye.exp3.json"
+      },
+      {
+        "Name": "torpedo",
+        "File": "expressions/torpedo.exp3.json"
       }
     ]
   },
@@ -35,41 +62,10 @@
     "EyeBlink": {
       "MinInterval": 500,
       "MaxInterval": 6000,
-      "Items": [
-        {
-          "Id": "ParamEyeLOpen",
-          "Min": 0.0,
-          "Max": 1.0,
-          "BlendMode": 2,
-          "Input": 0
-        },
-        {
-          "Id": "ParamEyeROpen",
-          "Min": 0.0,
-          "Max": 1.0,
-          "BlendMode": 2,
-          "Input": 0
-        }
-      ],
       "Enabled": true
     },
     "LipSync": {
-      "Gain": 5.0,
-      "Items": [
-        {
-          "Id": "ParamMouthForm",
-          "Min": 0.0,
-          "Max": 1.0,
-          "Input": 0
-        },
-        {
-          "Id": "ParamMouthOpenY",
-          "Min": 0.0,
-          "Max": 1.0,
-          "Input": 0
-        }
-      ],
-      "Enabled": true
+      "Gain": 5.0
     },
     "MouseTracking": {
       "SmoothTime": 0.15,
@@ -97,8 +93,15 @@
     "ArtmeshCulling": {
       "DefaultMode": 0
     },
-    "IntimacySystem": {}
+    "IntimacySystem": {},
+    "Battery": {}
   },
+  "HitAreas": [
+    {
+      "Name": "head",
+      "Id": "ArtMesh102"
+    }
+  ],
   "Options": {
     "TexType": 0
   }
