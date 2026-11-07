@@ -5,8 +5,7 @@
 ## 效果
 - 可以在 [Github Page](https://gardenhamster.github.io/live2d-web) 左下角看到效果
 
-<img width="861" height="750" alt="image" src="https://github.com/user-attachments/assets/c7d540ee-02e4-4e90-9f5f-5784e90ce135" />
-
+<img width="777" height="771" alt="image" src="https://github.com/user-attachments/assets/9962e904-f8a9-4809-a40e-b0a7e5686d90" />
 
 ## 魔改部分
 - 引用了 [guansss/pixi-live2d-display](https://github.com/guansss/pixi-live2d-display) 的项目，以便支持其他版本的模型，基于[PixiJSv6.5.6](https://github.com/pixijs/pixijs/releases/tag/v6.5.6)
