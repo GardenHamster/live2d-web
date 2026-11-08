@@ -57,6 +57,17 @@
         ],
         [
             {
+                "model_thumb": "Other/liveroid/thumb.jpg",
+                "model_json": "Other/liveroid/liveroid.model3.json",
+                "model_scale": 0.12,
+                "center_x": 0.5,
+                "center_y": 0.245,
+                "born_tip": "喵~喵~喵~",
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
                 "model_thumb": "Vup/shufulei/thumb.jpg",
                 "model_json": "Vup/shufulei/ShuFuLei.model3.json",
                 "model_scale": 0.112,

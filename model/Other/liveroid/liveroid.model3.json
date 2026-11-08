@@ -1,0 +1,101 @@
+{
+  "ConfVer": 1,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "liveroid.moc3",
+    "Textures": [
+      "liveroid.8192/texture_00.png"
+    ],
+    "Physics": "liveroid.physics3.json",
+    "PhysicsV2": {
+      "File": "liveroid.physics3.json"
+    },
+    "Motions": {
+      "tap_head": [
+        {
+          "Expression": "Blush"
+        },
+        {
+          "Expression": "BrowLink"
+        },
+        {
+          "Expression": "Cool"
+        },
+        {
+          "Expression": "Worried"
+        }
+      ]
+    },
+    "Expressions": [
+      {
+        "Name": "Blush",
+        "File": "expressions/blush.exp3.json"
+      },
+      {
+        "Name": "BrowLink",
+        "File": "expressions/browLink.exp3.json"
+      },
+      {
+        "Name": "Cool",
+        "File": "expressions/cool.exp3.json"
+      },
+      {
+        "Name": "Worried",
+        "File": "expressions/worried.exp3.json"
+      }
+    ]
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {},
+    "Battery": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "head",
+      "Id": "ArtMesh96"
+    }
+  ],
+  "Options": {
+    "TexType": 0
+  }
+}
