@@ -1,0 +1,143 @@
+{
+  "ConfVer": 1,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "huohuo.moc3",
+    "Textures": [
+      "huohuo.8192/texture_00.png",
+      "huohuo.8192/texture_01.png",
+      "huohuo.8192/texture_02.png",
+      "huohuo.8192/texture_03.png"
+    ],
+    "Physics": "huohuo.physics3.json",
+    "PhysicsV2": {
+      "File": "huohuo.physics3.json"
+    },
+    "Motions": {
+      "born": [
+        {
+          "text": "你们不要过来啊!",
+          "Expression": "Flag02",
+          "File": "motions/Tail.motion3.json"
+        }
+      ],
+      "idle": [
+        {
+          "File": "motions/Tail.motion3.json"
+        }
+      ],
+      "tap_head": [
+        {
+          "File": "motions/Curiosity.motion3.json"
+        },
+        {
+          "File": "motions/Drowsiness.motion3.json"
+        },
+        {
+          "File": "motions/Flag.motion3.json"
+        },
+        {
+          "File": "motions/ShakeHead.motion3.json"
+        },
+        {
+          "File": "motions/Soul.motion3.json"
+        },
+        {
+          "Expression": "Angry",
+          "File": "motions/Tail.motion3.json"
+        },
+        {
+          "Expression": "Cry",
+          "File": "motions/Tail.motion3.json"
+        },
+        {
+          "Expression": "Flag01",
+          "File": "motions/Tail.motion3.json"
+        },
+        {
+          "Expression": "Flag02",
+          "File": "motions/Tail.motion3.json"
+        },
+        {
+          "Expression": "WhiteEyes",
+          "File": "motions/Tail.motion3.json"
+        }
+      ]
+    },
+    "Expressions": [
+      {
+        "Name": "Angry",
+        "File": "expressions/Angry.exp3.json"
+      },
+      {
+        "Name": "Cry",
+        "File": "expressions/Cry.exp3.json"
+      },
+      {
+        "Name": "Flag01",
+        "File": "expressions/Flag01.exp3.json"
+      },
+      {
+        "Name": "Flag02",
+        "File": "expressions/Flag02.exp3.json"
+      },
+      {
+        "Name": "WhiteEyes",
+        "File": "expressions/WhiteEyes.exp3.json"
+      }
+    ]
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {},
+    "Battery": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "head",
+      "Id": "ArtMesh259"
+    }
+  ],
+  "Options": {
+    "TexType": 0
+  }
+}
