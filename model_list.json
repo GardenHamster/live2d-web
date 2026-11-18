@@ -2,17 +2,6 @@
     "models": [
         [
             {
-                "model_thumb": "Other/sakari/thumb.jpg",
-                "model_json": "Other/sakari/sakari.model3.json",
-                "model_scale": 0.15,
-                "center_x": 0.5,
-                "center_y": 0.66,
-                "born_tip": "By - B站作者 - 多维变奏MDV & 星临之海",
-                "showWaifuTips": true
-            }
-        ],
-        [
-            {
                 "model_thumb": "Other/deepseek/thumb.jpg",
                 "model_json": "Other/deepseek/deepseek.model3.json",
                 "model_scale": 0.18,
@@ -68,8 +57,19 @@
         ],
         [
             {
-                "model_thumb": "StarRail‌/huohuo/thumb.jpg",
-                "model_json": "StarRail‌/huohuo/huohuo.model3.json",
+                "model_thumb": "Other/sakari/thumb.jpg",
+                "model_json": "Other/sakari/sakari.model3.json",
+                "model_scale": 0.15,
+                "center_x": 0.5,
+                "center_y": 0.66,
+                "born_tip": "By - B站作者 - 多维变奏MDV & 星临之海",
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
+                "model_thumb": "StarRail/huohuo/thumb.jpg",
+                "model_json": "StarRail/huohuo/huohuo.model3.json",
                 "model_scale": 0.1,
                 "center_x": 0.5,
                 "center_y": 0.7,
