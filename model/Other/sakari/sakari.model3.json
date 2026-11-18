@@ -1,0 +1,179 @@
+{
+  "ConfVer": 1,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "sakari.moc3",
+    "Textures": [
+      "sakari.4096/texture_00.png",
+      "sakari.4096/texture_01.png",
+      "sakari.4096/texture_02.png",
+      "sakari.4096/texture_03.png"
+    ],
+    "Physics": "sakari.physics3.json",
+    "PhysicsV2": {
+      "File": "sakari.physics3.json"
+    },
+    "Motions": {
+      "born": [
+        {
+          "Expression": "LoveEyes"
+        }
+      ],
+      "tap_head": [
+        {
+          "Expression": "Angry"
+        },
+        {
+          "Expression": "Black"
+        },
+        {
+          "Expression": "Blush"
+        },
+        {
+          "Expression": "Cloud"
+        },
+        {
+          "Expression": "Cry"
+        },
+        {
+          "Expression": "Doubt"
+        },
+        {
+          "Expression": "Hat"
+        },
+        {
+          "Expression": "LoveEyes"
+        },
+        {
+          "Expression": "Moon"
+        },
+        {
+          "Expression": "Squint"
+        },
+        {
+          "Expression": "Star"
+        },
+        {
+          "Expression": "StarEyes"
+        },
+        {
+          "Expression": "WhiteEyes"
+        },
+        {
+          "Expression": "Wing"
+        }
+      ]
+    },
+    "Expressions": [
+      {
+        "Name": "Angry",
+        "File": "expressions/angry.exp3.json"
+      },
+      {
+        "Name": "Black",
+        "File": "expressions/black.exp3.json"
+      },
+      {
+        "Name": "Blush",
+        "File": "expressions/blush.exp3.json"
+      },
+      {
+        "Name": "Cloud",
+        "File": "expressions/cloud.exp3.json"
+      },
+      {
+        "Name": "Cry",
+        "File": "expressions/cry.exp3.json"
+      },
+      {
+        "Name": "Doubt",
+        "File": "expressions/doubt.exp3.json"
+      },
+      {
+        "Name": "Hat",
+        "File": "expressions/hat.exp3.json"
+      },
+      {
+        "Name": "LoveEyes",
+        "File": "expressions/loveEyes.exp3.json"
+      },
+      {
+        "Name": "Moon",
+        "File": "expressions/moon.exp3.json"
+      },
+      {
+        "Name": "Squint",
+        "File": "expressions/squint.exp3.json"
+      },
+      {
+        "Name": "Star",
+        "File": "expressions/star.exp3.json"
+      },
+      {
+        "Name": "StarEyes",
+        "File": "expressions/starEyes.exp3.json"
+      },
+      {
+        "Name": "WhiteEyes",
+        "File": "expressions/whiteEyes.exp3.json"
+      },
+      {
+        "Name": "Wing",
+        "File": "expressions/wing.exp3.json"
+      }
+    ]
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {},
+    "Battery": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "head",
+      "Id": "ArtMesh323"
+    }
+  ],
+  "Options": {
+    "TexType": 0
+  }
+}
