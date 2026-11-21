@@ -101,6 +101,16 @@
         ],
         [
             {
+                "model_thumb": "Other/racoon/thumb.jpg",
+                "model_json": "Other/racoon/racoon.model3.json",
+                "model_scale": 0.16,
+                "center_x": 0.5,
+                "center_y": 0.71,
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
                 "model_thumb": "Vup/shufulei/thumb.jpg",
                 "model_json": "Vup/shufulei/ShuFuLei.model3.json",
                 "model_scale": 0.112,
