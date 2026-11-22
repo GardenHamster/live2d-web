@@ -79,6 +79,17 @@
         ],
         [
             {
+                "model_thumb": "StarRail/fuxuan/thumb.jpg",
+                "model_json": "StarRail/fuxuan/fuxuan.model3.json",
+                "model_scale": 0.11,
+                "center_x": 0.5,
+                "center_y": 0.76,
+                "born_tip": "本座乃罗浮太卜司之首，符玄。初次见面——不，该说久见了…我已在法眼中遍历了与你之间的二十二次初会场面。",
+                "showWaifuTips": true
+            }
+        ],
+        [
+            {
                 "model_thumb": "Other/whitecat/thumb.jpg",
                 "model_json": "Other/whitecat/whitecat.model3.json",
                 "model_scale": 0.14,
