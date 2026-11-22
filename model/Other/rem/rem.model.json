@@ -1,0 +1,203 @@
+{
+  "conf_ver": 1,
+  "type": 0,
+  "model": "rem.moc",
+  "textures": [
+    "rem.2048/texture_00.png"
+  ],
+  "controllers": {
+    "param_hit": {},
+    "param_loop": {},
+    "key_trigger": {},
+    "param_trigger": {},
+    "area_trigger": {},
+    "hand_trigger": {},
+    "eye_blink": {
+      "min_interval": 500,
+      "max_interval": 6000,
+      "enabled": true
+    },
+    "lip_sync": {
+      "gain": 5.0
+    },
+    "mouse_tracking": {
+      "smooth_time": 0.15,
+      "enabled": true
+    },
+    "auto_breath": {
+      "enabled": true
+    },
+    "extra_motion": {
+      "enabled": true
+    },
+    "accelerometer": {
+      "enabled": true
+    },
+    "microphone": {},
+    "transform": {},
+    "face_tracking": {
+      "enabled": true
+    },
+    "hand_tracking": {},
+    "param_value": {},
+    "part_opacity": {},
+    "artmesh_opacity": {},
+    "artmesh_color": {},
+    "artmesh_culling": {
+      "default_mode": 0
+    },
+    "intimacy_system": {},
+    "battery": {}
+  },
+  "hit_areas": [
+    {
+      "name": "head",
+      "id": "D_REF.PT_HEAD"
+    }
+  ],
+  "motions": {
+    "idle": [
+      {
+        "file": "motions/Live2D_remu_idle.mtn"
+      }
+    ],
+    "tap_head": [
+      {
+        "file": "motions/Live2D_remu01.mtn",
+        "sound": "voice/01.wav"
+      },
+      {
+        "file": "motions/Live2D_remu02.mtn",
+        "sound": "voice/02.wav"
+      },
+      {
+        "file": "motions/Live2D_remu03.mtn",
+        "sound": "voice/03.wav"
+      },
+      {
+        "file": "motions/Live2D_remu04.mtn",
+        "sound": "voice/04.wav"
+      },
+      {
+        "file": "motions/Live2D_remu05.mtn",
+        "sound": "voice/05.wav"
+      },
+      {
+        "file": "motions/Live2D_remu06.mtn",
+        "sound": "voice/06.wav"
+      },
+      {
+        "file": "motions/Live2D_remu07.mtn",
+        "sound": "voice/07.wav"
+      },
+      {
+        "file": "motions/Live2D_remu08.mtn",
+        "sound": "voice/08.wav"
+      },
+      {
+        "file": "motions/Live2D_remu09.mtn",
+        "sound": "voice/09.wav"
+      },
+      {
+        "file": "motions/Live2D_remu10.mtn",
+        "sound": "voice/10.wav"
+      },
+      {
+        "file": "motions/Live2D_remu11.mtn",
+        "sound": "voice/11.wav"
+      },
+      {
+        "file": "motions/Live2D_remu12.mtn",
+        "sound": "voice/12.wav"
+      },
+      {
+        "file": "motions/Live2D_remu13.mtn",
+        "sound": "voice/13.wav"
+      },
+      {
+        "file": "motions/Live2D_remu14.mtn",
+        "sound": "voice/14.wav"
+      },
+      {
+        "file": "motions/Live2D_remu15.mtn",
+        "sound": "voice/15.wav"
+      },
+      {
+        "file": "motions/Live2D_remu16.mtn",
+        "sound": "voice/16.wav"
+      },
+      {
+        "file": "motions/Live2D_remu17.mtn",
+        "sound": "voice/17.wav"
+      },
+      {
+        "file": "motions/Live2D_remu18.mtn",
+        "sound": "voice/18.wav"
+      },
+      {
+        "file": "motions/Live2D_remu19.mtn",
+        "sound": "voice/19.wav"
+      },
+      {
+        "file": "motions/Live2D_remu20.mtn",
+        "sound": "voice/20.wav"
+      },
+      {
+        "file": "motions/Live2D_remu21.mtn",
+        "sound": "voice/21.wav"
+      },
+      {
+        "file": "motions/Live2D_remu22.mtn",
+        "sound": "voice/22.wav"
+      },
+      {
+        "file": "motions/Live2D_remu23.mtn",
+        "sound": "voice/23.wav"
+      },
+      {
+        "file": "motions/Live2D_remu24.mtn",
+        "sound": "voice/24.wav"
+      },
+      {
+        "file": "motions/Live2D_remu25.mtn",
+        "sound": "voice/25.wav"
+      },
+      {
+        "file": "motions/Live2D_remu26.mtn",
+        "sound": "voice/26.wav"
+      },
+      {
+        "file": "motions/Live2D_remu27.mtn"
+      },
+      {
+        "file": "motions/Live2D_remu28.mtn"
+      },
+      {
+        "file": "motions/Live2D_remu29.mtn"
+      },
+      {
+        "file": "motions/Live2D_remu30.mtn"
+      },
+      {
+        "file": "motions/Live2D_remu31.mtn"
+      },
+      {
+        "file": "motions/Live2D_remu32.mtn"
+      },
+      {
+        "file": "motions/Live2D_remu33.mtn"
+      },
+      {
+        "file": "motions/Live2D_remu34.mtn"
+      }
+    ]
+  },
+  "physics": "rem.physics.json",
+  "physics_v2": {
+    "file": "rem.physics.json"
+  },
+  "pose": "rem.pose.json",
+  "options": {
+    "tex_type": 0
+  }
+}
